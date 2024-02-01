@@ -4,19 +4,11 @@ layout: default
 
 {{ content }}
 
+{% assign posts = site.posts | where:"categories","research" %}
 <div class="columns is-multiline">
-    <div class="column is-12">
-        {% include pagination.html %}
-    </div>
-    {% for post in paginator.posts %}
-    <div class="column is-12">
+    {% for post in posts %}
+    <div class="column is-3-desktop is-4-tablet">
         {% include post-card.html %}
     </div>
     {% endfor %}
-    <div class="column is-12">
-        {% include pagination.html %}
-    </div>
-    <div class="column is-12">
-        {% include subscribe.html %}
-    </div>
 </div>

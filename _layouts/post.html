@@ -2,26 +2,96 @@
 layout: default
 ---
 
+{% if page.title_image %}
+	{% if page.title_image != 'None' %}
+		{% include post-featured-image.html image=page.title_image alt=page.title %}
+	{% endif %}
+{% elsif page.image %}
+  {% include post-featured-image.html image=page.image alt=page.title %}
+{% endif %}
+
+<!-- Set up the transparent black background for the title -->
+{% if page.title_color_bg == 'black' %}
+	<script>
+		window.onload = function () {
+			let p = document.getElementsByClassName("title is-2")[0].parentElement;
+			p.style.background = "rgba(10, 10, 10, 0.5)";
+			p.style.borderRadius = "20px";
+			p.style.padding = "20px";
+			p.style.width = "fit-content";
+			p.style.margin = "0px";
+		}
+
+		let p = document.getElementsByClassName("title is-2")[0].parentElement;
+		p.style.background = "rgba(10, 10, 10, 0.5)";
+		p.style.borderRadius = "20px";
+		p.style.padding = "20px";
+		p.style.width = "fit-content";
+		p.style.margin = "0px";
+	</script>
+{% endif %}
+
+<!-- Figure out the relative link to the author -->
+{% assign link_name = page.author | replace: ' ', '_' | downcase %}
+
+{% assign person_link = '' %}
+
+{% for person in site.data.team_member_profiles.links %}
+	{% if person.name == link_name %}
+		{% assign person_link = person.link %}
+			{% break %}
+	{% endif %}
+{% endfor %}
+
 <div class="content">
 
-    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		{% if person_link == '' %}
+			{{ page.author }}
+		{% else %}
+			<a href="{{ person_link }}">{{ page.author }}</a>
+		{% endif %}
+		</div>
+	</div></p>
 
-    {% if page.series %}
-        {% include series.html %}
-    {% endif %}
+    <!-- <h1>{{ page.title }}</h1> -->
+	<style>
+		.csl-block {
+			font-size: 16px;
+		}
+
+		.csl-title, .csl-author, .csl-event, .csl-editor, .csl-venue {
+			display: block;
+			position: relative;
+			font-size: 15px;
+		}
+
+		.csl-title b {
+			font-weight: 600;
+		}
+
+		.csl-content {
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 20px;
+			max-width: 95%;
+		}
+
+		.bibliography {
+		   list-style-type: none;
+		}
+	</style>
 
     {{ content }}
 </div>
 
 <div class="tags">
     {% for tag in page.tags %}
-      {% include tag.html tag=tag %}
+    <span class="tag is-primary">{{ tag }}</span>
     {% endfor %}
 </div>
-
-{% unless site.hide_share_buttons %}
-{% include share-buttons.html %}
-{% endunless %}
 
 {% if site.disqus.shortname %}
   {% include disqus.html %}

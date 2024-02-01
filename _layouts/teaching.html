@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign teaching = site.posts | where:"categories","teaching" %}
+<div class="columns is-multiline">
+    {% for post in teaching %}
+    <div class="column is-3-desktop is-6-tablet">
+        {% include post-card.html %}
+    </div>
+    {% endfor %}
+</div>

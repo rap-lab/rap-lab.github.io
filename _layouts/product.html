@@ -4,58 +4,119 @@ layout: default
 
 <div class="columns is-multiline">
 
-    <div class="column is-6">
-        <figure class="image is-4by3">
+    <div class="column is-4">
+        <figure>
             <img src="{{ page.image }}" />
         </figure>
-    </div>
 
-    <div class="column is-6">
-        <p class="title is-3">{{ page.title }}</p>
-        <p class="subtitle is-3">{{ page.subtitle }}</p>
-        <p class="title is-4 has-text-right">{{ page.price }}</p>
-        {% if page.product_code %}
-        <p class="subtitle is-5 has-text-right">{{ page.product_code }}</p>
+        <center>
+        {% if page.links.scholar %}
+        <a class="button" itemprop="scholar" href="https://scholar.google.com/citations?user={{page.links.scholar}}&hl=en" target="_blank">
+          <i class="ai ai-google-scholar ai-3x" style="color: #4285F4;"></i>
+        </a>
         {% endif %}
-        
-        {% if page.rating %}
-            {% include rating.html rating=page.rating %}
+
+        {% if page.links.github %}
+        <a class="button" itemprop="github" href="https://github.com/{{page.links.github}}" target="_blank">
+          <i class="fab fa-github fa-2x" style="color: black;"></i>
+        </a>
         {% endif %}
-        
-        {% if page.features %}
-        <div class="content">
-            {% for feature in page.features %}
-            <p>
-                <span class="icon">
-                    {% if feature.icon %}
-                    <i class="fas {{ feature.icon }}"></i>
-                    {% else %}
-                    <i class="fas fa-circle fa-xs"></i>
-                    {% endif %}
-                </span> 
-                <span>{{ feature.label }}</span></p>
+
+        {% if page.links.linkedin %}
+        <a class="button" itemprop="linkedin" href="https://www.linkedin.com/{{page.links.linkedin}}" target="_blank">
+          <i class="fab fa-linkedin fa-2x" style="color: #0072b1;"></i>
+        </a>
+        {% endif %}
+
+        {% if page.links.twitter %}
+        <a class="button" itemprop="twitter" href="https://www.twitter.com/{{page.links.twitter}}/" target="_blank">
+          <i class="fab fa-twitter fa-2x" style="color: #00acee;"></i>
+        </a>
+        {% endif %}
+
+        {% if page.links.youtube %}
+        <a class="button" itemprop="youtube" href="https://www.youtube.com/{{page.links.youtube}}" target="_blank">
+          <i class="fab fa-youtube fa-2x" style="color: red;"></i>
+        </a>
+        {% endif %}
+
+        {% if page.links.website %}
+        <a class="button" itemprop="website" href="{{page.links.website}}" target="_blank">
+          <i class="fa fa-address-card fa-2x" style="color: #3abd3a;"></i>
+        </a>
+        {% endif %}
+        </center>
+
+        <br>
+        <p class="title is-5">Latest News</p>
+
+        <div class="columns is-multiline">
+            {% if page.news.limit %}
+                {% assign limit = page.news.limit %}
+            {% else %}
+              {% assign limit = 2 %}
+            {% endif %}
+
+            {% assign count = 0 %}
+            {% for post in site.posts %}
+                {% if post.content contains page.title %}
+                    <div class="column is-24">
+                        {% include post-card.html %}
+                    </div>
+                    {% assign count = count | plus: 1 %}
+                {% endif %}
+                {% if count == limit %}
+                    {% break %}
+                {% endif %}
             {% endfor %}
         </div>
+
+        {% if page.news.twitter %}
+        <a class="twitter-timeline"
+        data-height="{{page.news.height}}"
+        data-tweet-limit="{{page.news.limit}}"
+        data-theme="light"
+        width="100%"
+        href="https://twitter.com/{{ page.news.twitter }}">
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% else %}
         {% endif %}
+
     </div>
 
-    <div class="column is-12">
-        <p class="title is-4">Description</p>
+    <div class="column is-8">
+        <p class="title is-3">{{ page.title }}</p>
+        <p class="subtitle is-3">{{ page.subtitle }}</p>
+        <style>
+            .csl-block {
+              font-size: 16px;
+            }
+
+            .csl-title, .csl-author, .csl-event, .csl-editor, .csl-venue {
+              display: block;
+              position: relative;
+              font-size: 15px;
+            }
+
+            .csl-title b {
+              font-weight: 600;
+            }
+
+            .csl-content {
+              display: inline-block;
+              vertical-align: top;
+              padding-left: 20px;
+              max-width: 95%;
+            }
+
+            .bibliography {
+               list-style-type: none;
+            }
+        </style>
         <div class="content">
-            
-    
             {{ content }}
         </div>
     </div>
 
-    {% if site.data.reviews[page.product_code] %}
-    <div class="column is-12">
-        <p class="title is-4">Reviews</p>
-        {% for review in site.data.reviews[page.product_code] %}
-        {% include review.html %}
-        {% endfor %}
-    </div>
-    {% endif %}
-
 </div>
-
