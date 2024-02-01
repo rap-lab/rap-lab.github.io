@@ -1,19 +1,21 @@
-- name: Docs
-  link: /docs/
-- name: Example Pages
-  link: /#
-  dropdown:
-    - name: Landing Page With Callouts
-      link: /landing/
-    - name: Sponsors Page
-      link: /sponsors/
-    - name: Image Gallery
-      link: /gallery/
-    - name: Products
-      link: /products/
-    - name: Recipe Page
-      link: /example-recipe/
-    - name: Showcase
-      link: /showcase/
-- name: Blog
-  link: /blog/
+- name: Research
+  link: /research
+- name: Publications
+  link: /publications
+- name: Team
+  link: /team
+  # dropdown:
+    # - name: Current Members
+    #   link: /current-members/
+    # - name: Alumni
+    #   link: /alumni/
+- name: Datasets
+  link: /datasets
+- name: Teaching
+  link: /teaching
+- name: Outreach
+  link: /outreach
+- name: Sponsors
+  link: /sponsors
+- name: Contact
+  link: /contact
