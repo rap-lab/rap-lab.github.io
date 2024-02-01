@@ -5,7 +5,7 @@ job_title: Assistant Professor
 category: lab_head 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
-image: /img/team/todo.jpg
+image: /img/team/zren-2023.png
 hide_hero: true
 hide_footer: false
 remove_hero_title: true
