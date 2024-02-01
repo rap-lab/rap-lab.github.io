@@ -2,7 +2,7 @@
 title: RAP Lab
 subtitle: Robotics Autonomy and Planning Lab
 layout: page
-show_sidebar: false
+show_sidebar: true
 hide_footer: false
 title_color_bg: black
 hero_height: is-medium
