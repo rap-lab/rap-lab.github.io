@@ -1,12 +1,18 @@
-<p class="title is-4">Latest Posts</p>
+<p class="title is-4">Latest News</p>
 
 <div class="columns is-multiline">
-    {% for post in site.posts limit:3 %}
-    <div class="column is-12">
-        {% include post-card.html %}
-    </div>
+    {% assign count = 0 %}
+    {% for post in site.posts %}
+        {% if post.title != page.title %}
+            <div class="column is-12">
+                {% include post-card.html %}
+            </div>
+            {% assign count = count | plus: 1 %}
+        {% endif %}
+        {% if count == 3 %}
+            {% break %}
+        {% endif %}
     {% endfor %}
 </div>
 
-
-
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
