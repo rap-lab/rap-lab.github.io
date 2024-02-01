@@ -1,54 +1,34 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: RAP Lab
+subtitle: Robotics Autonomy and Planning Lab
 layout: page
-callouts: home_callouts
-show_sidebar: true
+show_sidebar: false
+hide_footer: false
+title_color_bg: black
+hero_height: is-medium
+hero_image: todo.png
+hero_link: /research/
+hero_link_text: Our Research
+hero_link2: /publications
+hero_link_text2: Our Publication
 ---
 
-# Bulma Clean Theme demo website
+# About Us
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+We are part of the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-![GitHub Repo stars](https://img.shields.io/github/stars/chrisrhymes/bulma-clean-theme?style=social)
+We research **Robotics, Autonomy and Planning**, with the focus on fundamental **motion planning** and **path planning** problems for **single and multiple robots**.
+We leverage and advance the frontier of motion planning, multi-agent path planning, combinatorial search and optimal control.
+These problems are often NP-hard, and our research exploits the underlying structure of these problems to develop algorithms that balance between **runtime efficiency** and **solution quality** with **rigorous guarantees**, while being **deployable to physical robots**.
+These problems arise in **warehouse logistics, manufacturing and search-and-rescue**.
 
-## Ruby Gem
+# Highlights
 
-The ruby gem is available on the Ruby Gems website at the following location. [https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme).
-
-## GitHub Pages
-
-The theme can be used with GitHub Pages by setting the `remote_theme` in your Jekyll sites `_config.yml`
-
-```yml
-remote_theme: chrisrhymes/bulma-clean-theme
-```
-
-## Documentation
-
-For full instructions, please see the [Documentation](/bulma-clean-theme/docs/)
-
-## Page Layouts
-
-This demo site showcases the available page layout options. 
-
-* Sidebar
-* Menubar
-* Tabs
-* Footer
-* Hero
-* Contents
-* Landing Page With Callouts
-* Sponsors Page
-* Image Gallery
-* Recipe Page
-* Blog
-* Post
-
-## Supported By JetBrains
-
-JetBrains have kindly provided an Open Source licence to aid in the future development of Bulma Clean Theme.
-
-[![JetBrains](img/jetbrains-variant-4.svg)](https://www.jetbrains.com/?from=bulma-clean-theme)
+{% assign posts = site.posts | where:"categories","highlights" %}
+<div class="columns is-multiline">
+    {% for post in posts %}
+    <div class="column is-3-desktop is-6-tablet">
+        {% include post-card.html %}
+    </div>
+    {% endfor %}
+</div>
