@@ -21,11 +21,10 @@ items:
     call_to_action_link: /page-2/
   - title: Example callout 3
     subtitle: Example subtitle 3
-    icon: fa-github
-    icon_brand: true
+    icon: fab fa-github
     description: >
       The example description text goes here and can be multiple lines.
 
       For example, such as this.
     call_to_action_name: Call to action 3
-    call_to_action_link: https://www.csrhymes.com/bulma-clean-theme/page-3/
+    call_to_action_link: /page-3/
