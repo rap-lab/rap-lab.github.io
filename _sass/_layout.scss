@@ -1,6 +1,32 @@
+.content {
+    ul.pagination-list {
+        list-style: none;
+        margin-left: 0;
+        margin-top: 0;
+
+        li+li {
+            margin-top: 0;
+        }
+    }
+}
+
+.content-large-font {
+    ul.pagination-list {
+        list-style: none;
+        margin-left: 0;
+        margin-top: 0;
+
+        li+li {
+            margin-top: 0;
+        }
+    }
+    font-size: x-large;
+}
+
 div.highlight {
     margin-bottom: 1rem;
 }
+
 
 @include desktop {
     .navbar-item {
@@ -10,6 +36,13 @@ div.highlight {
             }
         }
     }
+    .navbar-logo {
+        background: url("../../img/logos/left-up-logo.png") no-repeat;
+        background-size: 172px auto;
+        background-position: 7px;
+        text-indent: -9999px;
+        width: 182px;
+    }
 }
 
 .contents {
@@ -18,23 +51,25 @@ div.highlight {
     margin-bottom: 3rem;
 }
 
-.hero-darken {
-    background-color: rgba($hero-darken, 0.5);
-}
+.circular_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    float: center;
+    object-fit:cover;
+    // margin-left: 125px;
+    margin-top: 15px;
+    margin-left: 10px;
 
-.content {
-    figure {
-        margin: 0;
-    }
-}
+    display:inline-block;
+  }
+  .circular_image img{
+    width:100%;
+    height: auto;
+  }
 
-.callout {
-    &-icon {
-        width: 4rem;
-        height: 4rem;
-        margin-bottom: 0.75rem;
-    }
+table.customFormat tr td{ 
+    line-height: 1.2rem; 
 }
-
-// Alpine.js hide on initial load
-[x-cloak] { display: none !important; }
