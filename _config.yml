@@ -1,19 +1,29 @@
 # Site Settings
+lang: en
 title: Robotics Autonomy and Planning Lab
 tagline: Robotics Autonomy and Planning Lab
 email: zhongqiang.ren@sjtu.edu.cn
-description: Robotics Autonomy and Planning Lab
-baseurl: ""
-# domain:
-url: ""
+description: >
+  Robotics Autonomy and Planning Lab
+baseurl: "/bulma-clean-theme"
+url: "https://www.csrhymes.com"
 permalink: pretty
+#favicon: /path/to/favicon.png
+gh_sponsor: chrisrhymes
+#hide_share_buttons: true
+#theme_color: '#eeeeee'
+#fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
 
 paginate: 5
-paginate_path: "/research/page:num"
+paginate_path: "/blog/page:num"
 
 # Disqus Comments
 disqus:
-  comments: false
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: csrhymes
 
 
 plugins:
@@ -21,11 +31,10 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-scholar
   - kramdown-parser-gfm
   - jekyll-redirect-from
 
-exclude:
+exclude: 
   - Gemfile
   - clean-theme.gemspec
   - Gemfile.lock
@@ -41,7 +50,7 @@ sass:
   style: compressed
   source_dir: _sass
 
-# google_analytics:
+#google_analytics: UA-code-here
 
 defaults:
   -
@@ -55,8 +64,9 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "Zhongqiang Ren"
+      author: "C.S. Rhymes"
       layout: post
+      image: https://via.placeholder.com/1200x800
       show_sidebar: true
 
 markdown: kramdown
@@ -65,7 +75,7 @@ highlighter: rouge
 footer_menu: example_footer_menu
 
 collections:
-  team:
+  products: 
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
