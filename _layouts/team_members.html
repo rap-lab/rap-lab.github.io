@@ -30,3 +30,216 @@ show_sidebar: false
   </div>
 {% endfor %}
 </div>
+
+<!-- <hr>
+<h1 style="font-size:35px;">Scientists & Postdocs</h1>
+<br> -->
+
+<div class="columns is-multiline">
+{% assign sorted_scientists = site.team | where:"category","scientist" %}
+{% assign sorted_postdocs = site.team | where:"category","postdoc" %}
+{% assign sorted_persons = sorted_scientists | concat: sorted_postdocs %}
+{% for person in sorted_persons %}
+<div class="column is-one-fifth-desktop is-3-tablet">
+  <a href="{{ person.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if person.image %}
+      <div class="card-image">
+        <figure class="image is-3by3">
+          <img src="{{ person.image }}" alt="{{ person.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-5">{{ person.title }}</h2>
+        <p class="subtitle is-5">{{ person.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+
+
+<hr>
+<h1 style="font-size:30px;">PhD Students</h1>
+<br>
+
+<div class="columns is-multiline">
+{% assign sorted_persons = site.team | where:"category","phd_student" %}
+{% for person in sorted_persons %}
+<div class="column is-one-fifth-desktop is-3-tablet">
+  <a href="{{ person.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if person.image %}
+      <div class="card-image">
+        <figure class="image is-3by3">
+          <img src="{{ person.image }}" alt="{{ person.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-6">{{ person.title }}</h2>
+        <p class="subtitle is-6">{{ person.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+
+<hr>
+<h1 style="font-size:30px;">Master's Students</h1>
+<br>
+<div class="columns is-multiline">
+  {% assign sorted_persons = site.team | where:"category","master_student" %}
+  {% for person in sorted_persons %}
+  <div class="column is-one-fifth-desktop is-3-tablet">
+    <a href="{{ person.url | prepend: site.baseurl }}">
+      <div class="card">
+        {% if person.image %}
+        <div class="card-image">
+          <figure class="image is-3by3">
+            <img src="{{ person.image }}" alt="{{ person.title }}" />
+          </figure>
+        </div>
+        {% endif %}
+        <div class="card-content">
+          <p class="title is-6">{{ person.title }}</h2>
+          <p class="subtitle is-6">{{ person.subtitle }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+  </div>
+
+<hr>
+<h1 style="font-size:30px;">Others</h1>
+<br>
+
+{% assign sorted_products = site.team | where:"category","undergraduate" %}
+{% if sorted_products.size > 0 %}
+<h1 style="font-size:35px;">Undergraduate Students</h1>
+<br>
+<div class="columns is-multiline">
+{% for product in sorted_products %}
+<div class="column is-one-fifth-desktop is-one-fourth-tablet">
+  <a href="{{ product.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if product.image %}
+      <div class="card-image">
+        <figure class="image is-3by3">
+          <img src="{{ product.image }}" alt="{{ product.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-6">{{ product.title }}</h2>
+        <p class="subtitle is-6">{{ product.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+<hr>
+{% endif %}
+
+
+<div class="columns is-multiline">
+{% assign sorted_products = site.team | where:"category","staff" %}
+{% for product in sorted_products %}
+<div class="column is-one-fifth-desktop is-3-tablet">
+  <a href="{{ product.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if product.image %}
+      <div class="card-image">
+        <figure class="image is-3by3">
+          <img src="{{ product.image }}" alt="{{ product.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-6">{{ product.title }}</h2>
+        <p class="subtitle is-6">{{ product.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+
+
+<div class="columns is-multiline">
+{% assign sorted_products = site.team | where:"category","visitor" %}
+{% for product in sorted_products %}
+<div class="column is-one-fifth-desktop is-3-tablet">
+  <a href="{{ product.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if product.image %}
+      <div class="card-image">
+        <figure class="image is-3by3">
+          <img src="{{ product.image }}" alt="{{ product.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-6">{{ product.title }}</h2>
+        <p class="subtitle is-6">{{ product.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+
+<div class="columns is-multiline">
+{% assign sorted_products = site.team | where:"category","intern" %}
+{% for product in sorted_products %}
+<div class="column is-one-fifth-desktop is-3-tablet">
+  <a href="{{ product.url | prepend: site.baseurl }}">
+    <div class="card">
+      {% if product.image %}
+      <div class="card-image">
+        <figure class="image is-3by3">
+          <img src="{{ product.image }}" alt="{{ product.title }}" />
+        </figure>
+      </div>
+      {% endif %}
+      <div class="card-content">
+        <p class="title is-6">{{ product.title }}</h2>
+        <p class="subtitle is-6">{{ product.subtitle }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+</div>
+
+
+<hr>
+<h1 style="font-size:30px;">Alumni</h1>
+<br>
+
+<div class="columns is-multiline">
+  {% assign sorted_products = site.team | where:"category","alumni" %}
+  {% for product in sorted_products %}
+  <div class="column is-one-fifth-desktop is-3-tablet">
+    <a href="{{ product.url | prepend: site.baseurl }}">
+      <div class="card">
+        {% if product.image %}
+        <div class="card-image">
+          <figure class="image is-3by3">
+            <img src="{{ product.image }}" alt="{{ product.title }}" />
+          </figure>
+        </div>
+        {% endif %}
+        <div class="card-content">
+          <p class="title is-6">{{ product.title }}</h2>
+          <p class="subtitle is-6">{{ product.subtitle }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
