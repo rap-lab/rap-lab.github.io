@@ -1,6 +1,6 @@
 - name: Research
   link: /research/
-  dropdown_from_tags: true
+  # dropdown_from_tags: true
 - name: Publications
   link: /publications
 - name: Team
