@@ -1,5 +1,5 @@
 ---
-title: Zhongqiang Ren
+title: Zhongqiang (Richard) Ren
 subtitle: Assistant Professor
 job_title: Assistant Professor
 category: lab_head 

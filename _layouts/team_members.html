@@ -31,9 +31,9 @@ show_sidebar: false
 {% endfor %}
 </div>
 
-<!-- <hr>
-<h1 style="font-size:35px;">Scientists & Postdocs</h1>
-<br> -->
+<hr>
+<h1 style="font-size:35px;">Postdocs & Students</h1>
+<br>
 
 <div class="columns is-multiline">
 {% assign sorted_scientists = site.team | where:"category","scientist" %}
@@ -61,9 +61,9 @@ show_sidebar: false
 </div>
 
 
-<hr>
+<<!-- hr>
 <h1 style="font-size:30px;">PhD Students</h1>
-<br>
+<br> -->
 
 <div class="columns is-multiline">
 {% assign sorted_persons = site.team | where:"category","phd_student" %}
@@ -88,9 +88,10 @@ show_sidebar: false
 {% endfor %}
 </div>
 
-<hr>
+<!-- <hr>
 <h1 style="font-size:30px;">Master's Students</h1>
-<br>
+<br> -->
+
 <div class="columns is-multiline">
   {% assign sorted_persons = site.team | where:"category","master_student" %}
   {% for person in sorted_persons %}
@@ -114,9 +115,9 @@ show_sidebar: false
   {% endfor %}
   </div>
 
-<hr>
+<<!-- hr>
 <h1 style="font-size:30px;">Others</h1>
-<br>
+<br> -->
 
 {% assign sorted_products = site.team | where:"category","undergraduate" %}
 {% if sorted_products.size > 0 %}
@@ -218,9 +219,9 @@ show_sidebar: false
 </div>
 
 
-<hr>
+<!-- <hr>
 <h1 style="font-size:30px;">Alumni</h1>
-<br>
+<br> -->
 
 <div class="columns is-multiline">
   {% assign sorted_products = site.team | where:"category","alumni" %}
