@@ -6,15 +6,3 @@ hero_height: is-small
 show_sidebar: true
 hide_footer: false
 ---
-
-# 2023
-{% bibliography --query @*[year=2023] %}
-
-# 2022
-{% bibliography --query @*[year=2022] %}
-
-# 2021
-{% bibliography --query @*[year=2021] %}
-
-# 2017
-{% bibliography --query @*[year=2017] %}
