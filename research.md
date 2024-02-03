@@ -6,5 +6,6 @@ show_sidebar: false
 hide_footer: false
 sort: subtitle
 hero_height: is-small
+tag_sort: true
 ---
 
