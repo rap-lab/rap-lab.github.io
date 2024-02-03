@@ -1,7 +1,7 @@
 ---
 title: Research
 subtitle: We develop planning algorithms and deploy them on robots 
-layout: blog
+layout: posts
 show_sidebar: false
 hide_footer: false
 sort: subtitle

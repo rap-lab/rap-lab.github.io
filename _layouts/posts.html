@@ -4,7 +4,9 @@ layout: default
 
 {{ content }}
 
-{% assign posts = site.posts | where:"categories", page.category | where: 'published', 'true' %}
+<!-- {% assign posts = site.posts | where:"categories", page.category | where: 'published', 'true' %} -->
+
+{% assign posts = site.posts | where:"categories","research" %}
 {% assign tags =  posts | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 
 
