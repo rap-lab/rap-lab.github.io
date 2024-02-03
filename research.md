@@ -1,9 +1,10 @@
 ---
-layout: posts
 title: Research
-hero_height: is-small
 subtitle: We develop planning algorithms and deploy them on robots
-hide_footer: false
+layout: posts
 show_sidebar: false
-tag_sort: true
+hide_footer: false
+sort: subtitle
+hero_height: is-small
 ---
+
