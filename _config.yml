@@ -32,6 +32,7 @@ plugins:
   - jekyll-scholar
   - kramdown-parser-gfm
   - jekyll-redirect-from
+  - jekyll-multiple-languages-plugin
 
 exclude:
   - Gemfile
@@ -44,6 +45,8 @@ exclude:
   - vendor/ruby/
 
 livereload: true
+
+languages: ["en", "cn"]
 
 sass:
   style: compressed

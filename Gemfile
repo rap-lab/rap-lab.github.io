@@ -12,6 +12,7 @@ group :jekyll_plugins do
     gem "jekyll-seo-tag"
     gem "jekyll-scholar"
     gem "jekyll-redirect-from", "~> 0.16"
+    gem 'jekyll-multiple-languages-plugin'
 end
 
 gem "webrick", "~> 1.7"
