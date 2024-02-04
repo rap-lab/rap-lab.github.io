@@ -1,8 +1,8 @@
-- name: Research
+- name: Research(科研)
   link: /research
-- name: Publications
+- name: Publications(发表)
   link: /publications
-- name: Team
+- name: Team(团队)
   link: /team
   # dropdown:
     # - name: Current Members
