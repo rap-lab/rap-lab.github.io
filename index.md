@@ -1,5 +1,5 @@
 ---
-title: RAP Lab
+title: RAP Lab (“摇滚”实验室)
 subtitle: Robotics Autonomy and Planning Lab (机器人自主规划实验室)
 layout: page
 show_sidebar: false
