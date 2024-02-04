@@ -1,24 +1,29 @@
 % Add new pubs at the beginning of this file, add url, video, code if available.
 
-@inproceedings{ren23bbmocbs,
-  title={Binary Branching Multi-Objective Conflict-Based Search for Multi-Agent Path Finding},
-  author={Ren, Zhongqiang and Li, Jiaoyang and Zhang, Han and Koenig, Sven and Rathinam, Sivakumar and Choset, Howie},
-  booktitle={Proceedings of the International Conference on Automated Planning and Scheduling},
-  volume={33},
-  DOI={10.1609/icaps.v33i1.27214},
-  url={https://rap-lab.github.io/documents/publications/ren23_BBMOCBS_ICAPS23.pdf},
-  number={1},
+@ARTICLE{ren23cbssTRO,
+  author={Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  journal={IEEE Transactions on Robotics}, 
+  title={{CBSS}: A New Approach for Multiagent Combinatorial Path Finding}, 
   year={2023},
-  month={July},
-  pages={361-369}
+  volume={39},
+  number={4},
+  pages={2669-2683},
+  keywords={Robots;Task analysis;Sequential analysis;Search problems;Collision avoidance;Planning;Costs;Multiagent path finding (MAPF);path planning for multiple mobile robots or agents;traveling salesman problem (TSP)},
+  doi={10.1109/TRO.2023.3266993},
+  url={https://rap-lab.github.io/documents/publications/ren23_CBSS_TRO.pdf}
 }
 
-@article{nandy2023heuristic,
-  title={Heuristic Search for Path Finding with Refuelling},
-  author={Nandy, Anushtup and Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
-  journal={arXiv preprint arXiv:2309.10796},
+@ARTICLE{ren23moesTRO,
+  author={Ren, Zhongqiang and Srinivasan, Akshaya Kesarimangalam and Vundurthy, Bhaskar and Abraham, Ian and Choset, Howie},
+  journal={IEEE Transactions on Robotics}, 
+  title={A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search}, 
   year={2023},
-  url={https://rap-lab.github.io/documents/publications/anushtup24refuel.pdf}
+  volume={39},
+  number={5},
+  pages={3452-3463},
+  keywords={Trajectory;Robots;Optimization;Measurement;Search problems;Task analysis;Visualization;Ergodic search;motion and path planning;optimization and optimal control},
+  doi={10.1109/TRO.2023.3284358},
+  url={https://rap-lab.github.io/documents/publications/ren23_MOES_TRO.pdf}
 }
 
 @ARTICLE{ren23erca,
@@ -32,6 +37,28 @@
   keywords={Costs;Shortest path problem;Runtime;Bidirectional control;Search problems;Heuristic algorithms;Approximation algorithms;Path planning;heuristic search;shortest path},
   doi={10.1109/TITS.2023.3293039},
   url={https://rap-lab.github.io/documents/publications/ren23_ERCA_TITS.pdf}
+}
+
+@inproceedings{ren23bbmocbs,
+  title={Binary Branching Multi-Objective Conflict-Based Search for Multi-Agent Path Finding},
+  author={Ren, Zhongqiang and Li, Jiaoyang and Zhang, Han and Koenig, Sven and Rathinam, Sivakumar and Choset, Howie},
+  booktitle={Proceedings of the International Conference on Automated Planning and Scheduling},
+  year={2023},
+  month={July},
+  volume={33},
+  number={1},
+  pages={361-369},
+  DOI={10.1609/icaps.v33i1.27214},
+  url={https://ojs.aaai.org/index.php/ICAPS/article/view/27214},
+  url={https://rap-lab.github.io/documents/publications/ren23_BBMOCBS_ICAPS23.pdf}
+}
+
+@article{nandy2023heuristic,
+  title={Heuristic Search for Path Finding with Refuelling},
+  author={Nandy, Anushtup and Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  journal={arXiv preprint arXiv:2309.10796},
+  year={2023},
+  url={https://rap-lab.github.io/documents/publications/anushtup24refuel.pdf}
 }
 
 @article{cao23explore,
@@ -48,8 +75,6 @@ eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.adf0970},
 abstract = {We propose a dual-resolution scheme to achieve time-efficient autonomous exploration with one or many robots. The scheme maintains a high-resolution local map of the robot’s immediate vicinity and a low-resolution global map of the remaining areas of the environment. We believe that the strength of our approach lies in this low- and high-resolution representation of the environment: The high-resolution local map ensures that the robots observe the entire region in detail, and because the local map is bounded, so is the computation burden to process it. The low-resolution global map directs the robot to explore the broad space and only requires lightweight computation and low bandwidth to communicate among the robots. This paper shows the strength of this approach for both single-robot and multirobot exploration. For multirobot exploration, we also introduce a “pursuit” strategy for sharing information among robots with limited communication. This strategy directs the robots to opportunistically approach each other. We found that the scheme could produce exploration paths with a bounded difference in length compared with the theoretical shortest paths. Empirically, for single-robot exploration, our method produced 80\% higher time efficiency with 50\% lower computational runtimes than state-of-the-art methods in more than 300 simulation and real-world experiments. For multirobot exploration, our pursuit strategy demonstrated higher exploration time efficiency than conventional strategies in more than 3400 simulation runs with up to 20 robots. Last, we discuss how our method was deployed in the DARPA Subterranean Challenge and demonstrated the fastest and most complete exploration among all teams. A dual-resolution framework for autonomous exploration delivers planning advancement and computational efficiency.}
 }
 
-
-
 @INPROCEEDINGS{Akshaya2023mamoes,
   author={Srinivasan, Akshaya Kesarimangalam and Gutow, Geordan and Ren, Zhongqiang and Abraham, Ian and Vundurthy, Bhaskar and Choset, Howie},
   booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
@@ -63,17 +88,6 @@ abstract = {We propose a dual-resolution scheme to achieve time-efficient autono
   url={https://rap-lab.github.io/documents/publications/2023_IROS_MAMOES_Akshaya.pdf}
 }
 
-@ARTICLE{ren23moesTRO,
-  author={Ren, Zhongqiang and Srinivasan, Akshaya Kesarimangalam and Vundurthy, Bhaskar and Abraham, Ian and Choset, Howie},
-  journal={IEEE Transactions on Robotics}, 
-  title={A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={1-12},
-  doi={10.1109/TRO.2023.3284358}
-}
-
 @ARTICLE{yan23muitare,
   author={Yan, Jingtian and Lin, Xingqiao and Ren, Zhongqiang and Zhao, Shiqi and Yu, Jieqiong and Cao, Chao and Yin, Peng and Zhang, Ji and Scherer, Sebastian},
   journal={IEEE Robotics and Automation Letters}, 
@@ -84,19 +98,6 @@ abstract = {We propose a dual-resolution scheme to achieve time-efficient autono
   pages={4299-4306},
   doi={10.1109/LRA.2023.3281262},
   url={https://rap-lab.github.io/documents/publications/yan23_MUITARE_RAL.pdf}
-}
-
-@ARTICLE{ren23cbssTRO,
-  author={Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
-  journal={IEEE Transactions on Robotics}, 
-  title={{CBSS}: A New Approach for Multiagent Combinatorial Path Finding}, 
-  year={2023},
-  volume={39},
-  number={4},
-  pages={2669-2683},
-  keywords={Robots;Task analysis;Sequential analysis;Search problems;Collision avoidance;Planning;Costs;Multiagent path finding (MAPF);path planning for multiple mobile robots or agents;traveling salesman problem (TSP)},
-  doi={10.1109/TRO.2023.3266993},
-  url={https://rap-lab.github.io/documents/publications/ren23_CBSS_TRO.pdf}
 }
 
 @inproceedings{ren23matcpf,
