@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Publications (发表)
+title: Publications
 subtitle: We publish in top journals and venues in robotics <br>研究成果发表在机器人顶会顶刊
 hero_height: is-small
 show_sidebar: true

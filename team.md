@@ -1,5 +1,5 @@
 ---
-title: Current Members (当前成员)
+title: Current Members
 subtitle: Our team is excellent
 layout: team_members
 show_sidebar: false

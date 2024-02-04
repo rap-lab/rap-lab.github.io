@@ -1,5 +1,5 @@
 ---
-title: Research (科研)
+title: Research
 subtitle: We develop planning algorithms and deploy them on robots <br>算法研究，真机部署
 layout: posts
 show_sidebar: false
