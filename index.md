@@ -9,7 +9,7 @@ hero_height: is-medium
 hero_image: todo.png
 ---
 
-# About Us
+# About Us (简介)
 
 We are part of the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
 
@@ -20,9 +20,9 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 我们隶属于[上海交通大学](https://www.sjtu.edu.cn/)[密西根学院](https://www.ji.sjtu.edu.cn/)。
 
-我们研究**机器人学，自主系统，规划**，尤其关注**单机器人和多机器人**中的**运动规划和路径规划**问题。
-我们利用运动规划，多机器人路径规划，组合搜索，最优控制相关领域的最新成果，同时推动这些领域的发展。
-我们研究的问题在计算复杂度上往往是NP-hard问题。我们的研究利用这些问题中的结构来设计算法，平衡计算速度和求解质量，并提供严格的理论保证，并最终部署在实体机器人上。
+我们研究**机器人学，自主系统，智能规划**，尤其关注**单机器人和多机器人**中的**运动规划和路径规划**问题。
+我们的研究利用运动规划，多机器人路径规划，组合搜索，最优控制相关领域的相关技术，同时推动这些领域的发展。
+我们研究的问题在计算复杂度上往往是NP-hard问题。我们的研究利用这些问题中的结构来设计算法，平衡计算速度和求解质量，提供严格的理论保证，并最终部署在实体机器人上。
 我们研究的问题广泛存在于仓储物流，智慧生产，搜索救援等应用中。
 
 # Highlights
