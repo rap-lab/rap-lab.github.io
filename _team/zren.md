@@ -31,6 +31,10 @@ news:
   height: 1200
 ---
 
+- Office: 502
+- Tel: +86-21-3420-6045 Ext.5021
+- Email: zhongqiang.ren@sjtu.edu.cn
+
 Dr. Ren is an [Assistant Professor](https://www.ji.sjtu.edu.cn/about/faculty-staff/faculty-directory/faculty-detail/75997/) at the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/), [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
 Prior to that, he received his dual bachelor degrees from both [Tongji University](https://www.tongji.edu.cn/) in China and [FH Aachen](https://www.fh-aachen.de/en/) in Germany. He obtained his master and PhD from [Carnegie Mellon University](https://www.cmu.edu/) in USA, where he also served as a Post-doc. He co-founded a startup called [BITO Robotics](https://bitorobotics.com/en/) and served as the Chief Technology Officer, where he was deeply involved in developing and deploying fleets of mobile robots in factories to transport materials. His research focuses on planning for multiple robots, motion planning, and autonomous systems. His research has led to more than 20 publications in top journals and venues in Robotics and AI such as Science Robotics and IEEE Transaction on Robotics.
 
