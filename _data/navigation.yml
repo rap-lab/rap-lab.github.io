@@ -9,13 +9,13 @@
     #   link: /current-members/
     # - name: Alumni
     #   link: /alumni/
-- name: Datasets
-  link: /datasets
-- name: Teaching
-  link: /teaching
-- name: Outreach
-  link: /outreach
-- name: Sponsors
-  link: /sponsors
-- name: Contact
-  link: /contact
+# - name: Datasets
+#   link: /datasets
+# - name: Teaching
+#   link: /teaching
+# - name: Outreach
+#   link: /outreach
+# - name: Sponsors
+#   link: /sponsors
+# - name: Contact
+#   link: /contact
