@@ -9,6 +9,15 @@ hero_height: is-medium
 hero_image: todo.png
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9QZD7Y8D0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D9QZD7Y8D0');
+</script>
+
 # About Us (简介)
 
 We are part of the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
