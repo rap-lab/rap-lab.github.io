@@ -37,7 +37,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
-* \[2024.04\] One [paper](https://rap-lab.github.io/documents/publications/2024_SOCS_RMA.pdf) on Orienteering Problem with Time Varying Reward is accepted to SOCS-2024.
+* \[2024.04\] One [paper](https://rap-lab.github.io/documents/publications/2024_SOCS_RMA.pdf) on the Orienteering Problem with Time Varying Reward is accepted to SOCS-2024.
 
 
 # Highlights
