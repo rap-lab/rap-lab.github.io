@@ -34,6 +34,12 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 我们研究的问题在计算复杂度上往往是NP-hard问题。我们的研究利用这些问题中的结构来设计算法，平衡计算速度和求解质量，提供严格的理论保证，并最终部署在实体机器人上。
 我们研究的问题广泛存在于仓储物流，智慧生产，搜索救援等应用中。
 
+
+# News
+
+* \[2024.04\] One [paper](https://rap-lab.github.io/documents/publications/2024_SOCS_RMA.pdf) on Orienteering Problem with Time Varying Reward is accepted to SOCS-2024.
+
+
 # Highlights
 
 {% assign posts = site.posts | where:"categories","highlights" %}
