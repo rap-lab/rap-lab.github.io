@@ -11,6 +11,7 @@ hide_footer: false
 remove_hero_title: true
 show_sidebar: false
 redirect_from:
+  - /team/zhongqiangren/
   - /team/richardren/
   - /team/zren/
   - /zren

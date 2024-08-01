@@ -11,7 +11,7 @@ hide_footer: false
 remove_hero_title: true
 show_sidebar: false
 redirect_from:
-  - /team/yhzhang
+  - /team/yuanhangzhang
 links:
   # scholar: kKKvRXsAAAAJ
   github: hang0610

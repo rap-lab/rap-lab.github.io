@@ -11,7 +11,7 @@ hide_footer: false
 remove_hero_title: true
 show_sidebar: false
 redirect_from:
-  - /team/szh/
+  - /team/shizhezhao/
 links:
   scholar: aqcs9dIAAAAJ 
   github: eggeek
