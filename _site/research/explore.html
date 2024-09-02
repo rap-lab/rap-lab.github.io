@@ -1,0 +1,568 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Exploration of Unknown Environments <br>未知环境探索 - Robotics Autonomy and Planning Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#cc002b">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Exploration of Unknown Environments 未知环境探索 | Robotics Autonomy and Planning Lab</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Exploration of Unknown Environments 未知环境探索" />
+<meta name="author" content="Zhongqiang Ren" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Planning paths for robots to explore unknown environments" />
+<meta property="og:description" content="Planning paths for robots to explore unknown environments" />
+<link rel="canonical" href="http://localhost:4000/research/explore" />
+<meta property="og:url" content="http://localhost:4000/research/explore" />
+<meta property="og:site_name" content="Robotics Autonomy and Planning Lab" />
+<meta property="og:image" content="http://localhost:4000/img/posts/2024-02-02-explore/fig_sr_explore.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-02T07:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/img/posts/2024-02-02-explore/fig_sr_explore.png" />
+<meta property="twitter:title" content="Exploration of Unknown Environments 未知环境探索" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhongqiang Ren"},"dateModified":"2024-02-02T07:00:00-05:00","datePublished":"2024-02-02T07:00:00-05:00","description":"Planning paths for robots to explore unknown environments","headline":"Exploration of Unknown Environments 未知环境探索","image":"http://localhost:4000/img/posts/2024-02-02-explore/fig_sr_explore.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/explore"},"url":"http://localhost:4000/research/explore"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                Robotics Autonomy and Planning Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/research" class="navbar-item " target="">Research(科研)</a>
+                    
+                
+                    
+                    <a href="/publications" class="navbar-item " target="">Publications(发表)</a>
+                    
+                
+                    
+                    <a href="/team" class="navbar-item " target="">Team(团队)</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  
+        is-small 
+         is-bold is-primary" 
+        >
+    <div class="hero-body">
+        <div class="container">
+            
+                <p class="title is-2" style="color:white;">Exploration of Unknown Environments <br>未知环境探索</p>
+                <p class="subtitle is-3" style="color:white;"></p>
+                <p class="subtitle is-3">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#3f9ba7;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#3f9ba7;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-9">
+                      
+	
+
+
+<!-- Set up the transparent black background for the title -->
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+	
+		
+			
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2024-02-02T07:00:00-05:00">Feb 2, 2024</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			<a href="/team/zren">Zhongqiang Ren</a>
+		
+		</div>
+	</div></p>
+
+    <!-- <h1>Exploration of Unknown Environments <br>未知环境探索</h1> -->
+	<style>
+		.csl-block {
+			font-size: 16px;
+		}
+
+		.csl-title, .csl-author, .csl-event, .csl-editor, .csl-venue {
+			display: block;
+			position: relative;
+			font-size: 15px;
+		}
+
+		.csl-title b {
+			font-weight: 600;
+		}
+
+		.csl-content {
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 20px;
+			max-width: 95%;
+		}
+
+		.bibliography {
+		   list-style-type: none;
+		}
+	</style>
+
+    <p>Autonomous exploration is crucial for applications where environments are often inaccessible or hazardous to humans, such as in search and rescue, surveillance, and planetary exploration. Here, we consider determining paths for one or more robotsto navigate in an a priori unknown environment, such that the robots can be directed to thoroughly sweep their sensors to make a representation, namely, a map, of the target environment. Such a problem is closely related to coverage path planning, which seeks a path that allows sensors to sweep over all objects in an environment. The problem of finding the shortest path to achieve such a complete coverage was shown to be non-deterministic polynomial-time hard (NP-hard). Here, the exploration problem focuses more on discovering the environment and computing the coverage path on the fly. As a result, computing the exploration paths must be performed iteratively and incrementally to process incoming sensor data, which can be more challenging than solving the coverage path planning problem. Sensor noise, state estimation drift, and terrain variation present additional challenges.</p>
+
+<h2 id="dual-resolution-time-efficient-autonomous-exploration">Dual-Resolution Time-Efficient Autonomous Exploration</h2>
+
+<p>We collaborate with <a href="https://frc.ri.cmu.edu/~zhangji/">Prof. Zhang’s group</a> at Carnegie Mellon Univeristy, and developed a two-level approach that efficiently explores an unknown region, where efficiency was measured by both explored volume over time and computational runtime. We validated this approach in several large-scale, complex, and cluttered environments both in simulation and in the real world, including the Subterranean (SubT) Challenge held by the Defense Advanced Research Projects Agency (DARPA). To improve the exploration time efficiency, our dual-resolution framework balances the use of high-resolution information located near the robot and the low-resolution global information across the entire environment. We then further extend the approach for multirobot exploration by bringing forward the “pursuit” strategy forinter-robot communication, where robots opportunistically pursue each other to facilitate communication if the information exchange can lead to faster exploration overall. We provide a theoretical analysis of our scheme and evaluated it both in simulation and in real-world experiments. We analyzed the computational complexity and the optimality gap resulting from the dual-resolution representation, specifically, the difference in length between the paths computed with and without the dual-resolution representation. We demonstrated that the optimality gap is bounded by a constant, independent of the environment size.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-explore/fig_sr_explore2.png" alt="image" />
+  <figcaption>Fig.1 - Single-robot exploration of unknown environments. Figure from <a class="citation" href="#cao23explore">[1]</a>. </figcaption>
+</figure>
+
+<p>Empirically, for single-robot exploration, our method produced 80% higher exploration time efficiency than three other state-of-the-art methods in both physical and simulation experiments with more than 300 runs. Meanwhile, the computational runtime of our method was 50% lower than that of others. For multirobot exploration, our pursuit strategy produced higher exploration time efficiency compared with the conventional rendezvous-based strategies in more than 3400 simulation runs with up to 20 robots. More details can be found in <a class="citation" href="#cao23explore">[1]</a> or <a href="https://www.cmu-exploration.com/">this web</a>.</p>
+
+<h2 id="with-unknown-initial-poses">With Unknown Initial Poses</h2>
+
+<p>In collaboration with <a href="https://www.cityu.edu.hk/mne/people/academic-staff/prof-yin-peng">Prof. Yin</a> We then further consider the multi-robot exploration where the robots have unknown initial poses. In other words, the robots know neither their global coordinates nor the relative pose between any pair of them. This problem requires both quickly exploring the environments and robustly merging the sub-maps built by the agents. Most existing exploration strategies directly merge two sub-maps built by different agents when a single frame observation is matched, which can lead to incorrect merging due to the false-positive detection of the overlap and is thus not robust. In the meanwhile, some recent place recognition methods use sequence matching for robust data association. However, naively applying these sequence matching methods to multi-agent exploration may require one agent to repeat a large amount of another agent’s history trajectory so that a sequence of matched observation can be established, which reduces the overall exploration time efficiency. To intelligently balance the robustness of sub-map merging and exploration efficiency, we develop a new approach for lidar-based multiagent exploration, which can direct one agent to repeat another agent’s trajectory in an adaptive manner based on the quality indicator of the sub-map merging process. Additionally, our approach extends the recent single-agent hierarchical exploration strategy to multiple agents in a cooperative manner for agents whose sub-maps are merged, to improve exploration efficiency. Our experiments show that our approach is up to 50% more efficient than the baselines while merging sub-maps robustly. More details can be found in <a class="citation" href="#yan23muitare">[2]</a>.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-explore/fig_muitare.png" alt="image" style="width:80%" />
+  <figcaption>Fig.2 - Multi-robot exploration with unknown initial poses. </figcaption>
+</figure>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="cao23explore">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Representation granularity enables time-efficient autonomous exploration in large, complex worlds</b>. </div><div class="csl-block csl-author">C. Cao, H. Zhu, Z. Ren, H. Choset, J. Zhang.</div><div class="csl-block csl-event"><i>Science Robotics</i>, vol. 8, no. 80, p. eadf0970, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="togglecao23explore()">bibtex</button>
+
+<script>
+    function togglecao23explore() {
+        var x= document.getElementById('acao23explore');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+<button class="button3" onclick="toggle2cao23explore()">abstract</button>
+
+
+<script>
+    function toggle2cao23explore() {
+        var x= document.getElementById('bcao23explore');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1126/scirobotics.adf0970"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://www.science.org/doi/abs/10.1126/scirobotics.adf0970"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="acao23explore" style="display:none"><pre>@article{cao23explore,
+  author = {Cao, C. and Zhu, H. and Ren, Z. and Choset, H. and Zhang, J.},
+  title = {Representation granularity enables time-efficient autonomous exploration in large, complex worlds},
+  journal = {Science Robotics},
+  volume = {8},
+  number = {80},
+  pages = {eadf0970},
+  year = {2023},
+  doi = {10.1126/scirobotics.adf0970},
+  url = {https://www.science.org/doi/abs/10.1126/scirobotics.adf0970},
+  eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.adf0970}
+}
+</pre></div>
+<!-- <div id="bcao23explore" style="display:none"><pre>We propose a dual-resolution scheme to achieve time-efficient autonomous exploration with one or many robots. The scheme maintains a high-resolution local map of the robot’s immediate vicinity and a low-resolution global map of the remaining areas of the environment. We believe that the strength of our approach lies in this low- and high-resolution representation of the environment: The high-resolution local map ensures that the robots observe the entire region in detail, and because the local map is bounded, so is the computation burden to process it. The low-resolution global map directs the robot to explore the broad space and only requires lightweight computation and low bandwidth to communicate among the robots. This paper shows the strength of this approach for both single-robot and multirobot exploration. For multirobot exploration, we also introduce a “pursuit” strategy for sharing information among robots with limited communication. This strategy directs the robots to opportunistically approach each other. We found that the scheme could produce exploration paths with a bounded difference in length compared with the theoretical shortest paths. Empirically, for single-robot exploration, our method produced 80% higher time efficiency with 50% lower computational runtimes than state-of-the-art methods in more than 300 simulation and real-world experiments. For multirobot exploration, our pursuit strategy demonstrated higher exploration time efficiency than conventional strategies in more than 3400 simulation runs with up to 20 robots. Last, we discuss how our method was deployed in the DARPA Subterranean Challenge and demonstrated the fastest and most complete exploration among all teams. A dual-resolution framework for autonomous exploration delivers planning advancement and computational efficiency.</pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="yan23muitare">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>MUI-TARE: Cooperative Multi-Agent Exploration With Unknown Initial Position</b>. </div><div class="csl-block csl-author">Jingtian Yan, Xingqiao Lin, Zhongqiang Ren, Shiqi Zhao, Jieqiong Yu, Chao Cao, Peng Yin, Ji Zhang, Sebastian Scherer.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 8, no. 7, pp. 4299–4306, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleyan23muitare()">bibtex</button>
+
+<script>
+    function toggleyan23muitare() {
+        var x= document.getElementById('ayan23muitare');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2yan23muitare() {
+        var x= document.getElementById('byan23muitare');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2023.3281262"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/yan23_MUITARE_RAL.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="ayan23muitare" style="display:none"><pre>@article{yan23muitare,
+  author = {Yan, Jingtian and Lin, Xingqiao and Ren, Zhongqiang and Zhao, Shiqi and Yu, Jieqiong and Cao, Chao and Yin, Peng and Zhang, Ji and Scherer, Sebastian},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {MUI-TARE: Cooperative Multi-Agent Exploration With Unknown Initial Position},
+  year = {2023},
+  volume = {8},
+  number = {7},
+  pages = {4299-4306},
+  doi = {10.1109/LRA.2023.3281262},
+  url = {https://rap-lab.github.io/documents/publications/yan23_MUITARE_RAL.pdf}
+}
+</pre></div>
+<!-- <div id="byan23muitare" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>
+
+</div>
+
+<div class="tags">
+    
+    <span class="tag is-primary">multi-agent_planning</span>
+    
+    <span class="tag is-primary">exploration</span>
+    
+</div>
+
+
+
+                </div>
+                
+                <div class="column is-3-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    
+        
+            <div class="column is-12">
+                <a href="/research/tcpf">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2024-08-12-tcpf/tcpf_motorcade.jpg" alt="Teamwise Cooperation & Traffic Coordination<br>分组合作与交叉口多机协同" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Teamwise Cooperation & Traffic Coordination<br>分组合作与交叉口多机协同</div>
+            
+            <p>Multi-Agent Path Finding (MAPF) computes a set of collision-free paths for multiple agents from t...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Aug 12, 2024</p>
+    </footer>
+</div>
+</a>
+
+            </div>
+            
+        
+        
+    
+        
+            <div class="column is-12">
+                <a href="/research/mcpf">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2024-02-04-mcpf/fig_mcpf_rviz.png" alt="Multi-Agent Combinatorial Path Finding <br>多机组合路径规划" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Multi-Agent Combinatorial Path Finding <br>多机组合路径规划</div>
+            
+            <p>Multi-robot systems prevail over the past decade. In particular, these systems provide an intelli...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 4, 2024</p>
+    </footer>
+</div>
+</a>
+
+            </div>
+            
+        
+        
+    
+        
+            <div class="column is-12">
+                <a href="/research/momapf">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2024-02-03-momapf/fig_mocbs.png" alt="Multi-Objective Multi-Agent Path Finding <br>多目标多机路径规划" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Multi-Objective Multi-Agent Path Finding <br>多目标多机路径规划</div>
+            
+            <p>Multi-Agent Path Finding (MAPF) computes a set of collision-free paths for multiple agents connec...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 3, 2024</p>
+    </footer>
+</div>
+</a>
+
+            </div>
+            
+        
+        
+            
+</div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/left-down-logo.png" alt="Left Down Logo" style="height:60px;"></div>
+          <div id="block2">
+            <center>
+
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <!-- <a class="button" itemprop="facebook" href="https://www.facebook.com/airlabcmu/" target="_blank">
+                <i class="fab fa-facebook fa-lg" style="height:100%;"></i>
+              </a> -->
+              <a class="button" itemprop="scholar" href="https://scholar.google.com/citations?user=kKKvRXsAAAAJ&hl=en&oi=ao" target="_blank">
+                <i class="ai ai-google-scholar ai-2x"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/rap-lab-org" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <!-- <a class="button" itemprop="bitbucket" href="https://bitbucket.org/castacks/" target="_blank"> -->
+                <!-- <i class="fab fa-bitbucket fa-lg"></i> -->
+              <!-- </a> -->
+              <br>
+              <br>
+              <!-- <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p> -->
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/right-down-logo.png" alt="Right Down Logo" style="float:right;height:80px;"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>

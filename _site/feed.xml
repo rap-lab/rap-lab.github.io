@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-02T18:28:31-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Robotics Autonomy and Planning Lab</title><subtitle>Robotics Autonomy and Planning Lab</subtitle><entry><title type="html">Teamwise Cooperation &amp;amp; Traffic Coordination分组合作与交叉口多机协同</title><link href="http://localhost:4000/research/tcpf" rel="alternate" type="text/html" title="Teamwise Cooperation &amp;amp; Traffic Coordination分组合作与交叉口多机协同" /><published>2024-08-12T08:00:00-04:00</published><updated>2024-08-12T08:00:00-04:00</updated><id>http://localhost:4000/research/tcpf</id><content type="html" xml:base="http://localhost:4000/research/tcpf"><![CDATA[<p>Multi-Agent Path Finding (MAPF) computes a set of collision-free paths for multiple agents from their respective starting locations to destinations. This work considers a generalization of MA-PF called Multi-Agent Teamwise Cooperative Path Finding (TCPF), where agents are grouped as multiple teams and each team has its own objective to be minimized. This work considers a generalization of MAPF, called Multi-Agent Teamwise Cooperative Path Finding (TCPF), where agents are grouped into multiple teams, and each team optimizes its own objective. Specifically, each agent has its own start and goal and belongs to at least one team. Every team has its own objective such as min-sum or min-max. As there are more than one teams in general, TCPF optimizes an objective vector, where each element of the vector corresponds to the objective of a team. For vector optimization, in general, there is no single solution that simultaneously optimizes all objectives. The problem thus seeks a set of Pareto-optimal solutions.</p>
+
+<figure>
+  <img src="/img/posts/2024-08-12-tcpf/tcpf_motorcade.jpg" alt="image" />
+  <figcaption>Fig.1 - An example of TCPF in intersection coordination of
+connected autonomous vehicles. (a) A motorcade (marked in red
+box, team 1) traverse the intersection shared with other vehicles
+(team 2). Both teams have the min-sum objective. (b) Pareto-
+optimal solutions (collision-free paths), where the motorcade can
+have priority, get cut in by others, or make a detour.</figcaption>
+</figure>
+
+<p>A motivating example of TCPF can be found in intersection coordination of connected autonomous vehicles. See Fig. 1 for an example, where a motorcade goes through an intersection that is shared with vehicles from other directions. The motorcade and all other vehicles naturally form two teams, and each team seeks to minimize their own traversal time through the intersection. The motion coordination has to trade the traversal time of one team for the other, and the set of Pareto-optimal solutions unveils trade-offs between the teams (Fig. 2), which can potentially support the intelligent decision making in traffic management.</p>
+
+<figure>
+  <img src="/img/posts/2024-08-12-tcpf/tcpf_result.jpg" alt="image" />
+  <figcaption>Fig.2 - Simulation of an intersection. (a) A motorcade (agent 1-3, team 1) goes through the intersection shared by other vehicles (agent 4-7, team 2). (b) A graph representation of the workspace showing the start and goal of each vehicle. (c) Visualization of the Pareto-optimal solutions (collision-free paths). The motorcade (team 1) has the objective value ranging between 45 and 52, while the public (team 2) has the objective value ranging from 76 and 83.</figcaption>
+</figure>
+
+<p>We formulated the TCPF problem, developed planners based on M* and CBS to solve it, and analyzed the properties of these planners <a class="citation" href="#ren23matcpf">[1]</a>. For the experiments, we connect TCPF with traffic management in scenarios where all vehicles are fully autonomous, conencted and can be coordinated in a centralized fashion <a class="citation" href="#2024_IROS_TCCBSt">[2]</a>. We also consider a special case of TCPF, a bi-objective MAPF problem that seeks to simultaneously minimize both the min-sum and the min-max objective of all agents. Here, min-sum and min-max are two widely used objective functions in MAPF, each with its own set of specialized algorithms. Our approach can solve it to optimize both objectives simultaneously.</p>
+
+<video id="demo1" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+  <source src="/img/posts/2024-08-12-tcpf/demo1.jpg" type="video/mp4" />
+</video>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren23matcpf">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Search Algorithms for Multi-Agent Teamwise Cooperative Path Finding</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Chaoran Zhang, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>2023 IEEE International Conference on Robotics and Automation (ICRA)</i>, pp. 1407–1413, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren23matcpf()">bibtex</button>
+
+<script>
+    function toggleren23matcpf() {
+        var x= document.getElementById('aren23matcpf');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren23matcpf() {
+        var x= document.getElementById('bren23matcpf');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/ICRA48891.2023.10160864"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren23_TCMAPF_icra23.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aren23matcpf" style="display:none"><pre>@inproceedings{ren23matcpf,
+  author = {Ren, Zhongqiang and Zhang, Chaoran and Rathinam, Sivakumar and Choset, Howie},
+  booktitle = {2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  title = {Search Algorithms for Multi-Agent Teamwise Cooperative Path Finding},
+  year = {2023},
+  volume = {},
+  number = {},
+  pages = {1407-1413},
+  keywords = {Automation;Planning},
+  doi = {10.1109/ICRA48891.2023.10160864},
+  url = {https://rap-lab.github.io/documents/publications/ren23_TCMAPF_icra23.pdf}
+}
+</pre></div>
+<!-- <div id="bren23matcpf" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="2024_IROS_TCCBSt">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Multi-Agent Teamwise Cooperative Path Finding and Traffic Intersection Coordination</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Yilin Cai, Hesheng Wang.</div><div class="csl-block csl-event"><i>2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, 2024.</div></div></span>
+    <br />
+<button class="button0" onclick="toggle2024_IROS_TCCBSt()">bibtex</button>
+
+<script>
+    function toggle2024_IROS_TCCBSt() {
+        var x= document.getElementById('a2024_IROS_TCCBSt');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle22024_IROS_TCCBSt() {
+        var x= document.getElementById('b2024_IROS_TCCBSt');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="a2024_IROS_TCCBSt" style="display:none"><pre>@inproceedings{2024_IROS_TCCBSt,
+  title = {Multi-Agent Teamwise Cooperative Path Finding and Traffic Intersection Coordination},
+  author = {Ren, Zhongqiang and Cai, Yilin and Wang, Hesheng},
+  booktitle = {2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year = {2024},
+  organization = {IEEE},
+  url = {https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf}
+}
+</pre></div>
+<!-- <div id="b2024_IROS_TCCBSt" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Yilin Cai, Zhongqiang Ren</name></author><category term="research" /><category term="multi-agent_planning" /><category term="multi-objective_planning" /><summary type="html"><![CDATA[Path Planning for Multiple Agents among Different Teams]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-08-12-tcpf/tcpf_motorcade.jpg" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-08-12-tcpf/tcpf_motorcade.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-Agent Combinatorial Path Finding 多机组合路径规划</title><link href="http://localhost:4000/research/mcpf" rel="alternate" type="text/html" title="Multi-Agent Combinatorial Path Finding 多机组合路径规划" /><published>2024-02-04T07:00:00-05:00</published><updated>2024-02-04T07:00:00-05:00</updated><id>http://localhost:4000/research/mcpf</id><content type="html" xml:base="http://localhost:4000/research/mcpf"><![CDATA[<p>Multi-robot systems prevail over the past decade. In particular, these systems provide an intelligent and automated solution for material transportation and information collection in smart warehouse, unmanned factories, automated ports, and many other potential scenarios.
+A fundamental problem in these applications is to tell the robots where they should go and how to arrive their target locations as quick as possible, namely, plan collision-free paths for the robots while minimizing their arrival times.</p>
+
+<figure>
+  <img src="/img/posts/2024-02-04-mcpf/fig_mcpf_eg.png" alt="image" style="width:30%" />
+  <figcaption>Fig.1 - A toy example of Multi-Agent Combinatorial Path Finding (MCPF). Squares are intermediate target locations and stars are final goal locations. The color of a target indicates the assignment constraints, i.e., the subset of agents that are capable of executing the task at that target location.</figcaption>
+</figure>
+
+<h2 id="exact-algorithms-for-mcpf">Exact Algorithms for MCPF</h2>
+
+<p>Conventionally, Multi-Agent Path Finding (MAPF) seeks an ensemble of collision-free paths for multiple agents from their respective start locations to their respective goal locations while minimizing a cost function defined over the paths. Here, we consider a generalization of MAPF where the agents must also visit a given set of intermediate target locations before reaching their goals. We refer to this generalization as Multi-Agent Combinatorial Path Finding (MCPF), which aims to find “start-target-goal” paths for the agents rather than the “start-goal” paths as in MAPF. MCPF is quite challenging as it requires both collision avoidance between agents (as present in MAPF), and target sequencing, i.e., solving Multiple Traveling Salesman Problem (MTSP) to specify the allocation and visiting orders of targets for all agents. MCPF requires handling both collision avoidance and target sequencing simultaneously, which has rarely been addressed before by MAPF or MTSP research. Both the MTSP and the MAPF are NP-hard to solve to optimality, and so is MCPF.</p>
+
+<figure>
+  <img src="/img/posts/2024-02-04-mcpf/fig_mcpf_grid.gif" alt="" />
+  <figcaption>Fig.2 - A visualization of the solution paths to MCPF.</figcaption>
+</figure>
+
+<p>To handle the challenges, we develop a family of algorithms <a class="citation" href="#ren23cbssTRO">[1], [2]</a> to find optimal, bounded sub-optimal and sub-optimal solutions to MCPF by leveraging the recent advances in both MAPF and MTSP. The main idea behind our approaches is to interleave MTSP and MAPF approaches in a princiipled way in order to provide solution quality guarantees. Our approach alternates between generating target sequences for the robots by (i) solving a MTSP where the collision avoidance constraint is relaxed, and (ii) generating collision-free paths for agents while fixing the target sequences. We instantiate this idea within the framework of dynamic programming and branch and bound, which leads to CBSS <a class="citation" href="#ren23cbssTRO">[1]</a> and MS* <a class="citation" href="#ren21ms">[2]</a>, exact algorithms that can find optimal solutions for MCPF.</p>
+
+<figure>
+  <img src="/img/posts/2024-02-04-mcpf/fig_rbtMCPF.gif" alt="" style="size:120%" />
+  <figcaption>Fig.3 - Deployment on mobile robots for verification.</figcaption>
+</figure>
+
+<h2 id="bounded-sub-optimal-approach-for-mcpf">Bounded Sub-optimal Approach for MCPF</h2>
+
+<p>TODO</p>
+
+<h2 id="mcpf-with-heterogeneous-task-duration">MCPF with Heterogeneous Task Duration</h2>
+
+<p>So far, our problem formulation and approaches simply direct the agent to visit the targets without considering the <em>task duration</em>, i.e., the amount of time needed for an agent to execute the task (such as picking an item) at a target location. In other words, when a robot reaches a target location to execute the task there, it takes time for the robot to finish the task, and during this period, the robot has to occupy that target location and thus blocks the paths of other agents. The inclusion of task duration further complicates the problem. When sequencing the targets, the task duration must be considered when solving the TSPs to optimally allocating the targets and finding the visiting order. Furthermore, task duration can be heterogeneous with respect to the agents and targets: different agents may take different duration for the task at the same target, and for the same agent, different targets may require different duration.</p>
+
+<figure>
+  <img src="/img/posts/2024-05-14-mcpf-d/fig_mcpf-d_1.gif" alt="" />
+  <figcaption>Fig.4 - Comparison of the proposed two methods on MCPF-D.</figcaption>
+</figure>
+
+<p>To tackle this challenge, we develop two methods.
+The first method post-processes the paths planned by any MCPF planner to include the task duration and has no solution optimality guarantee.
+It builds a temporal planning graph (TPG) that captures the precedence requirement between the waypoints along the agents’ paths, and then add the task duration to the target locations while maintaining the precedence requirement to avoid agent-agent collision.
+While being able to take advantage of any existing planner for MCPF, this first method only finds a sub-optimal solution to MCPF-D and the solution cost can be far away from the true optimum especially in the presence of large task duration.
+We instantiate this method by using our prior CBSS as the MCPF planner and name the resulting algorithm CBSS-TPG.</p>
+
+<p>To find an optimal solution for MCPF-D, we develop our second method called Conflict-Based Steiner Search with Task Duration (CBSS-D), which is similar to CBSS by interleaving target sequencing and path planning.
+Here, CBSS-D needs to consider task duration during planning, and there are two main differences between CBSS-D and CBSS.
+First, CBSS-D needs to solve TSPs with task duration to find optimal target sequences for the agents to visit, and thus modifies the target sequencing part in CBSS.
+Second, when an agent-agent collision is detected during path planning, CBSS-D introduces a new branching rule, which is based on the task duration, to resolve the collision more efficiently than using the basic branching rule in CBSS.
+The numerical and simulation results show that our methods can handle up to 20 agents and 50 targets in the presence of task duration, and can execute the paths subject to robot motion disturbance.</p>
+
+<figure>
+  <img src="/img/posts/2024-05-14-mcpf-d/fig_mcpf-d_2.gif" alt="" />
+  <figcaption>Fig.5 - Simulation of the proposed method in Gazebo and Rviz.</figcaption>
+</figure>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren23cbssTRO">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>CBSS: A New Approach for Multiagent Combinatorial Path Finding</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Transactions on Robotics</i>, vol. 39, no. 4, pp. 2669–2683, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren23cbssTRO()">bibtex</button>
+
+<script>
+    function toggleren23cbssTRO() {
+        var x= document.getElementById('aren23cbssTRO');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren23cbssTRO() {
+        var x= document.getElementById('bren23cbssTRO');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/TRO.2023.3266993"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren23_CBSS_TRO.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_pymcpf"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren23cbssTRO" style="display:none"><pre>@article{ren23cbssTRO,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  journal = {IEEE Transactions on Robotics},
+  title = {{CBSS}: A New Approach for Multiagent Combinatorial Path Finding},
+  year = {2023},
+  volume = {39},
+  number = {4},
+  pages = {2669-2683},
+  keywords = {Robots;Task analysis;Sequential analysis;Search problems;Collision avoidance;Planning;Costs;Multiagent path finding (MAPF);path planning for multiple mobile robots or agents;traveling salesman problem (TSP)},
+  doi = {10.1109/TRO.2023.3266993},
+  url = {https://rap-lab.github.io/documents/publications/ren23_CBSS_TRO.pdf},
+  code = {https://github.com/rap-lab-org/public_pymcpf}
+}
+</pre></div>
+<!-- <div id="bren23cbssTRO" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="ren21ms">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>MS*: A New Exact Algorithm for Multi-agent Simultaneous Multi-goal Sequencing and Path Finding</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>2021 IEEE International Conference on Robotics and Automation (ICRA)</i>, pp. 11560–11565, 2021.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren21ms()">bibtex</button>
+
+<script>
+    function toggleren21ms() {
+        var x= document.getElementById('aren21ms');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren21ms() {
+        var x= document.getElementById('bren21ms');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/ICRA48506.2021.9561779"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren21-MSstar.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aren21ms" style="display:none"><pre>@inproceedings{ren21ms,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  booktitle = {2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  title = {MS*: A New Exact Algorithm for Multi-agent Simultaneous Multi-goal Sequencing and Path Finding},
+  year = {2021},
+  volume = {},
+  number = {},
+  pages = {11560-11565},
+  keywords = {Sequential analysis;Portable computers;Surveillance;Conferences;Mobile agents;Games;Approximation algorithms},
+  doi = {10.1109/ICRA48506.2021.9561779},
+  url = {https://rap-lab.github.io/documents/publications/ren21-MSstar.pdf}
+}
+</pre></div>
+<!-- <div id="bren21ms" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="multi-agent_planning" /><category term="traveling_salesman_problems" /><summary type="html"><![CDATA[Planning collision-free paths for multiple robots to visit many target locations]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-04-mcpf/fig_mcpf_rviz.png" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-04-mcpf/fig_mcpf_rviz.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ergodic Trajectory Optimization 遍历轨迹优化</title><link href="http://localhost:4000/research/ergodic" rel="alternate" type="text/html" title="Ergodic Trajectory Optimization 遍历轨迹优化" /><published>2024-02-03T07:00:00-05:00</published><updated>2024-02-03T07:00:00-05:00</updated><id>http://localhost:4000/research/ergodic</id><content type="html" xml:base="http://localhost:4000/research/ergodic"><![CDATA[<p>Robots have the potential to perform search for a variety of applications in different scenarios. In humanitarian assistance and disaster relief, it is often critical to find signs of life in the presence of conflicting criteria, objectives, and information. Ergodic search provides a framework for exploiting available information as well as exploring for new information, especially when time is of the essence. Ergodic search algorithms plan trajectories such that the time spent in a region is proportional to the amount of information in that region, and is able to naturally balance exploitation (myopically searching high-information areas) and exploration (visiting all locations in the search space for new information).</p>
+
+<h2 id="multi-objective-ergodic-search">Multi-Objective Ergodic Search</h2>
+
+<p>Existing ergodic search algorithms, as well as other information-based approaches, typically consider search using only a single information map. However, in many scenarios, the use of multiple information maps that encode different types of relevant information is common. Ergodic search methods currently do not possess the ability for simultaneous nor do they have a way to balance which information gets priority. This leads us to formulate a Multi-Objective Ergodic Search (MOES) problem, which aims at finding a set of Pareto-optimal solutions, for the purpose of providing human decision makers various solutions that trade off between conflicting criteria.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-03-ergodic/fig_moes_overview.png" alt="image" style="width:50%" />
+  <figcaption>Fig.1 - An overview of Multi-Objective Ergodic Search.</figcaption>
+</figure>
+
+<p>To efficiently solve MOES, we develop a framework called Sequential Local Ergodic Search (SLES) that converts a MOES problem into a “weight space coverage” problem.
+We formally prove that the trajectories computed by SLES is guaranteed to be Pareto-optimal.
+Furthermore, SLES leverages the idea of local optimization based on the inherent convexity of the ergodic metric in the Fourier coefficient space.
+To expedite the computation, we also develop a variant called Adaptive SLES, which can adjust the computation based on the similarity of the information maps in the Fourier coefficient space.
+Finally, we extend the method from single-agent to multi-agent and deploy it on two robots.
+Our numerical results show that SLES and A-SLES compute a set of solution trajectories with better ergodic metrics than applying Multi-Objective Genetic Algorithms to MOES.
+Additionally, our methods require less than half of the run time of a naive scalarization method that does not leverage local optimization.
+We simulate our method in a hazardous material warehouse in ROS/Gazebo, and verify that the planned trajectory can be executed on physical robots. More details can be find in <a class="citation" href="#ren23moesTRO">[1]</a>.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-03-ergodic/fig_ergodic2robots.gif" alt="image" style="size:110%" />
+  <figcaption>Fig.2 - A simple demonstration with two mobile robots.</figcaption>
+</figure>
+
+<h2 id="allocating-multiple-information-maps-to-multiple-agents">Allocating Multiple Information Maps to Multiple Agents</h2>
+
+<p>A natural extension of MOES is to consider multiple robots. Instead of letting all robots to search all information maps, a natural question is how to assign the information maps to the agents, so that the robots collectively achieve better performance. We therefore formulate a multi-agent multi-objective ergodic search problem, with the primary focus on how to efficiently allocate the information maps to the agents. We seek to the optimize the worst-case scenario, i.e., the highest ergodic metric on any information map is minimized (minmax objective). The main challenge in determining the optimal allocation is the exponential growth of the number of possible allocations with the number of maps and agents. Further, computing the cost of an allocation is itself an expensive planning problem, since evaluating an allocation requires identifying the maximum ergodic metric with respect to the information maps, which requires computing the trajectory for each agent.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-03-ergodic/fig_mamoes_allocation.png" alt="image" style="width:60%" />
+  <figcaption>Fig.3 - An overview of Multi-Agent Multi-Objective Ergodic Search that allocates information maps to the agents.</figcaption>
+</figure>
+
+<p>To mitigate the computational challenge, we present a branch and bound algorithm with pruning techniques that reduce the number of allocations to be searched to find the optimal allocation. To reduce the branching factor in branch and bound, we propose to cluster information maps before allocation based on the similarity among information maps. Clustering information maps decreases the number of possible allocations and thus the branching factor. Testing on 70 randomly generated test cases shows an order of magnitude improvement in runtime for our branch and bound approach compared to an exhaustive brute force approach. Using similarity clustering further reduces the runtime, while maintaining good solution quality with an average of 20\% deviation from the optimal minmax ergodic metric. More details can be found in <a class="citation" href="#Akshaya2023mamoes">[2]</a>.</p>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren23moesTRO">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Akshaya Kesarimangalam Srinivasan, Bhaskar Vundurthy, Ian Abraham, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Transactions on Robotics</i>, vol. 39, no. 5, pp. 3452–3463, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren23moesTRO()">bibtex</button>
+
+<script>
+    function toggleren23moesTRO() {
+        var x= document.getElementById('aren23moesTRO');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren23moesTRO() {
+        var x= document.getElementById('bren23moesTRO');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/TRO.2023.3284358"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren23_MOES_TRO.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_moes"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren23moesTRO" style="display:none"><pre>@article{ren23moesTRO,
+  author = {Ren, Zhongqiang and Srinivasan, Akshaya Kesarimangalam and Vundurthy, Bhaskar and Abraham, Ian and Choset, Howie},
+  journal = {IEEE Transactions on Robotics},
+  title = {A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search},
+  year = {2023},
+  volume = {39},
+  number = {5},
+  pages = {3452-3463},
+  keywords = {Trajectory;Robots;Optimization;Measurement;Search problems;Task analysis;Visualization;Ergodic search;motion and path planning;optimization and optimal control},
+  doi = {10.1109/TRO.2023.3284358},
+  url = {https://rap-lab.github.io/documents/publications/ren23_MOES_TRO.pdf},
+  code = {https://github.com/rap-lab-org/public_moes}
+}
+</pre></div>
+<!-- <div id="bren23moesTRO" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="Akshaya2023mamoes">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Multi-Agent Multi-Objective Ergodic Search Using Branch and Bound</b>.</div><div class="csl-block csl-author">Akshaya Kesarimangalam Srinivasan, Geordan Gutow, Zhongqiang Ren, Ian Abraham, Bhaskar Vundurthy, Howie Choset.</div><div class="csl-block csl-event"><i>2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, pp. 844–849, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleAkshaya2023mamoes()">bibtex</button>
+
+<script>
+    function toggleAkshaya2023mamoes() {
+        var x= document.getElementById('aAkshaya2023mamoes');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2Akshaya2023mamoes() {
+        var x= document.getElementById('bAkshaya2023mamoes');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/IROS55552.2023.10341353"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/2023_IROS_MAMOES_Akshaya.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aAkshaya2023mamoes" style="display:none"><pre>@inproceedings{Akshaya2023mamoes,
+  author = {Srinivasan, Akshaya Kesarimangalam and Gutow, Geordan and Ren, Zhongqiang and Abraham, Ian and Vundurthy, Bhaskar and Choset, Howie},
+  booktitle = {2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  title = {Multi-Agent Multi-Objective Ergodic Search Using Branch and Bound},
+  year = {2023},
+  volume = {},
+  number = {},
+  pages = {844-849},
+  keywords = {Runtime;Costs;Force;Search problems;Planning;Resource management;Task analysis},
+  doi = {10.1109/IROS55552.2023.10341353},
+  url = {https://rap-lab.github.io/documents/publications/2023_IROS_MAMOES_Akshaya.pdf}
+}
+</pre></div>
+<!-- <div id="bAkshaya2023mamoes" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="trajectory_optimization" /><category term="multi-objective_planning" /><summary type="html"><![CDATA[Planning ergodic trajectories w.r.t. information maps]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-03-ergodic/fig_ergodic.png" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-03-ergodic/fig_ergodic.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-Objective Multi-Agent Path Finding 多目标多机路径规划</title><link href="http://localhost:4000/research/momapf" rel="alternate" type="text/html" title="Multi-Objective Multi-Agent Path Finding 多目标多机路径规划" /><published>2024-02-03T07:00:00-05:00</published><updated>2024-02-03T07:00:00-05:00</updated><id>http://localhost:4000/research/momapf</id><content type="html" xml:base="http://localhost:4000/research/momapf"><![CDATA[<p>Multi-Agent Path Finding (MAPF) computes a set of collision-free paths for multiple agents connecting their respective start and goal locations while optimizing a scalar measure of paths. We investigate a natural generalization of the MAPF to include multiple objectives for multiple agents and hence the name Multi-Objective Multi-Agent Path Finding (MOMAPF). In MOMAPF, agents have to trade-off multiple objectives such as completion time, travel risk and other domain-specific measures. MOMAPF is a generalization of MAPF and is therefore NP-Hard to solve to optimality.</p>
+
+<p>In the presence of multiple conflicting objectives, in general, no (single) solution can simultaneously optimize all the objectives. Therefore, the goal of MOMAPF is to find the set of all Pareto-optimal solutions rather than a single optimal solution as in MAPF. A solution is Pareto-optimal if there exists no other solution that will improve one objective without deteriorate at least one of the other objectives. To solve MOMAPF, we leverage both the dominance principles in multi-objective optimization and multi-agent path planners to develop new algorithms.</p>
+
+<h2 id="multi-objective-m-mom">Multi-Objective M* (MOM*)</h2>
+
+<p>MOM* begins by ignoring agent-agent collision and solve a single-agent multi-objective path planning problem to find individual Pareto-optimal paths. These individual paths can be readily converted to an individual policy that maps the location of the agent to an action in order to direct the agent from its starting location to its goal.
+MOM* lets the agents follow their individual policies towards their goals, unless a collision is detected. When a collision is found, MOM* couples the agents together, which locally increases the dimensionality of the search space and MOM* plans a path in the joint configuration space of these agents to resolve the collision.
+During this search process, to compare two paths in the presense of multiple objectives, MOM* leverages the dominance rules.
+As a result, MOM* plans in a compact space to find all Pareto-optimal solutions, and requires less computational effort than directly searching in the joint configuration space of agents. Additionally, with inflated heuristics, MOM* can be modified to a bounded sub-optimal algorithm that trades off between computational efficiency and approximation quality.</p>
+
+<p>To evaluate MOM*, we ran tests in various grid-like maps, against using multi-objective A* like search in the joint configuration space of the agents.
+We compared the algorithms under multiple metrics, as functions of both the number of agents as well as the number of objectives.
+The results show that MOM* runs faster than the baseline, and the heuristic inflation further speeds up the MOM* at the cost of finding a bounded sub-optimal Pareto-optimal solution set. More details can be found in <a class="citation" href="#ren21momstar">[1]</a>.</p>
+
+<h2 id="multi-objective-conflict-based-search-mo-cbs">Multi-Objective Conflict-Based Search (MO-CBS)</h2>
+
+<p>Among the algorithms that optimally solve the single-objective MAPF problems, Conflict-Based Search (CBS) has received significant attention due to its computational efficiency on average. We therefore investigate how to extend CBS to handle multiple objectives, which leads to a new algorithm called Multi-Objective Conflict-Based Search (MO-CBS).</p>
+
+<p>Similar to CBS, MO-CBS is a two-level search algorithm. The high-level search detects and resolves agent-agent collision by adding constraints to the agents while the low-level search plans paths for a single agent while satisfying the added constraints. MO-CBS begins by finding a Pareto-optimal set of (individual) paths for each single agent ignoring any agent-agent collision and then takes all combinations of these paths over all the agents to form a set of joint paths, where a joint path is a set of paths with one path for each agent. MO-CBS then creates a constraint tree for each joint path for the high-level search. In a joint path, if two agents occupy the same location at the same time, a conflict happens. To resolve a conflict between two agents, a constraint is added to either of the agents, and the low-level search finds a new Pareto-optimal set of paths for that agent while satisfying all constraints.
+Each of these paths results in a new branch for future search. MO-CBS uses dominance rules to select candidate solutions for conflict checking and compares them until all the candidates are either pruned or identified as Pareto-optimal. More details can be found in <a class="citation" href="#ren22mocbs_tase">[2]</a>.</p>
+
+<p>TODO… more…</p>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren21momstar">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Subdimensional Expansion for Multi-Objective Multi-Agent Path Finding</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 6, no. 4, pp. 7153–7160, 2021.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren21momstar()">bibtex</button>
+
+<script>
+    function toggleren21momstar() {
+        var x= document.getElementById('aren21momstar');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren21momstar() {
+        var x= document.getElementById('bren21momstar');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2021.3096744"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren21-MOMstar_RAL_IROS.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_cppmomapf"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren21momstar" style="display:none"><pre>@article{ren21momstar,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {Subdimensional Expansion for Multi-Objective Multi-Agent Path Finding},
+  year = {2021},
+  volume = {6},
+  number = {4},
+  pages = {7153-7160},
+  doi = {10.1109/LRA.2021.3096744},
+  url = {https://rap-lab.github.io/documents/publications/ren21-MOMstar_RAL_IROS.pdf},
+  code = {https://github.com/rap-lab-org/public_cppmomapf}
+}
+</pre></div>
+<!-- <div id="bren21momstar" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="ren22mocbs_tase">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>A Conflict-Based Search Framework for Multiobjective Multiagent Path Finding</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Transactions on Automation Science and Engineering</i>, vol. 20, no. 2, pp. 1262–1274, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22mocbs_tase()">bibtex</button>
+
+<script>
+    function toggleren22mocbs_tase() {
+        var x= document.getElementById('aren22mocbs_tase');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22mocbs_tase() {
+        var x= document.getElementById('bren22mocbs_tase');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/TASE.2022.3183183"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_mocbs_tase_final.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_cppmomapf"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren22mocbs_tase" style="display:none"><pre>@article{ren22mocbs_tase,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  journal = {IEEE Transactions on Automation Science and Engineering},
+  title = {A Conflict-Based Search Framework for Multiobjective Multiagent Path Finding},
+  year = {2022},
+  volume = {20},
+  number = {2},
+  pages = {1262-1274},
+  doi = {10.1109/TASE.2022.3183183},
+  url = {https://rap-lab.github.io/documents/publications/ren22_mocbs_tase_final.pdf},
+  code = {https://github.com/rap-lab-org/public_cppmomapf}
+}
+</pre></div>
+<!-- <div id="bren22mocbs_tase" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="multi-agent_planning" /><category term="multi-objective_planning" /><summary type="html"><![CDATA[Planning collision-free Pareto-optimal paths for multiple while optimizing multiple objective functions]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-03-momapf/fig_mocbs.png" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-03-momapf/fig_mocbs.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multi-Objective Path Planning 多目标路径规划</title><link href="http://localhost:4000/research/mopp" rel="alternate" type="text/html" title="Multi-Objective Path Planning 多目标路径规划" /><published>2024-02-02T07:00:00-05:00</published><updated>2024-02-02T07:00:00-05:00</updated><id>http://localhost:4000/research/mopp</id><content type="html" xml:base="http://localhost:4000/research/mopp"><![CDATA[<p>Given a graph with non-negative scalar edge costs, the well-known shortest path problem (SPP) requires computing a minimum-cost path from the given start node to a destination node in the graph, which be solved by Dijkstra or A*.
+We consider an extension of SPP, the Multi-Objective Path Planning (MOPP) problem, which generalizes SPP by associating each edge with a non-negative cost vector (of constant length), where each component of the vector corresponds to an objective to be minimized.
+MOPP arises in many applications including hazardous material transportation, robot design, and logistics, and is also the foundation for many other problems such as constrained path planning and route planning.</p>
+
+<h2 id="emoa-fast-search-for-mopp">EMOA*: Fast Search for MOPP</h2>
+
+<p>In the presence of multiple conflicting objectives, in general, no (single) feasible path can simultaneously optimize all the objectives. Therefore, the goal of MOPP is to find a Pareto-optimal set (of solution paths), whose cost vectors form the so-called Pareto-optimal front. A path is Pareto-optimal (also called non-dominated) if no objective of the path can be improved without deteriorating at least one of the other objectives.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-mopp/fig_emoa.png" alt="image" />
+  <figcaption>Fig.1 - Finding Pareto-optimal paths in a New York City map.</figcaption>
+</figure>
+
+<p>To solve MOPP, a family of approaches based on MOA* have been developed. Typically, these approaches maintain a “frontier” set at each vertex during the search process to keep track of the non-dominated, partial paths to reach that vertex. This search process becomes computationally expensive when the number of objectives increases as the number of Pareto-optimal solutions becomes large. We introduce a new method to efficiently maintain these frontiers for multiple objectives by incrementally constructing balanced binary search trees  within the MOA* search framework. We show that our approach correctly finds the Pareto-optimal front, and then provide extensive simulation results for problems with three, four and five objectives to show that our method runs faster than existing techniques by up to an order of magnitude. <a class="citation" href="#ren22emoa">[1]</a>.</p>
+
+<h2 id="mopbd-incremental-search-for-mopp-in-dynamic-environments">MOPBD*: Incremental Search for MOPP in Dynamic Environments</h2>
+
+<p>We further consider MOPP in graphs with changing edge costs that represents dynamic environments.
+This problem arises robot navigation, where the robot needs to frequently update its graph representation of the workspace by incorporating new sensor reading such as unexpected closed doors, untraversable rough terrains, etc.
+In these scenarios, the robot needs to quickly replan its paths after the grpah changes.
+To achieve this goal, the existing incremental search algorithms, such as D* Lite, reuse previous, and perhaps partial, searches to expedite subsequent path planning tasks.
+We are interested in developing incremental search algorithms for path finding problems to simultaneously optimize multiple objectives such as travel risk, arrival time, etc. This is challenging because in a multi-objective setting, the number of Pareto-optimal solutions can grow exponentially with respect to the size of the graph.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-mopp/fig_mopbd.gif" alt="image" style="width:70%" />
+  <figcaption>Fig.2 - MOPBD\* in a dynamic environment with unexpected obstacles.</figcaption>
+</figure>
+
+<p>We develop a new multi-objective incremental search algorithm called Multi-Objective Path-Based D* Lite (MOPBD*) which leverages a path-based expansion strategy to prune dominated solutions. Additionally, we introduce a sub-optimal variant of MOPBD* to improve search efficiency while approximating the Pareto-optimal front. We numerically evaluate the performance of MOPBD* and its variants in various maps with two and three objectives. Results show that our approach is more efficient than search from scratch, and runs up to an order of magnitude faster than the existing incremental method for multi-objective path planning. More details can be found in <a class="citation" href="#ren22mopbd">[2]</a>.</p>
+
+<h2 id="mo-sipp-mopp-among-dynamic-obstacles">MO-SIPP: MOPP among Dynamic Obstacles</h2>
+
+<p>Path planning among dynamic obstacles is a fundamental problem in Robotics with numerous applications. We investigate a problem called Multi-Objective Path Planning with Dynamic Obstacles (MOPPwDO), which requires finding collision-free Pareto-optimal paths amid obstacles moving along known trajectories while simultaneously optimizing multiple conflicting objectives, such as arrival time, communication robustness and obstacle clearance. Most of the existing multi-objective A*-like planners consider no dynamic obstacles, and naively applying them to address MOPPwDO can lead to large computation times. On the other hand, efficient algorithms such as Safe-Interval Path Planing (SIPP) can handle dynamic obstacles but for a single objective. We therefore develop an algorithm called MO-SIPP by leveraging both the notion of safe intervals from SIPP to efficiently represent the search space in the presence of dynamic obstacles, and search techniques from multi-objective A* algorithms. We show that MO-SIPP is guaranteed to find the entire Pareto-optimal front, and verify MO-SIPP with extensive numerical tests with two and three objectives. The results show that the MO-SIPP runs up to an order of magnitude faster than the conventional alternates. More details can be found in <a class="citation" href="#ren22mosipp">[3]</a>.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-mopp/fig_mosipp.gif" alt="image" />
+  <figcaption>Fig.3 - MO-SIPP among many moving obstacles.</figcaption>
+</figure>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren22emoa">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Enhanced multi-objective A* using balanced binary search trees</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Richard Zhan, Sivakumar Rathinam, Maxim Likhachev, Howie Choset.</div><div class="csl-block csl-event"><i>Proceedings of the International Symposium on Combinatorial Search</i>vol. 15, no. 1, pp. 162–170, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22emoa()">bibtex</button>
+
+<script>
+    function toggleren22emoa() {
+        var x= document.getElementById('aren22emoa');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22emoa() {
+        var x= document.getElementById('bren22emoa');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/https://doi.org/10.1609/socs.v15i1.21764"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_emoa_socs.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_emoa/"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren22emoa" style="display:none"><pre>@inproceedings{ren22emoa,
+  title = {Enhanced multi-objective {A}* using balanced binary search trees},
+  author = {Ren, Zhongqiang and Zhan, Richard and Rathinam, Sivakumar and Likhachev, Maxim and Choset, Howie},
+  booktitle = {Proceedings of the International Symposium on Combinatorial Search},
+  volume = {15},
+  number = {1},
+  pages = {162--170},
+  year = {2022},
+  doi = {https://doi.org/10.1609/socs.v15i1.21764},
+  url = {https://rap-lab.github.io/documents/publications/ren22_emoa_socs.pdf},
+  code = {https://github.com/rap-lab-org/public_emoa/}
+}
+</pre></div>
+<!-- <div id="bren22emoa" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="ren22mopbd">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Multi-Objective Path-Based D* Lite</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Maxim Likhachev, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 7, no. 2, pp. 3318–3325, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22mopbd()">bibtex</button>
+
+<script>
+    function toggleren22mopbd() {
+        var x= document.getElementById('aren22mopbd');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22mopbd() {
+        var x= document.getElementById('bren22mopbd');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2022.3146918"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_mopbd_RAL_ICRA22.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aren22mopbd" style="display:none"><pre>@article{ren22mopbd,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Likhachev, Maxim and Choset, Howie},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {Multi-Objective Path-Based D* Lite},
+  year = {2022},
+  volume = {7},
+  number = {2},
+  pages = {3318-3325},
+  doi = {10.1109/LRA.2022.3146918},
+  url = {https://rap-lab.github.io/documents/publications/ren22_mopbd_RAL_ICRA22.pdf}
+}
+</pre></div>
+<!-- <div id="bren22mopbd" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="ren22mosipp">[3]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Multi-Objective Safe-Interval Path Planning With Dynamic Obstacles</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Maxim Likhachev, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 7, no. 3, pp. 8154–8161, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22mosipp()">bibtex</button>
+
+<script>
+    function toggleren22mosipp() {
+        var x= document.getElementById('aren22mosipp');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22mosipp() {
+        var x= document.getElementById('bren22mosipp');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2022.3187270"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_mosipp_RAL_IROS22.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_mosipp"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren22mosipp" style="display:none"><pre>@article{ren22mosipp,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Likhachev, Maxim and Choset, Howie},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {Multi-Objective Safe-Interval Path Planning With Dynamic Obstacles},
+  year = {2022},
+  volume = {7},
+  number = {3},
+  pages = {8154-8161},
+  doi = {10.1109/LRA.2022.3187270},
+  url = {https://rap-lab.github.io/documents/publications/ren22_mosipp_RAL_IROS22.pdf},
+  code = {https://github.com/rap-lab-org/public_mosipp}
+}
+</pre></div>
+<!-- <div id="bren22mosipp" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="multi-objective_planning" /><category term="dynamic_environment" /><summary type="html"><![CDATA[Finding Pareto-optimal paths in a graph with vector edge costs]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-02-mopp/fig_mopbd.gif" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-02-mopp/fig_mopbd.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Exploration of Unknown Environments 未知环境探索</title><link href="http://localhost:4000/research/explore" rel="alternate" type="text/html" title="Exploration of Unknown Environments 未知环境探索" /><published>2024-02-02T07:00:00-05:00</published><updated>2024-02-02T07:00:00-05:00</updated><id>http://localhost:4000/research/explore</id><content type="html" xml:base="http://localhost:4000/research/explore"><![CDATA[<p>Autonomous exploration is crucial for applications where environments are often inaccessible or hazardous to humans, such as in search and rescue, surveillance, and planetary exploration. Here, we consider determining paths for one or more robotsto navigate in an a priori unknown environment, such that the robots can be directed to thoroughly sweep their sensors to make a representation, namely, a map, of the target environment. Such a problem is closely related to coverage path planning, which seeks a path that allows sensors to sweep over all objects in an environment. The problem of finding the shortest path to achieve such a complete coverage was shown to be non-deterministic polynomial-time hard (NP-hard). Here, the exploration problem focuses more on discovering the environment and computing the coverage path on the fly. As a result, computing the exploration paths must be performed iteratively and incrementally to process incoming sensor data, which can be more challenging than solving the coverage path planning problem. Sensor noise, state estimation drift, and terrain variation present additional challenges.</p>
+
+<h2 id="dual-resolution-time-efficient-autonomous-exploration">Dual-Resolution Time-Efficient Autonomous Exploration</h2>
+
+<p>We collaborate with <a href="https://frc.ri.cmu.edu/~zhangji/">Prof. Zhang’s group</a> at Carnegie Mellon Univeristy, and developed a two-level approach that efficiently explores an unknown region, where efficiency was measured by both explored volume over time and computational runtime. We validated this approach in several large-scale, complex, and cluttered environments both in simulation and in the real world, including the Subterranean (SubT) Challenge held by the Defense Advanced Research Projects Agency (DARPA). To improve the exploration time efficiency, our dual-resolution framework balances the use of high-resolution information located near the robot and the low-resolution global information across the entire environment. We then further extend the approach for multirobot exploration by bringing forward the “pursuit” strategy forinter-robot communication, where robots opportunistically pursue each other to facilitate communication if the information exchange can lead to faster exploration overall. We provide a theoretical analysis of our scheme and evaluated it both in simulation and in real-world experiments. We analyzed the computational complexity and the optimality gap resulting from the dual-resolution representation, specifically, the difference in length between the paths computed with and without the dual-resolution representation. We demonstrated that the optimality gap is bounded by a constant, independent of the environment size.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-explore/fig_sr_explore2.png" alt="image" />
+  <figcaption>Fig.1 - Single-robot exploration of unknown environments. Figure from <a class="citation" href="#cao23explore">[1]</a>. </figcaption>
+</figure>
+
+<p>Empirically, for single-robot exploration, our method produced 80% higher exploration time efficiency than three other state-of-the-art methods in both physical and simulation experiments with more than 300 runs. Meanwhile, the computational runtime of our method was 50% lower than that of others. For multirobot exploration, our pursuit strategy produced higher exploration time efficiency compared with the conventional rendezvous-based strategies in more than 3400 simulation runs with up to 20 robots. More details can be found in <a class="citation" href="#cao23explore">[1]</a> or <a href="https://www.cmu-exploration.com/">this web</a>.</p>
+
+<h2 id="with-unknown-initial-poses">With Unknown Initial Poses</h2>
+
+<p>In collaboration with <a href="https://www.cityu.edu.hk/mne/people/academic-staff/prof-yin-peng">Prof. Yin</a> We then further consider the multi-robot exploration where the robots have unknown initial poses. In other words, the robots know neither their global coordinates nor the relative pose between any pair of them. This problem requires both quickly exploring the environments and robustly merging the sub-maps built by the agents. Most existing exploration strategies directly merge two sub-maps built by different agents when a single frame observation is matched, which can lead to incorrect merging due to the false-positive detection of the overlap and is thus not robust. In the meanwhile, some recent place recognition methods use sequence matching for robust data association. However, naively applying these sequence matching methods to multi-agent exploration may require one agent to repeat a large amount of another agent’s history trajectory so that a sequence of matched observation can be established, which reduces the overall exploration time efficiency. To intelligently balance the robustness of sub-map merging and exploration efficiency, we develop a new approach for lidar-based multiagent exploration, which can direct one agent to repeat another agent’s trajectory in an adaptive manner based on the quality indicator of the sub-map merging process. Additionally, our approach extends the recent single-agent hierarchical exploration strategy to multiple agents in a cooperative manner for agents whose sub-maps are merged, to improve exploration efficiency. Our experiments show that our approach is up to 50% more efficient than the baselines while merging sub-maps robustly. More details can be found in <a class="citation" href="#yan23muitare">[2]</a>.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-explore/fig_muitare.png" alt="image" style="width:80%" />
+  <figcaption>Fig.2 - Multi-robot exploration with unknown initial poses. </figcaption>
+</figure>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="cao23explore">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Representation granularity enables time-efficient autonomous exploration in large, complex worlds</b>. </div><div class="csl-block csl-author">C. Cao, H. Zhu, Z. Ren, H. Choset, J. Zhang.</div><div class="csl-block csl-event"><i>Science Robotics</i>, vol. 8, no. 80, p. eadf0970, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="togglecao23explore()">bibtex</button>
+
+<script>
+    function togglecao23explore() {
+        var x= document.getElementById('acao23explore');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+<button class="button3" onclick="toggle2cao23explore()">abstract</button>
+
+
+<script>
+    function toggle2cao23explore() {
+        var x= document.getElementById('bcao23explore');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1126/scirobotics.adf0970"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://www.science.org/doi/abs/10.1126/scirobotics.adf0970"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="acao23explore" style="display:none"><pre>@article{cao23explore,
+  author = {Cao, C. and Zhu, H. and Ren, Z. and Choset, H. and Zhang, J.},
+  title = {Representation granularity enables time-efficient autonomous exploration in large, complex worlds},
+  journal = {Science Robotics},
+  volume = {8},
+  number = {80},
+  pages = {eadf0970},
+  year = {2023},
+  doi = {10.1126/scirobotics.adf0970},
+  url = {https://www.science.org/doi/abs/10.1126/scirobotics.adf0970},
+  eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.adf0970}
+}
+</pre></div>
+<!-- <div id="bcao23explore" style="display:none"><pre>We propose a dual-resolution scheme to achieve time-efficient autonomous exploration with one or many robots. The scheme maintains a high-resolution local map of the robot’s immediate vicinity and a low-resolution global map of the remaining areas of the environment. We believe that the strength of our approach lies in this low- and high-resolution representation of the environment: The high-resolution local map ensures that the robots observe the entire region in detail, and because the local map is bounded, so is the computation burden to process it. The low-resolution global map directs the robot to explore the broad space and only requires lightweight computation and low bandwidth to communicate among the robots. This paper shows the strength of this approach for both single-robot and multirobot exploration. For multirobot exploration, we also introduce a “pursuit” strategy for sharing information among robots with limited communication. This strategy directs the robots to opportunistically approach each other. We found that the scheme could produce exploration paths with a bounded difference in length compared with the theoretical shortest paths. Empirically, for single-robot exploration, our method produced 80% higher time efficiency with 50% lower computational runtimes than state-of-the-art methods in more than 300 simulation and real-world experiments. For multirobot exploration, our pursuit strategy demonstrated higher exploration time efficiency than conventional strategies in more than 3400 simulation runs with up to 20 robots. Last, we discuss how our method was deployed in the DARPA Subterranean Challenge and demonstrated the fastest and most complete exploration among all teams. A dual-resolution framework for autonomous exploration delivers planning advancement and computational efficiency.</pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="yan23muitare">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>MUI-TARE: Cooperative Multi-Agent Exploration With Unknown Initial Position</b>. </div><div class="csl-block csl-author">Jingtian Yan, Xingqiao Lin, Zhongqiang Ren, Shiqi Zhao, Jieqiong Yu, Chao Cao, Peng Yin, Ji Zhang, Sebastian Scherer.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 8, no. 7, pp. 4299–4306, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleyan23muitare()">bibtex</button>
+
+<script>
+    function toggleyan23muitare() {
+        var x= document.getElementById('ayan23muitare');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2yan23muitare() {
+        var x= document.getElementById('byan23muitare');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2023.3281262"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/yan23_MUITARE_RAL.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="ayan23muitare" style="display:none"><pre>@article{yan23muitare,
+  author = {Yan, Jingtian and Lin, Xingqiao and Ren, Zhongqiang and Zhao, Shiqi and Yu, Jieqiong and Cao, Chao and Yin, Peng and Zhang, Ji and Scherer, Sebastian},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {MUI-TARE: Cooperative Multi-Agent Exploration With Unknown Initial Position},
+  year = {2023},
+  volume = {8},
+  number = {7},
+  pages = {4299-4306},
+  doi = {10.1109/LRA.2023.3281262},
+  url = {https://rap-lab.github.io/documents/publications/yan23_MUITARE_RAL.pdf}
+}
+</pre></div>
+<!-- <div id="byan23muitare" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="multi-agent_planning" /><category term="exploration" /><summary type="html"><![CDATA[Planning paths for robots to explore unknown environments]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-02-explore/fig_sr_explore.png" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-02-explore/fig_sr_explore.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Deformed State Lattice Planning 变形状态栅格规划</title><link href="http://localhost:4000/research/dslp" rel="alternate" type="text/html" title="Deformed State Lattice Planning 变形状态栅格规划" /><published>2024-02-01T07:00:00-05:00</published><updated>2024-02-01T07:00:00-05:00</updated><id>http://localhost:4000/research/dslp</id><content type="html" xml:base="http://localhost:4000/research/dslp"><![CDATA[<p>Search-based planning that uses a state lattice has been successfully applied in many applications but its utility is limited when confronted with complex problems represented by a lattice with many nodes and edges with high branching factor. However, in many seemingly complex problems, proper “form-fitting” can reduce the number of nodes and edges needed to represent the problems, provides a concise state lattice and therefore simplifies the computation. This project proposes a planning framework which strikes to identify concise representations of problems, creates such “form-fitting” state lattice on which a more concise search can take place. In a sense, we take a conventional state lattice and map it onto a deformed space, and then the motion primitives and heuristics follow. Since the contribution of the project is not the search approach but rather the means by which the lattice is deformed, any search-based planner can then be easily changed to a corresponding deformed version with no increase in time complexity. This project demonstrates the benifits of the approach which includes (i) planned path can be followed with few changes in motion primitives and thus can provide global smoothness of planned path; (ii) fewer states are expanded and thus shorter time to search solution in state space is required, and (iii) fewer states are expanded and thus less memory is required to save the state lattice. We demonstrate the benefit of the proposed approach in illustrative toy examples, as well as robot experiments. More details can be found in <a class="citation" href="#ren17deformed">[1]</a>.</p>
+
+<figure>
+  <img src="/img/posts/2024-02-01-dslp/fig_dslp.png" alt="image" />
+  <figcaption>Fig.1 - An illustration of the idea of Deformed State Lattice Planning and the mobile robot that is used in the experiments.</figcaption>
+</figure>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren17deformed">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Deformed state lattice planning</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Chaohui Gong, Howie Choset.</div><div class="csl-block csl-event"><i>2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, pp. 6307–6312, 2017.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren17deformed()">bibtex</button>
+
+<script>
+    function toggleren17deformed() {
+        var x= document.getElementById('aren17deformed');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren17deformed() {
+        var x= document.getElementById('bren17deformed');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/IROS.2017.8206534"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren17_DSLP_IROS.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aren17deformed" style="display:none"><pre>@inproceedings{ren17deformed,
+  author = {Ren, Zhongqiang and Gong, Chaohui and Choset, Howie},
+  booktitle = {2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  title = {Deformed state lattice planning},
+  year = {2017},
+  volume = {},
+  number = {},
+  pages = {6307-6312},
+  keywords = {Lattices;Strain;Planning;Robots;Search problems;Manifolds;Automobiles},
+  doi = {10.1109/IROS.2017.8206534},
+  url = {https://rap-lab.github.io/documents/publications/ren17_DSLP_IROS.pdf}
+}
+</pre></div>
+<!-- <div id="bren17deformed" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="state_lattice_planning" /><summary type="html"><![CDATA[Search-based planning that uses a state lattice has been successfully applied in many applications but its utility is limited when confronted with complex problems represented by a lattice with many nodes and edges with high branching factor. However, in many seemingly complex problems, proper “form-fitting” can reduce the number of nodes and edges needed to represent the problems, provides a concise state lattice and therefore simplifies the computation. This project proposes a planning framework which strikes to identify concise representations of problems, creates such “form-fitting” state lattice on which a more concise search can take place. In a sense, we take a conventional state lattice and map it onto a deformed space, and then the motion primitives and heuristics follow. Since the contribution of the project is not the search approach but rather the means by which the lattice is deformed, any search-based planner can then be easily changed to a corresponding deformed version with no increase in time complexity. This project demonstrates the benifits of the approach which includes (i) planned path can be followed with few changes in motion primitives and thus can provide global smoothness of planned path; (ii) fewer states are expanded and thus shorter time to search solution in state space is required, and (iii) fewer states are expanded and thus less memory is required to save the state lattice. We demonstrate the benefit of the proposed approach in illustrative toy examples, as well as robot experiments. More details can be found in [1].]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-01-dslp/fig_dslp.png" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-01-dslp/fig_dslp.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Resource Constrained Path Planning 资源约束路径规划</title><link href="http://localhost:4000/research/rcpp" rel="alternate" type="text/html" title="Resource Constrained Path Planning 资源约束路径规划" /><published>2024-02-01T07:00:00-05:00</published><updated>2024-02-01T07:00:00-05:00</updated><id>http://localhost:4000/research/rcpp</id><content type="html" xml:base="http://localhost:4000/research/rcpp"><![CDATA[<p>Resource constrained path planning seeks an optimal path subject a variety of resource constraints. This problem arises in applications such as fuel limits or battery capacity in electrical vehicles or package delivery quadroters. These problems are usually NP-hard, and we seek to develop fast planning algorithms to solve these problems to optimality.</p>
+
+<h2 id="resource-constrained-shortest-path-problem-rcspp">Resource Constrained Shortest Path Problem (RCSPP)</h2>
+
+<p>We first consider the Resource Constrained Shortest Path Problem (RCSPP), which requires a minimum-cost path between a start and a goal location while ensuring that one or multiple types of resource consumed along the path do not exceed their limits.
+This problem is often solved on a graph where a path is incrementally built from the start towards the goal during the search.
+RCSPP is computationally challenging as comparing these partial solution paths is based on multiple criteria (i.e., the accumulated cost and resource along the path), and in general, there does not exist a single path that optimizes all criteria simultaneously.
+Consequently, the search needs to maintain and explore a large number of partial paths in order to find an optimal solution.
+While a variety of algorithms have been developed to solve RCSPP, they either have little consideration about efficiently comparing and maintaining the partial paths, which reduces their overall runtime efficiency, or are restricted to handle only one resource constraint as opposed to multiple resource constraints.
+We develop a planner called Enhanced Resource Constrained A* (ERCA*), a fast A*-based algorithm that can find an optimal solution while satisfying multiple resource constraints.
+ERCA* leverages our prior research in <a href="/research/mopp">multi-objective path planning</a> to efficiently compare and maintain partial paths, and techniques from the existing RCSPP literature. Furthermore, ERCA* has a functional parameter to broker a trade-off between solution quality and runtime efficiency.
+The results show ERCA* often runs several orders of magnitude faster than an existing leading algorithm for RCSPP. More details can be found in <a class="citation" href="#ren23erca">[1]</a>.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-01-rcpp/fig_rcspp_eg.png" alt="image" style="width:80%" />
+  <figcaption>Fig.1 - A toy example of Resource Constrained Shortest Path Problem (RCSPP). Given a graph where each edge is associated with three non-negative values: distance, traversal time and toll, the problem seeks to find a minimum distance path from the start to the goal while satisfying two resource constraints, i.e, the arrival time must be less than three and the accumulated toll must be less than six. The blue dotted lines show an optimal solution path to the problem.
+  </figcaption>
+</figure>
+
+<h2 id="path-planning-with-refueling">Path Planning with Refueling</h2>
+
+<p>We then further consider a specific type of constraint, the fuel constraint of the robot. 
+In this Refueling Path Planning (RFPP) problem, the vertices represent gas stations with known fuel prices, and the edge costs indicate the gas consumption when moving between vertices. The fuel prices at vertices may be different and are fixed over time. RFPP seeks a start-goal path subject to a limited gas tank and a limited number of refuelling stops while minimizing the fuel cost along the path. RFPP is also called the Gas Station Problem in the literature. It arises in applications such as path planning for electric vehicles between cities and package delivery using an unmanned vehicle, where a robot needs to move over long distance when refuelling becomes necessary. While RFPP is polynomial time solvable, it remains a challenge to quickly compute an optimal solution in practice since the robot needs to simultaneously determine the path, where to make the stops, and the amount of refuelling at each stop.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-01-rcpp/fig_refuel.png" alt="image" />
+  <figcaption>Fig.2 - A toy example of the Refuel Path Planning problem.
+  </figcaption>
+</figure>
+
+<p>We focus on developing exact algorithms that can solve RFPP to optimality. Based on our research on ERCA*, we develop a heuristic search algorithm called RF-A*, which iteratively constructs partial solution paths from the start vertex to the goal guided by a heuristic function. We compare RF-A* against baselines in real-world city maps of various sizes from the OpenStreetMap dataset. Our results show that RF-A* runs more than an order of magnitude faster than the baseline as tested in maps with hundreds of gas stations.
+While the baseline takes up to hundreds of seconds to solve these test instances, RF-A* often takes less than a second. The fast running speed makes it possible for online planning on a robot with a limited tank in large urban areas. More details can be found in <a class="citation" href="#nandy2023heuristic">[2]</a>.</p>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren23erca">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>ERCA*: A New Approach for the Resource Constrained Shortest Path Problem</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Zachary B. Rubinstein, Stephen F. Smith, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Transactions on Intelligent Transportation Systems</i>, vol. 24, no. 12, pp. 14994–15005, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren23erca()">bibtex</button>
+
+<script>
+    function toggleren23erca() {
+        var x= document.getElementById('aren23erca');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren23erca() {
+        var x= document.getElementById('bren23erca');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/TITS.2023.3293039"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren23_ERCA_TITS.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_erca/"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren23erca" style="display:none"><pre>@article{ren23erca,
+  author = {Ren, Zhongqiang and Rubinstein, Zachary B. and Smith, Stephen F. and Rathinam, Sivakumar and Choset, Howie},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  title = {ERCA*: A New Approach for the Resource Constrained Shortest Path Problem},
+  year = {2023},
+  volume = {24},
+  number = {12},
+  pages = {14994-15005},
+  keywords = {Costs;Shortest path problem;Runtime;Bidirectional control;Search problems;Heuristic algorithms;Approximation algorithms;Path planning;heuristic search;shortest path},
+  doi = {10.1109/TITS.2023.3293039},
+  url = {https://rap-lab.github.io/documents/publications/ren23_ERCA_TITS.pdf},
+  code = {https://github.com/rap-lab-org/public_erca/}
+}
+</pre></div>
+<!-- <div id="bren23erca" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="nandy2023heuristic">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Heuristic Search for Path Finding with Refuelling</b>. </div><div class="csl-block csl-author">Anushtup Nandy, Zhongqiang Ren, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>arXiv preprint arXiv:2309.10796</i>, 2023.</div></div></span>
+    <br />
+<button class="button0" onclick="togglenandy2023heuristic()">bibtex</button>
+
+<script>
+    function togglenandy2023heuristic() {
+        var x= document.getElementById('anandy2023heuristic');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2nandy2023heuristic() {
+        var x= document.getElementById('bnandy2023heuristic');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/anushtup24refuel.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="anandy2023heuristic" style="display:none"><pre>@article{nandy2023heuristic,
+  title = {Heuristic Search for Path Finding with Refuelling},
+  author = {Nandy, Anushtup and Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  journal = {arXiv preprint arXiv:2309.10796},
+  year = {2023},
+  url = {https://rap-lab.github.io/documents/publications/anushtup24refuel.pdf}
+}
+</pre></div>
+<!-- <div id="bnandy2023heuristic" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="resource_constrained_planning" /><summary type="html"><![CDATA[Planning an optimal path subject to resource constraints]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-01-rcpp/fig_rcspp_eg.png" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-01-rcpp/fig_rcspp_eg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Optimality Bounds in Motion Planning 运动规划中的最优界</title><link href="http://localhost:4000/research/obmp" rel="alternate" type="text/html" title="Optimality Bounds in Motion Planning 运动规划中的最优界" /><published>2024-02-01T07:00:00-05:00</published><updated>2024-02-01T07:00:00-05:00</updated><id>http://localhost:4000/research/obmp</id><content type="html" xml:base="http://localhost:4000/research/obmp"><![CDATA[<p>For many motion planning problems, there is currently no algorithm available in the literature to find an optimal solution. While finding the optimum is challenging, there are many algorithms that can compute a feasible solution such as search-based or sampling-based methods. 
+A natural and fundamental question is: how close a feasible solution actually is to the (true) optimum. In the absence of methods for finding the optimum, lower bounds can be used as proxies to the optimum. Baseline approaches that find trivial lower bounds are always possible. However, these bounds tend to be far away from the optimum, and therefore, do not serve as good estimates of the optimum. The goal of this research is to develop approaches that can provide tight lower-bounding estimates of the true optimum to motion planning problems.</p>
+
+<h2 id="optimality-bounds-for-the-motion-planning-among-dynamic-obstacles">Optimality Bounds for the Motion Planning Among Dynamic Obstacles</h2>
+
+<figure>
+ <img src="/img/posts/2024-02-01-obmp/fig_lbmp_vis3.gif" alt="image" />
+  <figcaption>Fig.1 - Visualization of upper bounding and lower bounding solutions to MPDO.</figcaption>
+</figure>
+
+<p>We begin by considering a Motion Planning Problem with Dynamic Obstacles (MPDO) in 2D that requires finding a minimum-arrival-time collision-free trajectory for a point robot between its start and goal locations amid dynamic obstacles moving along known trajectories. We develop an approach that can provide tight lower bounds to the optimum, which consists of (i) a bi-level discretization approach that converts the MPDO to a relaxed path planning problem, and (ii) an algorithm that can solve the relaxed problem to obtain lower bounds. The proposed bi-level discretization approach simultaneously handles the collision avoidance constraints and the generation of tight lower bounds. We theoretically show that our approach generates lower bounds and the experimental results show that the bounds obtained by our approach for some instances are up to twice tighter than a baseline approach showcasing potential advantages of the proposed approach. More details can be found in <a class="citation" href="#ren22lbmp">[1]</a>.</p>
+
+<h2 id="optimality-bounds-for-the-moving-target-traveling-salesman-problem">Optimality Bounds for the Moving Target Traveling Salesman Problem</h2>
+
+<p>In collaboration with <a href="https://engineering.tamu.edu/mechanical/profiles/rathinam-sivakumar.html">Prof. Rathinam</a>, we then investigate Moving-Target Traveling Salesman Problem (MT-TSP).
+Given a set of target locations (or targets) and the cost of traveling between any pair of targets, the well-known TSP aims to find a shortest tour for a vehicle to visit each of the targets exactly once. Here, we consider a natural generalization of the TSP where the targets are mobile and traverse along known trajectories. The targets also have time-windows during which they must be visited. This generalization is motivated by applications in border surveillance, search and rescue, and dynamic target tracking where vehicles are required to visit or monitor a set of mobile targets. We refer to this generalization as the Moving-Target Traveling Salesman Problem, or MT-TSP for short. The focus of this work is on the optimality guarantees for the MT-TSP.</p>
+
+<p>We introduce a new bounding approach called Continuity* (C*) that provides optimality guarantees to the MT-TSP. Our approach relies on relaxing the continuity constraints on the agent’s tour. This is done by partitioning the targets’ trajectories into small sub-segments and allowing the agent to arrive at any point in one of the sub-segments and depart from any point in the same sub-segment when visiting each target. This lets us pose the bounding problem as a Generalized Traveling Salesman Problem (GTSP) in a graph where the cost of traveling an edge requires us to solve a new problem called the Shortest Feasible Travel (SFT). We also introduce C*-lite, which follows the same approach as C*, but uses simple and easy to compute lower-bounds to the SFT. We first prove that the proposed algorithms provide lower bounds to the MT-TSP. We also provide computational results to corroborate the performance of C* and C*-lite for instances with up to 15 targets. For the special case where targets travel along lines, we compare our C* variants with the second-order conic programming (SOCP) based method, which is the current state-of-the-art solver for MT-TSP. While the SOCP based method performs well for instances with 5 and 10 targets, C* outperforms the SOCP based method for instances with 15 targets. For the general case, on average, our approaches find feasible solutions within around 4 percent of the lower bounds for the tested instances.</p>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren22lbmp">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>A Lower Bounding Framework for Motion Planning Amid Dynamic Obstacles in 2D</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Howie Choset.</div><div class="csl-block csl-event"><i>Algorithmic Foundations of Robotics XV</i>, Cham, pp. 540–556, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22lbmp()">bibtex</button>
+
+<script>
+    function toggleren22lbmp() {
+        var x= document.getElementById('aren22lbmp');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22lbmp() {
+        var x= document.getElementById('bren22lbmp');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1007/978-3-031-21090-7_32"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_lbmp_wafr.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aren22lbmp" style="display:none"><pre>@inproceedings{ren22lbmp,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Choset, Howie},
+  title = {A Lower Bounding Framework for Motion Planning Amid Dynamic Obstacles in 2D},
+  booktitle = {Algorithmic Foundations of Robotics XV},
+  year = {2022},
+  month = dec,
+  vol = {25},
+  publisher = {Springer International Publishing},
+  address = {Cham},
+  pages = {540--556},
+  isbn = {978-3-031-21090-7},
+  doi = {10.1007/978-3-031-21090-7_32},
+  url = {https://rap-lab.github.io/documents/publications/ren22_lbmp_wafr.pdf}
+}
+</pre></div>
+<!-- <div id="bren22lbmp" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>]]></content><author><name>Zhongqiang Ren</name></author><category term="research" /><category term="optimality_bounds" /><category term="dynamic_environment" /><summary type="html"><![CDATA[Compute optimality bounds for motion planning problems]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/img/posts/2024-02-01-obmp/fig_lbmp.gif" /><media:content medium="image" url="http://localhost:4000/img/posts/2024-02-01-obmp/fig_lbmp.gif" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

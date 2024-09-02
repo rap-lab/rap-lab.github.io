@@ -1,0 +1,646 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Multi-Objective Path Planning <br>多目标路径规划 - Robotics Autonomy and Planning Lab</title>
+    
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon/favicon.ico" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#cc002b">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!-- Include the standard DataTables bits -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+      $('table.display').DataTable({
+        paging: false,
+        stateSave: true,
+        searching: true
+      });
+    });
+  </script>
+  
+  
+    <script>
+      $(document).ready(function () {
+          $('.content a').attr({'target':'_blank', 'rel':'noopener noreferrer'});
+        });
+    </script>
+  
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Multi-Objective Path Planning 多目标路径规划 | Robotics Autonomy and Planning Lab</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Multi-Objective Path Planning 多目标路径规划" />
+<meta name="author" content="Zhongqiang Ren" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Finding Pareto-optimal paths in a graph with vector edge costs" />
+<meta property="og:description" content="Finding Pareto-optimal paths in a graph with vector edge costs" />
+<link rel="canonical" href="http://localhost:4000/research/mopp" />
+<meta property="og:url" content="http://localhost:4000/research/mopp" />
+<meta property="og:site_name" content="Robotics Autonomy and Planning Lab" />
+<meta property="og:image" content="http://localhost:4000/img/posts/2024-02-02-mopp/fig_mopbd.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-02T07:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/img/posts/2024-02-02-mopp/fig_mopbd.gif" />
+<meta property="twitter:title" content="Multi-Objective Path Planning 多目标路径规划" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Zhongqiang Ren"},"dateModified":"2024-02-02T07:00:00-05:00","datePublished":"2024-02-02T07:00:00-05:00","description":"Finding Pareto-optimal paths in a graph with vector edge costs","headline":"Multi-Objective Path Planning 多目标路径规划","image":"http://localhost:4000/img/posts/2024-02-02-mopp/fig_mopbd.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/mopp"},"url":"http://localhost:4000/research/mopp"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- head scripts --><!-- Added by Chen -->
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5ee902d30e78e50012567eb4&product=inline-follow-buttons&cms=sop' async='async'></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- for mathjax support -->
+    
+
+</head>
+
+<body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item navbar-logo">
+                Robotics Autonomy and Planning Lab
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+                
+                
+                    
+                    <a href="/research" class="navbar-item " target="">Research(科研)</a>
+                    
+                
+                    
+                    <a href="/publications" class="navbar-item " target="">Publications(发表)</a>
+                    
+                
+                    
+                    <a href="/team" class="navbar-item " target="">Team(团队)</a>
+                    
+                
+                
+            </div>
+        </div>
+    </div>
+</nav>
+  <section class="hero  
+        is-small 
+         is-bold is-primary" 
+        >
+    <div class="hero-body">
+        <div class="container">
+            
+                <p class="title is-2" style="color:white;">Multi-Objective Path Planning <br>多目标路径规划</p>
+                <p class="subtitle is-3" style="color:white;"></p>
+                <p class="subtitle is-3">
+            
+            
+            
+        </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .button.is-info {
+     background-color:#3f9ba7;
+     border-color:transparent;
+     color:#fff
+    }
+    .button.is-info.is-hovered {
+     background-color:#3f9ba7;
+     border-color:transparent;
+     color:#fff
+    }
+</style>
+  
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+
+                
+                <div class="column is-9">
+                      
+	
+
+
+<!-- Set up the transparent black background for the title -->
+
+
+<!-- Figure out the relative link to the author -->
+
+
+
+
+
+	
+		
+			
+
+<div class="content">
+
+    <p><div style="font-size: 13px">Published: 
+		<time datetime="2024-02-02T07:00:00-05:00">Feb 2, 2024</time> by 
+		<div style="font-weight: bold; color: #3399ff; display: inline">
+		
+			<a href="/team/zren">Zhongqiang Ren</a>
+		
+		</div>
+	</div></p>
+
+    <!-- <h1>Multi-Objective Path Planning <br>多目标路径规划</h1> -->
+	<style>
+		.csl-block {
+			font-size: 16px;
+		}
+
+		.csl-title, .csl-author, .csl-event, .csl-editor, .csl-venue {
+			display: block;
+			position: relative;
+			font-size: 15px;
+		}
+
+		.csl-title b {
+			font-weight: 600;
+		}
+
+		.csl-content {
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 20px;
+			max-width: 95%;
+		}
+
+		.bibliography {
+		   list-style-type: none;
+		}
+	</style>
+
+    <p>Given a graph with non-negative scalar edge costs, the well-known shortest path problem (SPP) requires computing a minimum-cost path from the given start node to a destination node in the graph, which be solved by Dijkstra or A*.
+We consider an extension of SPP, the Multi-Objective Path Planning (MOPP) problem, which generalizes SPP by associating each edge with a non-negative cost vector (of constant length), where each component of the vector corresponds to an objective to be minimized.
+MOPP arises in many applications including hazardous material transportation, robot design, and logistics, and is also the foundation for many other problems such as constrained path planning and route planning.</p>
+
+<h2 id="emoa-fast-search-for-mopp">EMOA*: Fast Search for MOPP</h2>
+
+<p>In the presence of multiple conflicting objectives, in general, no (single) feasible path can simultaneously optimize all the objectives. Therefore, the goal of MOPP is to find a Pareto-optimal set (of solution paths), whose cost vectors form the so-called Pareto-optimal front. A path is Pareto-optimal (also called non-dominated) if no objective of the path can be improved without deteriorating at least one of the other objectives.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-mopp/fig_emoa.png" alt="image" />
+  <figcaption>Fig.1 - Finding Pareto-optimal paths in a New York City map.</figcaption>
+</figure>
+
+<p>To solve MOPP, a family of approaches based on MOA* have been developed. Typically, these approaches maintain a “frontier” set at each vertex during the search process to keep track of the non-dominated, partial paths to reach that vertex. This search process becomes computationally expensive when the number of objectives increases as the number of Pareto-optimal solutions becomes large. We introduce a new method to efficiently maintain these frontiers for multiple objectives by incrementally constructing balanced binary search trees  within the MOA* search framework. We show that our approach correctly finds the Pareto-optimal front, and then provide extensive simulation results for problems with three, four and five objectives to show that our method runs faster than existing techniques by up to an order of magnitude. <a class="citation" href="#ren22emoa">[1]</a>.</p>
+
+<h2 id="mopbd-incremental-search-for-mopp-in-dynamic-environments">MOPBD*: Incremental Search for MOPP in Dynamic Environments</h2>
+
+<p>We further consider MOPP in graphs with changing edge costs that represents dynamic environments.
+This problem arises robot navigation, where the robot needs to frequently update its graph representation of the workspace by incorporating new sensor reading such as unexpected closed doors, untraversable rough terrains, etc.
+In these scenarios, the robot needs to quickly replan its paths after the grpah changes.
+To achieve this goal, the existing incremental search algorithms, such as D* Lite, reuse previous, and perhaps partial, searches to expedite subsequent path planning tasks.
+We are interested in developing incremental search algorithms for path finding problems to simultaneously optimize multiple objectives such as travel risk, arrival time, etc. This is challenging because in a multi-objective setting, the number of Pareto-optimal solutions can grow exponentially with respect to the size of the graph.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-mopp/fig_mopbd.gif" alt="image" style="width:70%" />
+  <figcaption>Fig.2 - MOPBD\* in a dynamic environment with unexpected obstacles.</figcaption>
+</figure>
+
+<p>We develop a new multi-objective incremental search algorithm called Multi-Objective Path-Based D* Lite (MOPBD*) which leverages a path-based expansion strategy to prune dominated solutions. Additionally, we introduce a sub-optimal variant of MOPBD* to improve search efficiency while approximating the Pareto-optimal front. We numerically evaluate the performance of MOPBD* and its variants in various maps with two and three objectives. Results show that our approach is more efficient than search from scratch, and runs up to an order of magnitude faster than the existing incremental method for multi-objective path planning. More details can be found in <a class="citation" href="#ren22mopbd">[2]</a>.</p>
+
+<h2 id="mo-sipp-mopp-among-dynamic-obstacles">MO-SIPP: MOPP among Dynamic Obstacles</h2>
+
+<p>Path planning among dynamic obstacles is a fundamental problem in Robotics with numerous applications. We investigate a problem called Multi-Objective Path Planning with Dynamic Obstacles (MOPPwDO), which requires finding collision-free Pareto-optimal paths amid obstacles moving along known trajectories while simultaneously optimizing multiple conflicting objectives, such as arrival time, communication robustness and obstacle clearance. Most of the existing multi-objective A*-like planners consider no dynamic obstacles, and naively applying them to address MOPPwDO can lead to large computation times. On the other hand, efficient algorithms such as Safe-Interval Path Planing (SIPP) can handle dynamic obstacles but for a single objective. We therefore develop an algorithm called MO-SIPP by leveraging both the notion of safe intervals from SIPP to efficiently represent the search space in the presence of dynamic obstacles, and search techniques from multi-objective A* algorithms. We show that MO-SIPP is guaranteed to find the entire Pareto-optimal front, and verify MO-SIPP with extensive numerical tests with two and three objectives. The results show that the MO-SIPP runs up to an order of magnitude faster than the conventional alternates. More details can be found in <a class="citation" href="#ren22mosipp">[3]</a>.</p>
+
+<figure>
+ <img src="/img/posts/2024-02-02-mopp/fig_mosipp.gif" alt="image" />
+  <figcaption>Fig.3 - MO-SIPP among many moving obstacles.</figcaption>
+</figure>
+
+<h2 id="related-publications">Related Publications</h2>
+
+<ul.no-bullet class="bibliography"><li><div class="text-justify">
+    <span id="ren22emoa">[1]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Enhanced multi-objective A* using balanced binary search trees</b>.</div><div class="csl-block csl-author">Zhongqiang Ren, Richard Zhan, Sivakumar Rathinam, Maxim Likhachev, Howie Choset.</div><div class="csl-block csl-event"><i>Proceedings of the International Symposium on Combinatorial Search</i>vol. 15, no. 1, pp. 162–170, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22emoa()">bibtex</button>
+
+<script>
+    function toggleren22emoa() {
+        var x= document.getElementById('aren22emoa');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22emoa() {
+        var x= document.getElementById('bren22emoa');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/https://doi.org/10.1609/socs.v15i1.21764"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_emoa_socs.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_emoa/"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren22emoa" style="display:none"><pre>@inproceedings{ren22emoa,
+  title = {Enhanced multi-objective {A}* using balanced binary search trees},
+  author = {Ren, Zhongqiang and Zhan, Richard and Rathinam, Sivakumar and Likhachev, Maxim and Choset, Howie},
+  booktitle = {Proceedings of the International Symposium on Combinatorial Search},
+  volume = {15},
+  number = {1},
+  pages = {162--170},
+  year = {2022},
+  doi = {https://doi.org/10.1609/socs.v15i1.21764},
+  url = {https://rap-lab.github.io/documents/publications/ren22_emoa_socs.pdf},
+  code = {https://github.com/rap-lab-org/public_emoa/}
+}
+</pre></div>
+<!-- <div id="bren22emoa" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="ren22mopbd">[2]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Multi-Objective Path-Based D* Lite</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Maxim Likhachev, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 7, no. 2, pp. 3318–3325, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22mopbd()">bibtex</button>
+
+<script>
+    function toggleren22mopbd() {
+        var x= document.getElementById('aren22mopbd');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22mopbd() {
+        var x= document.getElementById('bren22mopbd');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2022.3146918"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_mopbd_RAL_ICRA22.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+
+
+
+</div>
+
+<div id="aren22mopbd" style="display:none"><pre>@article{ren22mopbd,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Likhachev, Maxim and Choset, Howie},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {Multi-Objective Path-Based D* Lite},
+  year = {2022},
+  volume = {7},
+  number = {2},
+  pages = {3318-3325},
+  doi = {10.1109/LRA.2022.3146918},
+  url = {https://rap-lab.github.io/documents/publications/ren22_mopbd_RAL_ICRA22.pdf}
+}
+</pre></div>
+<!-- <div id="bren22mopbd" style="display:none"><pre></pre></div> -->
+</li>
+<li><div class="text-justify">
+    <span id="ren22mosipp">[3]<div class="csl-block csl-content"><div class="csl-block csl-title"><b>Multi-Objective Safe-Interval Path Planning With Dynamic Obstacles</b>. </div><div class="csl-block csl-author">Zhongqiang Ren, Sivakumar Rathinam, Maxim Likhachev, Howie Choset.</div><div class="csl-block csl-event"><i>IEEE Robotics and Automation Letters</i>, vol. 7, no. 3, pp. 8154–8161, 2022.</div></div></span>
+    <br />
+<button class="button0" onclick="toggleren22mosipp()">bibtex</button>
+
+<script>
+    function toggleren22mosipp() {
+        var x= document.getElementById('aren22mosipp');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<script>
+    function toggle2ren22mosipp() {
+        var x= document.getElementById('bren22mosipp');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+</script>
+
+
+
+<a href="http://doi.org/10.1109/LRA.2022.3187270"><input type="button" class="button1" value="doi" /></a>
+
+
+
+<a href="https://rap-lab.github.io/documents/publications/ren22_mosipp_RAL_IROS22.pdf"><input type="button" class="button4" value="PDF" /></a>
+
+
+<a href="https://github.com/rap-lab-org/public_mosipp"><input type="button" class="button3" value="Code" /></a>
+
+
+
+
+</div>
+
+<div id="aren22mosipp" style="display:none"><pre>@article{ren22mosipp,
+  author = {Ren, Zhongqiang and Rathinam, Sivakumar and Likhachev, Maxim and Choset, Howie},
+  journal = {IEEE Robotics and Automation Letters},
+  title = {Multi-Objective Safe-Interval Path Planning With Dynamic Obstacles},
+  year = {2022},
+  volume = {7},
+  number = {3},
+  pages = {8154-8161},
+  doi = {10.1109/LRA.2022.3187270},
+  url = {https://rap-lab.github.io/documents/publications/ren22_mosipp_RAL_IROS22.pdf},
+  code = {https://github.com/rap-lab-org/public_mosipp}
+}
+</pre></div>
+<!-- <div id="bren22mosipp" style="display:none"><pre></pre></div> -->
+</li></ul.no-bullet>
+
+
+</div>
+
+<div class="tags">
+    
+    <span class="tag is-primary">multi-objective_planning</span>
+    
+    <span class="tag is-primary">dynamic_environment</span>
+    
+</div>
+
+
+
+                </div>
+                
+                <div class="column is-3-desktop is-12-tablet">
+                    <p class="title is-4">Latest News</p>
+
+<div class="columns is-multiline">
+    
+    
+        
+            <div class="column is-12">
+                <a href="/research/tcpf">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2024-08-12-tcpf/tcpf_motorcade.jpg" alt="Teamwise Cooperation & Traffic Coordination<br>分组合作与交叉口多机协同" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Teamwise Cooperation & Traffic Coordination<br>分组合作与交叉口多机协同</div>
+            
+            <p>Multi-Agent Path Finding (MAPF) computes a set of collision-free paths for multiple agents from t...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Aug 12, 2024</p>
+    </footer>
+</div>
+</a>
+
+            </div>
+            
+        
+        
+    
+        
+            <div class="column is-12">
+                <a href="/research/mcpf">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2024-02-04-mcpf/fig_mcpf_rviz.png" alt="Multi-Agent Combinatorial Path Finding <br>多机组合路径规划" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Multi-Agent Combinatorial Path Finding <br>多机组合路径规划</div>
+            
+            <p>Multi-robot systems prevail over the past decade. In particular, these systems provide an intelli...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 4, 2024</p>
+    </footer>
+</div>
+</a>
+
+            </div>
+            
+        
+        
+    
+        
+            <div class="column is-12">
+                <a href="/research/momapf">
+<div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+    
+        <div style="height: 200px;">
+            <img src="/img/posts/2024-02-03-momapf/fig_mocbs.png" alt="Multi-Objective Multi-Agent Path Finding <br>多目标多机路径规划" style="object-fit: contain; height: 100%;">
+        </div>
+    
+    <div class="card-content" style="flex-grow: 3;">
+        <div class="content">
+            
+            <div class="title is-5">Multi-Objective Multi-Agent Path Finding <br>多目标多机路径规划</div>
+            
+            <p>Multi-Agent Path Finding (MAPF) computes a set of collision-free paths for multiple agents connec...</p>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <p class="card-footer-item">Published: Feb 3, 2024</p>
+    </footer>
+</div>
+</a>
+
+            </div>
+            
+        
+        
+            
+</div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+     <style>
+  #blocks {
+      width:100%;
+      height:60px;
+      margin:0 auto;
+      /* background-color: #ffe; */
+  }
+  #block1 {
+      height:33.33%;
+      width:30%;
+      /* background: red; */
+      float: left;
+  }
+  #block2 {
+      height:33.33%;
+      width:40%;
+      /* background: yellow; */
+      float: left;
+  }
+  #block3 {
+      height:33.33%;
+      width:30%;
+      /* background: green; */
+      float: right;
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+<footer class="footer">
+    <div class="container">
+        <!-- 
+        <div class="columns is-multiline">
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/" class="link">Home</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/blog/" class="link">Blog</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/products/" class="link">Products</a>
+                </div>
+            </div>
+            
+            <div class="column has-text-centered">
+                <div>
+                    <a href="/privacy-policy/" class="link">Privacy Policy</a>
+                </div>
+            </div>
+            
+        </div>
+         -->
+        <div id="blocks">
+          <div id="block1"><img src="/img/logos/left-down-logo.png" alt="Left Down Logo" style="height:60px;"></div>
+          <div id="block2">
+            <center>
+
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-github"></i>
+              </a> -->
+              <!-- <a class="button" itemprop="email" href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"</i>
+              </a> -->
+              <!-- <a class="button" itemprop="facebook" href="https://www.facebook.com/airlabcmu/" target="_blank">
+                <i class="fab fa-facebook fa-lg" style="height:100%;"></i>
+              </a> -->
+              <a class="button" itemprop="scholar" href="https://scholar.google.com/citations?user=kKKvRXsAAAAJ&hl=en&oi=ao" target="_blank">
+                <i class="ai ai-google-scholar ai-2x"></i>
+              </a>
+              <a class="button" itemprop="github" href="https://github.com/rap-lab-org" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <!-- <a class="button" itemprop="bitbucket" href="https://bitbucket.org/castacks/" target="_blank"> -->
+                <!-- <i class="fab fa-bitbucket fa-lg"></i> -->
+              <!-- </a> -->
+              <br>
+              <br>
+              <!-- <p class="">&copy; 2021 | Built using the <a href="https://github.com/chrisrhymes/bulma-clean-theme">Bulma Clean Theme</a></p> -->
+            </center>
+          </div>
+          <div id="block3"><img src="/img/logos/right-down-logo.png" alt="Right Down Logo" style="float:right;height:80px;"></div>
+        </div>
+        <!-- <div>
+          <a href="" class="button is-large"><div class="icon"><i class="fab fa-facebook"</i></div></a>
+        </div> -->
+        <!-- <div class="content is-small has-text-centered">
+            <p class="">© 2020</p>
+        </div> -->
+    </div>
+
+
+</footer>
+ 
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+</html>
