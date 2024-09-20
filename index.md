@@ -37,7 +37,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
-* \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_MTTSP_MICP_Allen_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to IROS-2024.
+* \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_MTTSP_MICP_Allen_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to IROS-2024.
 * \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_iMTSP_Yifan_cam.pdf) on Multiple Traveling Salesman Problem is accepted to IROS-2024.
 * \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf) on Multi-Agent Teamwise Cooperative Path Finding is accepted to IROS-2024.
 * \[2024.07\] One [paper](https://rap-lab.github.io/documents/publications/2024_RAL_DMS.pdf) on Multi-Agent Combinatorial Path Finding is accepted to RAL-2024.
