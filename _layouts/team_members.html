@@ -36,7 +36,7 @@ show_sidebar: false
 <br>
 
 <div class="columns is-multiline">
-{% assign sorted_persons = site.team | where:"category","postdoc" or "phd_student" or "master_student" %}
+{% assign sorted_persons = site.team | where:"category","postdoc" %}
 {% for person in sorted_persons %}
 <div class="column is-one-fifth-desktop is-3-tablet">
   <a href="{{ person.url | prepend: site.baseurl }}">
@@ -58,7 +58,7 @@ show_sidebar: false
 {% endfor %}
 </div>
 
-<!-- 
+
 <hr>
 <h1 style="font-size:30px;">PhD Students</h1>
 <br>
@@ -111,7 +111,7 @@ show_sidebar: false
     </a>
   </div>
   {% endfor %}
-  </div> -->
+  </div>
 
 <<!-- hr>
 <h1 style="font-size:30px;">Others</h1>
