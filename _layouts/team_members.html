@@ -32,13 +32,15 @@ show_sidebar: false
 </div>
 
 <hr>
-<h1 style="font-size:35px;">Postdocs & Graduate Students</h1>
+<h1 style="font-size:30px;">Postdocs and Graduate Students</h1>
 <br>
 
 <div class="columns is-multiline">
 {% assign sorted_scientists = site.team | where:"category","scientist" %}
 {% assign sorted_postdocs = site.team | where:"category","postdoc" %}
 {% assign sorted_persons = sorted_scientists | concat: sorted_postdocs %}
+{% assign sorted_persons = site.team | where:"category","phd_student" %}
+{% assign sorted_persons = site.team | where:"category","master_student" %}
 {% for person in sorted_persons %}
 <div class="column is-one-fifth-desktop is-3-tablet">
   <a href="{{ person.url | prepend: site.baseurl }}">
@@ -60,10 +62,10 @@ show_sidebar: false
 {% endfor %}
 </div>
 
-
-<<!-- hr>
+<!-- 
+<hr>
 <h1 style="font-size:30px;">PhD Students</h1>
-<br> -->
+<br>
 
 <div class="columns is-multiline">
 {% assign sorted_persons = site.team | where:"category","phd_student" %}
@@ -88,9 +90,9 @@ show_sidebar: false
 {% endfor %}
 </div>
 
-<!-- <hr>
-<h1 style="font-size:30px;">Master's Students</h1>
-<br> -->
+<hr>
+<h1 style="font-size:30px;">Master Students</h1>
+<br>
 
 <div class="columns is-multiline">
   {% assign sorted_persons = site.team | where:"category","master_student" %}
@@ -113,7 +115,7 @@ show_sidebar: false
     </a>
   </div>
   {% endfor %}
-  </div>
+  </div> -->
 
 <<!-- hr>
 <h1 style="font-size:30px;">Others</h1>
