@@ -36,9 +36,7 @@ show_sidebar: false
 <br>
 
 <div class="columns is-multiline">
-{% assign sorted_persons = site.team | where:"category","postdoc" %}
-{% assign sorted_persons = site.team | where:"category","phd_student" %}
-{% assign sorted_persons = site.team | where:"category","master_student" %}
+{% assign sorted_persons = site.team | where:"category","postdoc"||"phd_student"||"master_student" %}
 {% for person in sorted_persons %}
 <div class="column is-one-fifth-desktop is-3-tablet">
   <a href="{{ person.url | prepend: site.baseurl }}">
