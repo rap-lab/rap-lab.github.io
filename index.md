@@ -37,6 +37,8 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
+* \[2024.09\] One [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_PDO_YuChen_cam.pdf) on Inverse Kinematics is accepted to WAFR-2024.
+* \[2024.09\] One [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_MT-TSP-O_Anoop_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to WAFR-2024.
 * \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_MTTSP_MICP_Allen_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to IROS-2024.
 * \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_iMTSP_Yifan_cam.pdf) on Multiple Traveling Salesman Problem is accepted to IROS-2024.
 * \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf) on Multi-Agent Teamwise Cooperative Path Finding is accepted to IROS-2024.
