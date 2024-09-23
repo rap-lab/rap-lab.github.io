@@ -36,9 +36,7 @@ show_sidebar: false
 <br>
 
 <div class="columns is-multiline">
-{% assign sorted_scientists = site.team | where:"category","scientist" %}
-{% assign sorted_postdocs = site.team | where:"category","postdoc" %}
-{% assign sorted_persons = sorted_scientists | concat: sorted_postdocs %}
+{% assign sorted_persons = site.team | where:"category","postdoc" %}
 {% assign sorted_persons = site.team | where:"category","phd_student" %}
 {% assign sorted_persons = site.team | where:"category","master_student" %}
 {% for person in sorted_persons %}
