@@ -37,13 +37,15 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
-* \[2024.09\] One [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_PDO_YuChen_cam.pdf) on Inverse Kinematics is accepted to WAFR-2024.
-* \[2024.09\] One [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_MT-TSP-O_Anoop_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to WAFR-2024.
+* \[2024.12\] A [paper](https://rap-lab.github.io/documents/publications/2024_AIJ_EMOA.pdf) on Multi-Objective Shortest Path is accepted to [AIJ](https://doi.org/10.1016/j.artint.2024.104260).
+* \[2024.10\] A [paper](https://rap-lab.github.io/documents/publications/2024_TASE_AKstar_CBSSAPX.pdf) on Multi-Agent Combinatorial Path Finding is accepted to [T-ASE](https://doi.org/10.1109/TASE.2024.3466183).
+* \[2024.09\] A [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_PDO_YuChen_cam.pdf) on Inverse Kinematics is accepted to WAFR-2024.
+* \[2024.09\] A [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_MT-TSP-O_Anoop_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to WAFR-2024.
 * \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_MTTSP_MICP_Allen_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to IROS-2024.
-* \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_iMTSP_Yifan_cam.pdf) on Multiple Traveling Salesman Problem is accepted to IROS-2024.
-* \[2024.08\] One [paper](https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf) on Multi-Agent Teamwise Cooperative Path Finding is accepted to IROS-2024.
-* \[2024.07\] One [paper](https://rap-lab.github.io/documents/publications/2024_RAL_DMS.pdf) on Multi-Agent Combinatorial Path Finding is accepted to RAL-2024.
-* \[2024.04\] One [paper](https://rap-lab.github.io/documents/publications/2024_SOCS_RMA.pdf) on the Orienteering Problem with Time Varying Reward is accepted to SOCS-2024.
+* \[2024.08\] A [paper](https://rap-lab.github.io/documents/publications/2024_IROS_iMTSP_Yifan_cam.pdf) on Multiple Traveling Salesman Problem is accepted to IROS-2024.
+* \[2024.08\] A [paper](https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf) on Multi-Agent Teamwise Cooperative Path Finding is accepted to IROS-2024.
+* \[2024.07\] A [paper](https://rap-lab.github.io/documents/publications/2024_RAL_DMS.pdf) on Multi-Agent Combinatorial Path Finding is accepted to RAL-2024.
+* \[2024.04\] A [paper](https://rap-lab.github.io/documents/publications/2024_SOCS_RMA.pdf) on the Orienteering Problem with Time Varying Reward is accepted to SOCS-2024.
 
 
 # Highlights
