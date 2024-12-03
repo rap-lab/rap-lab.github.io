@@ -7,6 +7,9 @@ show_sidebar: true
 hide_footer: false
 ---
 
+# 2025
+{% bibliography --query @*[year=2025] %}
+
 # 2024
 {% bibliography --query @*[year=2024] %}
 
