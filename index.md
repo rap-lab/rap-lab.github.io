@@ -37,6 +37,8 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
+* \[2025.3\] Three papers on [moving target traveling salesman problem](https://rap-lab.github.io/documents/publications/2025_ICRA_MTTSP3D_Anoop.pdf), [robot arm motion planning](https://rap-lab.github.io/documents/publications/2025_ICRA_MTTSP3D_Anoop.pdf), and [path planning among movable obstacles](https://rap-lab.github.io/documents/publications/2025_ICRA_PAMO.pdf) are accepted to ICRA-2025.
+* \[2025.2\] A [paper](https://rap-lab.github.io/documents/publications/2025_RAL_Refuel_ShizheZhao.pdf) on path planning with refueling is accepted to RAL.
 * \[2024.12\] A [paper](https://rap-lab.github.io/documents/publications/2025_AAAI_LSRP_ShuaiZhou.pdf) on Multi-Agent Path Finding is accepted to AAAI-2025.
 * \[2024.12\] A [paper](https://rap-lab.github.io/documents/publications/2024_AIJ_EMOA.pdf) on Multi-Objective Shortest Path is accepted to [AIJ](https://doi.org/10.1016/j.artint.2024.104260).
 * \[2024.10\] A [paper](https://rap-lab.github.io/documents/publications/2024_TASE_AKstar_CBSSAPX.pdf) on Multi-Agent Combinatorial Path Finding is accepted to [T-ASE](https://doi.org/10.1109/TASE.2024.3466183).
