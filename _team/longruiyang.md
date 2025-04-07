@@ -1,4 +1,3 @@
-```
 ---
 title: Longrui Yang
 subtitle: Research Assistant
@@ -33,5 +32,3 @@ His main research interest is Heterogeneous Multi-Robot Exploration.
 
 
 杨泷瑞目前为实验室研究助理,他的主要研究方向为异构多机器人探索。
-
-```
