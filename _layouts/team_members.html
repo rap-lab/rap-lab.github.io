@@ -198,10 +198,10 @@ show_sidebar: false
 
 
 <hr>
-<h1 style="font-size:35px;">Interns</h1>
+<h1 style="font-size:35px;">Staff and Interns</h1>
 <br>
 <div class="columns is-multiline">
-{% assign sorted_products = site.team | where:"category","intern" %}
+{% assign sorted_products = site.team | where:"category","intern", "staff" %}
 {% for product in sorted_products %}
 <div class="column is-one-fifth-desktop is-3-tablet">
   <a href="{{ product.url | prepend: site.baseurl }}">
