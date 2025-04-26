@@ -37,6 +37,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
+* \[2025.4\] A [paper](https://rap-lab.github.io/documents/publications/2025_RSS_IMEC_YongceLiu_cam.pdf) on Multi-Robot Connectivity and Ergodic Optimization is accepted to RSS-2025.
 * \[2025.3\] A [paper](https://rap-lab.github.io/documents/publications/2025_ICRA_MTTSP3D_Anoop.pdf) on Moving Target Traveling Salesman Problem is accepted to ICRA-2025.
 * \[2025.3\] A [paper](https://rap-lab.github.io/documents/publications/2025_ICRA_PDOMP_YuChen.pdf) on Inverse Kinematics is accepted to ICRA-2025.
 * \[2025.3\] A [paper](https://rap-lab.github.io/documents/publications/2025_ICRA_PAMO.pdf) on Path Planning among Movable Obstacles is accepted to ICRA-2025.
@@ -46,12 +47,6 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 * \[2024.10\] A [paper](https://rap-lab.github.io/documents/publications/2024_TASE_AKstar_CBSSAPX.pdf) on Multi-Agent Combinatorial Path Finding is accepted to [T-ASE](https://doi.org/10.1109/TASE.2024.3466183).
 * \[2024.09\] A [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_PDO_YuChen_cam.pdf) on Inverse Kinematics is accepted to WAFR-2024.
 * \[2024.09\] A [paper](https://rap-lab.github.io/documents/publications/2024_WAFR_MT-TSP-O_Anoop_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to WAFR-2024.
-* \[2024.08\] A [paper](https://rap-lab.github.io/documents/publications/2024_IROS_MTTSP_MICP_Allen_cam.pdf) on Moving-Target Traveling Salesman Problem is accepted to IROS-2024.
-* \[2024.08\] A [paper](https://rap-lab.github.io/documents/publications/2024_IROS_iMTSP_Yifan_cam.pdf) on Multiple Traveling Salesman Problem is accepted to IROS-2024.
-* \[2024.08\] A [paper](https://rap-lab.github.io/documents/publications/2024_IROS_TCCBSt.pdf) on Multi-Agent Teamwise Cooperative Path Finding is accepted to IROS-2024.
-* \[2024.07\] A [paper](https://rap-lab.github.io/documents/publications/2024_RAL_DMS.pdf) on Multi-Agent Combinatorial Path Finding is accepted to RAL-2024.
-* \[2024.04\] A [paper](https://rap-lab.github.io/documents/publications/2024_SOCS_RMA.pdf) on the Orienteering Problem with Time Varying Reward is accepted to SOCS-2024.
-
 
 # Highlights
 
