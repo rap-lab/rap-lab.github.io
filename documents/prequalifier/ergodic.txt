@@ -1,0 +1,23 @@
+Title: Ergodic Optimal Control for Robotic Motion Planning
+
+Brief intro of the project:
+Many applications, such as search and rescue and environment monitoring, require one or multiple autonomous robots to collect information from the environment during their motion. Ergodic search provides a framework for exploiting available information as well as exploring for new information, especially when time is of the essence. Ergodic search algorithms plan trajectories such that the time spent in a region is proportional to the amount of information in that region, and is able to naturally balance exploitation (myopically searching high-information areas) and exploration (visiting all locations in the search space for new information). This project investigates and further pushes the frontier of ergodic trajectory planning.
+
+Job description/workload
+Students’ job includes algorithm development, analysis and experimental verification, which involves developing new ergodic planning algorithms for systems with uncertainty and dynamics in complex environments, writing code to verify the correctness and runtime efficiency of the new algorithms, and comparing the proposed method against the existing ones if available in the literature. The workload is expected to be at least 12 hours per week. 
+
+Keywords of this project
+Robotics, Optimal Control, Motion Planning, Ergodic Planning 
+
+Eligibility (sophomore, junior or senior, major requirement, etc)
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
+
+Prerequisite: 
+Ergodic search is a branch of optimal control. The student should (i) learn background knowledge in optimal control on their own, possible by following the course by Prof. Zac Manchester from CMU (https://github.com/Optimal-Control-16-745), for which, all course materials including video lectures, handouts, and homework can be found at YouTube and GitHub, and (ii) learn basic knowledge in ergodic search from this tutorial (https://ergodiccontrol.github.io/), which provides links to papers and codes. 
+
+Then, the applicants is expected to finish the following tasks:
+(1) read the planner at https://github.com/MurpheyLab/ergodic-control-sandbox and explain in a few sentences how they use iterative LQR (iLQR) to solve ergodic search problem. 
+(2) implement the augmented Lagrangian based iLQR method on your own. Refer to https://github.com/ialab-yale/time_optimal_ergodic_search/blob/main/time_opt_erg_lib%2Fcbf.py and implement control barrier in your code for ergodic search to support obstacle avoidance.
+(3) (Optional) Further improve your planner to reproduce the multi-agent ergodic search with connectivity maintenance in this paper (https://rap-lab.github.io/documents/publications/2025_RSS_IMEC_YongceLiu_cam.pdf) on your own. You should design a few test cases to verify the correctness of your code.
+
+For submission, for question (1), you should prepare a PDF containing your answer. For (2) and (3), you should generate gif images to show the movement of the robots along the planned trajectories. For your python code, you should provide a toy example in a file with name such as example_q2.py, example_q3.py which can be executed in a terminal window with command: “python3 example_q2.py” and shows the planned results. After you finish this task, send (i) your python code, (ii) the gif images you created, together as a zip file to zhongqiang.ren@sjtu.edu.cn for further consideration.
