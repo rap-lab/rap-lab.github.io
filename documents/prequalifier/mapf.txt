@@ -1,0 +1,33 @@
+Title: Multi-Agent Path Finding
+
+Brief intro of the project:
+Multi-Agent Path Finding (MAPF) seeks collision free paths for multiple robots from their start locations to their goal locations, while minimize an objective function such as the sum of robots' arrival times. MAPF arises in applications such as smart warehouse and logistics. This projects investigates new algorithms for MAPF related problems.
+
+Job description/workload
+Students’ job includes algorithm development, analysis and experimental verification, which involves developing new algorithms for various MAPF problems, writing code to verify the correctness and runtime efficiency of the new algorithms, and comparing the proposed method against the existing ones. The workload is expected to be at least 12 hours per week. 
+
+Keywords of this project
+Robotics, Motion Planning, Multi-Agent Systems
+
+Eligibility (sophomore, junior or senior, major requirement, etc)
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
+
+Prerequisite: 
+Your job is to read the following paper
+https://ojs.aaai.org/index.php/AAAI/article/view/8140
+and the following code base
+https://github.com/rap-lab-org/public_graph
+and then implement conflict-based search (CBS) based on this code base.
+
+First, to understand CBS, you need to make sure you understand A*, A* in space-time, and then CBS. If you are unfimilar with any of them, you should find online tutorials yourself and understand these algorithms.
+
+Second, your implementation of CBS must be based on the provided code base. You need to understand the provided classes and functions such as graph, space-time A*, etc. Create a header file named my_cbs.hpp in the include/ folder and a source file named my_cbs.cpp in the source/ folder, and a test file named test_my_cbs.cpp in the test/ folder. Your test file should contain the toy examples in that paper and additional more complicated examples you designed. 
+
+Finally, you should save the results of those examples into files and write some python code to generate a gif to animate the path of the agents, something similar to Fig. 2 on this webpage
+https://rap-lab.github.io/research/mcpf 
+
+Send your solutions to zhongqiang.ren@sjtu.edu.cn in a zip that contains 
+1. a folder containing all your source code
+2. the gif(s) of your examples.
+Your source code folder should be directly compilable with the same command as in the readme of the code base
+https://github.com/rap-lab-org/public_graph
