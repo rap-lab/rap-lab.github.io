@@ -22,7 +22,7 @@ hero_image: todo.png
 
 We are part of the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
 
-We research **Robotics, Autonomy and Planning**, with the focus on fundamental **motion planning** and **path planning** problems for **single and multiple robots**.
+We research **Robotics, Autonomy and Planning**, with the focus on fundamental **motion planning** and **path planning** problems for **single and multiple robots** in dynamic, interactive and unknown environments.
 We leverage and advance the frontier of combinatorial search, optimal control and mixed integer programming approaches.
 The problems we addressed are often NP-hard, and our research exploits the underlying structure of these problems to develop algorithms that balance between **runtime efficiency** and **solution quality** with **rigorous guarantees**, while being **deployable to physical robots**.
 These problems arise in **warehouse logistics, manufacturing and search-and-rescue**.
