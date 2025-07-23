@@ -9,7 +9,7 @@ Keywords of this project
 Robotics, Motion Planning, Autonomous Exploration
 
 Eligibility (sophomore, junior or senior, major requirement, etc)
-Students must do well in the test at https://github.com/rap-lab-org/public_exploration_sim_test as specified in the readme file there.
+Students must be familiar with ROS (Robot Operating System), and do well in the test at https://github.com/rap-lab-org/public_exploration_sim_test as specified in the readme file there.
 Send your solutions to zhongqiang.ren@sjtu.edu.cn in a zip that contains 
 1. a folder containing all your source code
 2. a video demonstrating the exploration process of your method in the simulation

@@ -12,6 +12,11 @@ Robotics, Motion Planning, Operation Research, Optimization
 Eligibility (sophomore, junior or senior, major requirement, etc)
 Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
 
-Prerequisite: implement both MIP formulations in the following paper using Python and Gurobi solver. 
+Prerequisite:
+(A) implement both MIP formulations in the following paper using Python and Gurobi solver.
 https://rap-lab.github.io/documents/publications/2024_IROS_MTTSP_MICP_Allen_cam.pdf
 You should design a few test cases to verify the correctness of your code. You should generate a gif image to show the movement of the robots along the planned path. For your python code, your solver should be implemented as a function which should be called by other functions for testing or visualization. You should provide a toy example in a file with name such as example.py, which can be executed in a terminal window with command: “python3 example.py” and shows the planned results (either in figure or with printed text). If you are not familiar with basic optimization theory, Python, or Gurobi, you need to learn them on your own, which will be the prerequisite for the project. After you finish this task, send (1) your python code (with example.py that is runnable), (2) the gif image you created, together as a zip file to zhongqiang.ren@sjtu.edu.cn for further consideration.
+
+(B) Answer the following questions in your own words. Put your answers in a PDF file and add it to the zip.
+(Q1) What's the pros and cons of using big-M constraints?
+(Q2) Why is convex optimization regarded as an "easy-to-solve" problem?
