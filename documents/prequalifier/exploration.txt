@@ -1,0 +1,28 @@
+Title:  Autonomous Exploration of Unknown Environments
+Brief intro of the project:
+Exploration seeks to navigate one or multiple autonomous robots to quickly map a bounded unknown environment. It involves multiple key components such as, motion planning and mapping. Our goal is to develop novel algorithms for exploration in the real world.
+
+Job description/workload
+Students' job includes algorithm development, data analysis, and implementation of algorithms in both simulation and on real-world robots. The workload is expected to be at least 12 hours per week.
+
+Keywords of this project
+Robotics, Motion Planning, Autonomous Exploration
+
+Eligibility (sophomore, junior or senior, major requirement, etc)
+Students must do well in the test at https://github.com/rap-lab-org/public_exploration_sim_test as specified in the readme file there.
+Send your solutions to zhongqiang.ren@sjtu.edu.cn in a zip that contains 
+1. a folder containing all your source code
+2. a video demonstrating the exploration process of your method in the simulation
+
+The following paper can code base can be your references
+- https://www.science.org/doi/10.1126/scirobotics.adf0970
+- https://github.com/caochao39/tare_planner
+- https://github.com/ai-winter/ros_motion_planning
+- https://www.diva-portal.org/smash/get/diva2:1285787/FULLTEXT01.pdf
+- https://github.com/ethz-asl/nbvplanner 
+- https://arxiv.org/pdf/2010.11561
+- Yamauchi, B., "A frontier-based approach for autonomous exploration", IEEE CIRA, 1997.
+
+Recommended Background Knowledge:
+Ideally, you should be familiar with basic graph search algorithms (e.g., A*, JPS), sampling-based methods (e.g., RRT, RRT*), control methods such as PID, MPC, LQR. Some knowledge about SLAM algorithm (e.g., FastLIO, VINS, LIO-SAM, or A-LOAM) and basic understanding of common map representations such as 2D grid maps and 3D OctoMap will also help a lot in this project.
+Finally, it is preferred if you have basic knowledge of using common sensors such as MID360 Lidar or Intel Realsense, and understanding how to use ROS to acquire sensor data and control the robot platform.
