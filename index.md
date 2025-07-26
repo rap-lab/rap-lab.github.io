@@ -18,6 +18,10 @@ hero_image: todo.png
   gtag('config', 'G-D9QZD7Y8D0');
 </script>
 
+**We are looking for self-motivated students and postdocs in Robotics. Please send an email to Prof. Ren if you are interested in joining us.**
+
+**欢迎热爱机器人的学生和博士后加入我们，有兴趣请发送邮件给任教授。**
+
 # About Us (简介)
 
 We are part of the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
