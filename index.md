@@ -37,6 +37,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
+* \[2025.7\] Three papers [paper1](https://rap-lab.github.io/documents/publications/2025_IROS_MCPFTT_XuemianWu.pdf) [paper2](https://rap-lab.github.io/documents/publications/2025_IROS_ESPC_YongceLiu.pdf) [paper3](https://rap-lab.github.io/documents/publications/2025_IROS_MAMP_MICP_ShizheZhao.pdf) are accepted to IROS-2025.
 * \[2025.6\] Our [paper](https://rap-lab.github.io/documents/publications/2025_TRO_Cstar_Allen.pdf) on Moving Target Traveling Salesman Problem is accepted to T-RO.
 * \[2025.5\] Our [paper](https://rap-lab.github.io/documents/publications/2025_ICRA_MTTSP3D_Anoop.pdf) on Moving Target Traveling Salesman Problem enters the Best Paper Finalist at ICRA-2025.
 * \[2025.4\] A [paper](https://rap-lab.github.io/documents/publications/2025_RSS_IMEC_YongceLiu_cam.pdf) on Multi-Robot Connectivity and Ergodic Optimization is accepted to RSS-2025.
