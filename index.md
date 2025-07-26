@@ -18,9 +18,9 @@ hero_image: todo.png
   gtag('config', 'G-D9QZD7Y8D0');
 </script>
 
-**We are looking for self-motivated students and postdocs in Robotics. Please send an email to [Prof. Ren](https://rap-lab.github.io/team/zren/) if you are interested in joining us.**
+**We are looking for self-motivated staffs and postdocs in Robotics. Please send an email to [Prof. Ren](https://rap-lab.github.io/team/zren/) if you are interested in joining us.**
 
-**欢迎热爱机器人的学生和博士后加入我们，有兴趣请发送邮件给[任教授](https://rap-lab.github.io/team/zren/)。**
+**欢迎热爱机器人的同学和博士后加入我们，有兴趣请发送邮件给[任教授](https://rap-lab.github.io/team/zren/)。**
 
 # About Us (简介)
 
