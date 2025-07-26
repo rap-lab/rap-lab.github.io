@@ -24,7 +24,7 @@ hero_image: todo.png
 
 # About Us (简介)
 
-We are part of the [UM-SJTU Joint Institute](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
+We are part of the [Global College](https://www.ji.sjtu.edu.cn/) at [Shanghai Jiao Tong University (SJTU)](https://www.sjtu.edu.cn/).
 
 We research **Robotics, Autonomy and Planning**, with the focus on fundamental **motion planning** and **path planning** problems for **single and multiple robots** in dynamic, interactive and unknown environments.
 We leverage and advance the frontier of combinatorial search, optimal control and mixed integer programming approaches.
