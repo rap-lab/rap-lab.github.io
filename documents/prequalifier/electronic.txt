@@ -1,0 +1,31 @@
+Title: Development of Circuits and Embedded Systems
+
+Brief intro of the project:
+Circuits and embedded systems are essential building parts of all robots. This project requires the development of circuits and embedded systems for snake robots.
+
+Job description/workload
+The student's work includes designing circuits with microcontrollers for embedded control according to the functional requirements of the robot. This typically involves selecting an appropriate MCU, sensor chips, and fieldbus interfaces based on the system requirements. The student designs circuit schematics with reference to chip datasheets and open-source examples, and then carries out PCB component layout and routing according to design rules. Finally, the student is capable of assembling the hardware through soldering and verifying the correctness of the design. The workload is expected to be at least 12 hours per week. 
+
+Keywords of this project
+Robotics, Embedded Control System, Microcontroller
+
+Eligibility
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
+
+Prerequisite: 
+Your job is to design an example controller for a snake robot module. You need to design the complete PCB for the controller, with the following guidelines:
+
+FUNCTIONAL REQUIREMENTS: The controller controls a motor by CAN bus, uses a gyroscope chip to acquire pose data and communicates with the 
+master PC by RS-485 bus. The controller receives 12V DC power supply. There is no need to consider the power supply for the motor.
+
+SELECTION GUIDELINES: The controller should consist of 4 main parts:
+1. MCU and its basic system circuit. Ensure that programming and serial debug ports are designed. The MCU model selected is STM32G431RBT6. 
+2. CAN transmit and receive circuit. Ensure that CAN bus port is designed.The CAN TR chip model is TJA1050T. 
+3. RS-485 transmit and receive circuit. Ensure that RS-485 bus port is designed. The RS-485 TR chip model is MAX13487. 
+3. Gyroscope circuit. The gyroscope chip can communicate with the MCU by I2C or SPI. The gyroscope chip model is LSM6DS3TR.
+
+REFERENCE:
+1. ICs' footprints and datasheet can be find in (https://www.szlcsc.com/).
+2. If you have no experience in EDA software before, you can learn JLC EDA in (https://www.bilibili.com/video/BV1fM411Z7cW/?share_source=copy_web&vd_source=c88159cdbbf9b7d393a454c26a332460).
+
+In addition to the four circuits mentioned above, you need to consider the power supply configuration of the circuit yourself. The PCB outline is a circle with a diameter of 50 mm. You can design this PCB project by any EDA software, but we recommend JCL EDA for its convenience to learn and use. You should use STM32CubeMX to pre-plan the connections between the MCU and the chips. Before designing, make sure to read the design guidelines in each chip's datasheet and strictly follow them. Finally, send your PCB project folder in a zip to zhongqiang.ren@sjtu.edu.cn.
