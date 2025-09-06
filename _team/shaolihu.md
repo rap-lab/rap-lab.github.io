@@ -1,7 +1,7 @@
 ---
 title: Shaoli Hu
-subtitle: Master
-job_title: Master
+subtitle: Master Student
+job_title: Master Student
 category: master_student
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
