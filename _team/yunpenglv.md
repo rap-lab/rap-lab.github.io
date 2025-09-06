@@ -1,7 +1,7 @@
 ---
 title: Yunpeng Lv
-subtitle: Phd
-job_title: Phd
+subtitle: Ph.D. Student
+job_title: Ph.D. Student
 category: phd_student 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product

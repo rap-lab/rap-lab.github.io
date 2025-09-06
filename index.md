@@ -20,7 +20,7 @@ hero_image: todo.png
 
 **We are looking for self-motivated staffs and postdocs in Robotics. Please send an email to [Prof. Ren](https://rap-lab.github.io/team/zren/) if you are interested in joining us.**
 
-**欢迎热爱机器人的同学和博士后加入我们，有兴趣请发送邮件给[任教授](https://rap-lab.github.io/team/zren/)。**
+**欢迎热爱机器人的同学和博士后加入我们，有兴趣请发送邮件给[任教授](https://rap-lab.github.io/team/zren/)。（对于希望保研的同学，因为申请邮件太多，如果没有收到回复，请默认婉拒。）**
 
 # About Us (简介)
 
@@ -42,7 +42,8 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 # News
 
 * \[2025.7\] Three papers [paper1](https://rap-lab.github.io/documents/publications/2025_IROS_MCPFTT_XuemianWu.pdf) [paper2](https://rap-lab.github.io/documents/publications/2025_IROS_ESPC_YongceLiu.pdf) [paper3](https://rap-lab.github.io/documents/publications/2025_IROS_MAMP_MICP_ShizheZhao.pdf) are accepted to IROS-2025.
-* \[2025.6\] Our [paper](https://rap-lab.github.io/documents/publications/2025_TRO_Cstar_Allen.pdf) on Moving Target Traveling Salesman Problem is accepted to T-RO.
+* \[2025.6\] One [paper](https://rap-lab.github.io/documents/publications/2025_TRO_Cstar_Allen.pdf) on Moving Target Traveling Salesman Problem is accepted to T-RO.
+* \[2025.6\] One [paper](https://rap-lab.github.io/documents/publications/2025_IJRR_IL_ChenWang.pdf) on Neuro-Symbolic Approach is accepted to IJRR.
 * \[2025.5\] Our [paper](https://rap-lab.github.io/documents/publications/2025_ICRA_MTTSP3D_Anoop.pdf) on Moving Target Traveling Salesman Problem enters the Best Paper Finalist at ICRA-2025.
 * \[2025.5\] Two papers [paper1](https://rap-lab.github.io/documents/publications/2025_SOCS_BOTSPTW_ShizheZhao.pdf) [paper2](https://rap-lab.github.io/documents/publications/2025_SOCS_LSPRstar_ShuaiZhou.pdf) accepted to SOCS-2025.
 * \[2025.4\] A [paper](https://rap-lab.github.io/documents/publications/2025_RSS_IMEC_YongceLiu_cam.pdf) on Multi-Robot Connectivity and Ergodic Optimization is accepted to RSS-2025.

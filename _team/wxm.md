@@ -1,7 +1,7 @@
 ---
 title: Xuemian Wu
-subtitle: Research Assistant
-job_title: Research Assistant
+subtitle: Ph.D. Student
+job_title: Ph.D. Student
 category: phd_student 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
