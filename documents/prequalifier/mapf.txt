@@ -17,13 +17,16 @@ Your job is to read the following paper
 https://ojs.aaai.org/index.php/AAAI/article/view/8140
 and the following code base
 https://github.com/rap-lab-org/public_graph
-and then implement conflict-based search (CBS) based on this code base.
+and then implement conflict-based search (CBS) for agents with different speeds based on this code base.
 
-First, to understand CBS, you need to make sure you understand A*, A* in space-time, and then CBS. If you are unfimilar with any of them, you should find online tutorials yourself and understand these algorithms.
+First, to understand CBS, you need to make sure you understand A*, A* in space-time, and then CBS. If you are unfamiliar with any of them, you should find online tutorials yourself and understand these algorithms.
 
-Second, your implementation of CBS must be based on the provided code base. You need to understand the provided classes and functions such as graph, space-time A*, etc. Create a header file named my_cbs.hpp in the include/ folder and a source file named my_cbs.cpp in the source/ folder, and a test file named test_my_cbs.cpp in the test/ folder. Your test file should contain the toy examples in that paper and additional more complicated examples you designed. 
+Second, the planner you need to implement should address a small variant of MAPF where agents can move with different sizes. Consider a grid-like map. Some agents are rectangles that occupy more than one cell (e.g. occupy 2x2 cells, or 2x3 cells). If at any time step, two agents occupy the same cell, then there is a conflict. Your planner should return conflict-free paths for all agents, given agents' sizes.
+You can define how to represent agents' sizes as you like in your code. The sizes should be parameters that are specified in the main function and passed to your planner. You should not hard code the agents' sizes in your planner. In other words, if I modify the size parameters in your main function, your planner should still work.
 
-Finally, you should save the results of those examples into files and write some python code to generate a gif to animate the path of the agents, something similar to Fig. 2 on this webpage
+Third, your implementation of CBS must be based on the provided code base. You need to understand the provided classes and functions such as graph, space-time A*, etc. Create a header file named my_cbs.hpp in the include/ folder and a source file named my_cbs.cpp in the source/ folder, and a test file named test_my_cbs.cpp in the test/ folder. You can change other files if needed. Your test file should contain the toy examples in that paper and additional more complicated examples you designed. 
+
+Finally, you should save the results of those examples into files and write some python code to generate a gif to animate the path of the agents, something similar to Fig. 2 on this webpage, but with agents of different sizes
 https://rap-lab.github.io/research/mcpf 
 
 Send your solutions to zhongqiang.ren@sjtu.edu.cn in a zip that contains 
