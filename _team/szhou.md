@@ -1,8 +1,8 @@
 ---
 title: Shuai Zhou
-subtitle: Undergraduate Student
-job_title: Undergraduate Student
-category: intern
+subtitle: Intern@CMU
+job_title: Intern@CMU
+category: alumni
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/szhou.png
@@ -30,7 +30,8 @@ news:
 - Tel: +8615622851270
 - Email: davidzhou718@gmail.com
 
+(2025 Shuai worked as an intern at CMU.)
 
-Shuai is currently an research intern in [Rap-lab](https://rap-lab.github.io/) working on MAPF problems with Prof. Ren. He is a sophomore student at the [South China University of Technology](https://www.scut.edu.cn/en/) majoring in robotics engineering. 
+Shuai was a research intern in [Rap-lab](https://rap-lab.github.io/) working on MAPF problems with Prof. Ren. He is a sophomore student at the [South China University of Technology](https://www.scut.edu.cn/en/) majoring in robotics engineering. 
 
-周帅目前是机器人自主规划实验室的一位科研实习生，专注于多机规划问题。他是华南理工大学大二本科生，专业为机器人工程。
+周帅曾是机器人自主规划实验室的一位科研实习生，专注于多机规划问题。他是华南理工大学大二本科生，专业为机器人工程。

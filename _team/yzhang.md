@@ -1,8 +1,8 @@
 ---
 title: Yuanhang Zhang
-subtitle: Undergraduate Student
-job_title: Undergraduate Student
-category: intern 
+subtitle: MS@CMU
+job_title: MS@CMU
+category: alumni 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/yuanhang_zhang.jpeg

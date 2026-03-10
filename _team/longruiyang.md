@@ -1,8 +1,8 @@
 ---
 title: Longrui Yang
-subtitle: Research Assistant
-job_title: Research Assistant
-category: staff 
+subtitle: MS@NTU
+job_title: MS@NTU
+category: alumni 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/ylr.jpg
@@ -27,8 +27,10 @@ news:
   height: 1200
 ---
 
-Longrui Yang is currently a Research Assistant at the [UM-SJTU Joint Institute]((https://www.ji.sjtu.edu.cn/)).
+(2025: Longrui is a master student at Nanyang Technological University in Singapore.)
+
+Longrui Yang was a Research Assistant at the [Global College]((https://www.gc.sjtu.edu.cn/)).
 His main research interest is Heterogeneous Multi-Robot Exploration.
 
 
-杨泷瑞目前为实验室研究助理,他的主要研究方向为异构多机器人探索。
+杨泷瑞曾为实验室研究助理,他的主要研究方向为异构多机器人探索。
