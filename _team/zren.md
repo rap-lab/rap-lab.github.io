@@ -1,7 +1,7 @@
 ---
 title: Zhongqiang (Richard) Ren
-subtitle: Assistant Professor
-job_title: Assistant Professor
+subtitle: Associate Professor
+job_title: Associate Professor
 category: lab_head 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
