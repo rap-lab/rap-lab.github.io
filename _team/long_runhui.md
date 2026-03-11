@@ -1,17 +1,17 @@
 ---
-title: Jingfan Tang
-subtitle: Undergraduate Researcher
-job_title: Undergraduate Researcher
-category: undergraduate 
+title: Runhui Long
+subtitle: MS@CMU
+job_title: MS@CMU
+category: alumni 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
-image: /img/team/tang_jingfan.jpg
+image: /img/team/long_runhui.jpg
 hide_hero: true
 hide_footer: false
 remove_hero_title: true
 show_sidebar: false
 redirect_from:
-  - /team/jingfantang/
+  - /team/runhuilong/
 links:
   scholar:  
   github: 
@@ -27,4 +27,6 @@ news:
   height: 1200
 ---
 
-Jingfan Tang is an undergraduate research assistant at the [Global College]((https://www.gc.sjtu.edu.cn/)), with research interest on autonomous exploration of unknown environments.
+(2026: Runhui will join Carnegie Mellon University as a master student.)
+
+Runhui Long is an undergraduate research assistant at the [Global College]((https://www.gc.sjtu.edu.cn/)), with research interest on mixed-integer motion planning and planning in interactive environments.
