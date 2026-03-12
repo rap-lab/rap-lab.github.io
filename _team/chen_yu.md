@@ -1,17 +1,17 @@
 ---
-title: Runhui Long
-subtitle: Undergraduate Researcher
-job_title: Undergraduate Researcher
-category: undergraduate 
+title: Yu Chen
+subtitle: Staff
+job_title: Staff
+category: staff 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
-image: /img/team/long_runhui.jpg
+image: /img/team/chen_yu.jpg
 hide_hero: true
 hide_footer: false
 remove_hero_title: true
 show_sidebar: false
 redirect_from:
-  - /team/runhuilong/
+  - /team/yuchen/
 links:
   scholar:  
   github: 
@@ -27,6 +27,5 @@ news:
   height: 1200
 ---
 
-(2026: Runhui will join Carnegie Mellon University as a master student.)
 
-Runhui Long is an undergraduate research assistant at the [Global College]((https://www.gc.sjtu.edu.cn/)), with research interest on mixed-integer motion planning and planning in interactive environments.
+Yu Chen got his master from Carnegie Mellon University and is currently a staff engineer in the lab with research interest on motion planning for robot arms.
