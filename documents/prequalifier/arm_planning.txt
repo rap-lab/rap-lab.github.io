@@ -1,0 +1,42 @@
+Title: Motion Planning for a Robot Arm
+
+Brief intro of the project:
+Robotic arms are now everywhere. However, planning their motion in cluttered environments remains a challenging problem due to the large number of degree-of-freedom (DoF). This project focus on the fundamental problem of motion planning for general robot arms.
+
+Job description/workload
+The student's work involves implementing motion planning algorithms for robot arms and conducting simulations on the MuJoCo platform and possibly real robot. The workload is expected to be at least 12 hours per week. 
+
+Keywords of this project
+Robotics, Motion Planning
+
+Eligibility 
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
+
+Prerequisite: 
+Your task is to read the paper and master the underlying concepts and methods (you may refer to the cited references for further information). Subsequently, you are expected to implement a recent motion planning algorithm based on the provided code base.
+
+REFERENCE:
+0. CAVEAT: No matter you successfully solve the problem or not, you should NOT put any of your code related to this prerequisite task public online (e.g. push to any public GitHub repo).
+
+1. If you are not familiar with notions such as configuration space, inverse kinematics, please refer to Modern Robotics.
+Book: https://hades.mech.northwestern.edu/images/2/2e/MR-largefont-v2.pdf 
+Online video lectures: https://www.youtube.com/watch?v=jVu-Hijns70&list=PLggLP4f-rq02vX0OQQ5vrCxbJrzamYDfx
+
+2. If you are not familiar with augmented Lagrangian optimization, please refer to the first few lectures of the optimal control online course.
+Videos: https://www.youtube.com/playlist?list=PLZnJoM76RM6IAJfMXd1PgGNXn3dxhkVgI
+Notes: https://github.com/Optimal-Control-16-745/lecture-notebooks-2022
+
+3. Your are required to implement the algorithm in this paper
+https://rap-lab.github.io/documents/publications/2025_ICRA_PDOMP_YuChen.pdf
+which is based on a prior work on inverse kinematics:
+https://rap-lab.github.io/documents/publications/2024_WAFR_PDO_YuChen_cam.pdf
+
+4. The code base and the detailed description of the task is here:
+https://github.com/rap-lab-org/public_arm_planning_test
+
+5. You are not allowed to use any additional third-party library except the ones that are already required in this project.
+
+Please submit a zip that includes:
+1. Your entire "public_arm_planning_test" project after you fill in your code.
+2. Videos/gifs of the solution paths of the robot arm. You should try different starts and goals to verify the robustness of your approach.
+3. Put 1 and 2 in a zip and send to zhongqiang.ren@sjtu.edu.cn.
