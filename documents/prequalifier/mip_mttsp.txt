@@ -20,3 +20,5 @@ You should design a few test cases to verify the correctness of your code. You s
 (B) Answer the following questions in your own words. Put your answers in a PDF file and add it to the zip.
 (Q1) What's the pros and cons of using big-M constraints?
 (Q2) Why is convex optimization regarded as an "easy-to-solve" problem?
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).

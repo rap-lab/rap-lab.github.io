@@ -18,6 +18,8 @@ Ergodic search is a branch of optimal control. The student should (i) learn back
 Then, the applicants is expected to finish the following tasks:
 (1) read the planner at https://github.com/MurpheyLab/ergodic-control-sandbox and explain in a few sentences how they use iterative LQR (iLQR) to solve ergodic search problem. 
 (2) implement the augmented Lagrangian based iLQR method on your own. Refer to https://github.com/ialab-yale/time_optimal_ergodic_search/blob/main/time_opt_erg_lib%2Fcbf.py and implement control barrier in your code for ergodic search to support obstacle avoidance.
-(3) (Optional) Further improve your planner to reproduce the multi-agent ergodic search with connectivity maintenance in this paper (https://rap-lab.github.io/documents/publications/2025_RSS_IMEC_YongceLiu_cam.pdf) on your own. You should design a few test cases to verify the correctness of your code.
+(3) reproduce the multi-agent ergodic search with connectivity maintenance in this paper (https://rap-lab.github.io/documents/publications/2025_RSS_IMEC_YongceLiu_cam.pdf) on your own. You should design a few test cases to verify the correctness of your code.
 
 For submission, for question (1), you should prepare a PDF containing your answer. For (2) and (3), you should generate gif images to show the movement of the robots along the planned trajectories. For your python code, you should provide a toy example in a file with name such as example_q2.py, example_q3.py which can be executed in a terminal window with command: “python3 example_q2.py” and shows the planned results. After you finish this task, send (i) your python code, (ii) the gif images you created, together as a zip file to zhongqiang.ren@sjtu.edu.cn for further consideration.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).

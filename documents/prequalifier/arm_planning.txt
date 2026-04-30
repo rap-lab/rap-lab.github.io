@@ -36,7 +36,10 @@ https://github.com/rap-lab-org/public_arm_planning_test
 
 5. You are not allowed to use any additional third-party library except the ones that are already required in this project.
 
+
 Please submit a zip that includes:
 1. Your entire "public_arm_planning_test" project after you fill in your code.
 2. Videos/gifs of the solution paths of the robot arm. You should try different starts and goals to verify the robustness of your approach.
 3. Put 1 and 2 in a zip and send to zhongqiang.ren@sjtu.edu.cn.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).

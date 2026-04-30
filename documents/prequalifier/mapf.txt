@@ -34,3 +34,7 @@ Send your solutions to zhongqiang.ren@sjtu.edu.cn in a zip that contains
 2. the gif(s) of your examples.
 Your source code folder should be directly compilable with the same command as in the readme of the code base
 https://github.com/rap-lab-org/public_graph
+You must implement your code based on this code base. If you find any bug in this code base, you should fix them yourself.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).
+

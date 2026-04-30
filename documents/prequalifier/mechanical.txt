@@ -27,3 +27,5 @@ Please submit a zip that includes:
 please convert your files into .stp format and submit.
 2. An exploded view animation video of the designed robot module.
 Send your folder in a zip to zhongqiang.ren@sjtu.edu.cn.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).

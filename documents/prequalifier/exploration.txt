@@ -26,3 +26,5 @@ The following paper can code base can be your references
 Recommended Background Knowledge:
 Ideally, you should be familiar with basic graph search algorithms (e.g., A*, JPS), sampling-based methods (e.g., RRT, RRT*), control methods such as PID, MPC, LQR. Some knowledge about SLAM algorithm (e.g., FastLIO, VINS, LIO-SAM, or A-LOAM) and basic understanding of common map representations such as 2D grid maps and 3D OctoMap will also help a lot in this project.
 Finally, it is preferred if you have basic knowledge of using common sensors such as MID360 Lidar or Intel Realsense, and understanding how to use ROS to acquire sensor data and control the robot platform.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).
