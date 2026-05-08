@@ -31,7 +31,7 @@ We leverage and advance the frontier of combinatorial search, optimal control an
 The problems we addressed are often NP-hard, and our research exploits the underlying structure of these problems to develop algorithms that balance between **runtime efficiency** and **solution quality** with **rigorous guarantees**, while being **deployable to physical robots**.
 These problems arise in **warehouse logistics, manufacturing and search-and-rescue**.
 
-我们隶属于[上海交通大学](https://www.sjtu.edu.cn/)[密西根学院](https://www.ji.sjtu.edu.cn/)。
+我们隶属于[上海交通大学](https://www.sjtu.edu.cn/)[浦江国际学院](https://www.ji.sjtu.edu.cn/)(原密西根学院)。
 
 我们研究**机器人学，自主系统，智能规划**，尤其关注**单机器人和多机器人**中的**运动规划和路径规划**问题。
 我们的研究利用组合搜索，最优控制，混合整数规划等方法，同时推动这些方法的发展。
