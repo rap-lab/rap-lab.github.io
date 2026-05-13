@@ -4,7 +4,7 @@ Brief intro of the project:
 Mixed Integer Programming (MIP) is a useful approach for many motion planning problems. As its name suggests, MIP is a mathematical optimization problem in which some or all the variables are integers, while the others are continuous variables. For motion planning, the integer variables can be used to describe discrete or logical decisions, such as passing an obstacle on its left or right, while continuous variables can describe the position, orientation or velocities of the robot in some continuous workspace. This projects investigates new MIP formulation for motion planning for single and multiple robots.
 
 Job description/workload
-Students’ job includes algorithm development, analysis and experimental verification, which involves developing new formulation of MIP for various motion planning problems, writing code to verify the correctness and runtime efficiency of the new formulations, and comparing the proposed method against the existing formulations. The workload is expected to be at least 12 hours per week. 
+Students’ job includes algorithm development, analysis and experimental verification, which involves developing new formulation of MIP for various motion planning problems, writing code to verify the correctness and runtime efficiency of the new formulations, and comparing the proposed method against the existing formulations.
 
 Keywords of this project
 Robotics, Motion Planning, Operation Research, Optimization

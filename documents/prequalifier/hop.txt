@@ -1,0 +1,25 @@
+Title: Optimal Control and Trajectory Optimization
+
+Brief intro of the project:
+Optimal Control (OC) problems seek a dynamically feasible trajectory that minimizes a cost functional defined along the trajectory, which is of fundamental importance in robotics, and is the basis for numerous research topics such as agile flight of drones, dynamic balancing of legged robots, trajectory planning for multiple robots or information search. This project investigates and further pushes the frontier of OC and robot motion planning.
+
+Job description/workload
+Students’ job includes algorithm development, analysis and experimental verification, which involves developing new OC algorithms for systems with uncertainty and dynamics in complex environments, writing code to verify the correctness and runtime efficiency of the new algorithms, and comparing the proposed method against the existing ones if available in the literature.
+
+Keywords of this project
+Robotics, Optimal Control, Motion Planning 
+
+Eligibility (sophomore, junior or senior, major requirement, etc)
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
+
+Prerequisite: 
+The student should (i) learn background knowledge in optimal control on their own, possible by following the course by Prof. Zac Manchester from CMU (https://github.com/Optimal-Control-16-745), for which, all course materials including video lectures, handouts, and homework can be found at YouTube and GitHub, and (ii) understand the method HOP-LQR and HOP-DDP and the code in the following paper (https://rap-lab.github.io/documents/publications/2026_RSS_HOP_MiaomiaoDai.pdf). 
+(iii) if needed, go to https://ieeexplore.ieee.org/document/8967788 for more information on Augmented Lagrangian.
+
+Then, the applicants is expected to develop an the following tasks:
+(1) combine Augmented Lagrangian (AL) with the HOP-DDP to develop a new algorithm (AL-HOP-DDP) that can achieve collision avoidance among static obstacles. Prepare a PDF to describe your AL-HOP-DDP in pseudo-code with explanation on notations you used in the pseudo-code.
+(2) implement your planner AL-HOP-DDP in Python. You should design a few test cases to verify the correctness of your code.
+
+For submission, for question (1), you should prepare a PDF containing your answer. For (2), you should generate gif images to show the movement of the robots along the planned trajectories. For your python code, you should provide a toy example in a file with name such as example1.py, example2.py which can be executed in a terminal window with command: “python3 example1.py” and shows the planned results. After you finish this task, send your PDF, python code, the gif images you created, together as a zip file to zhongqiang.ren@sjtu.edu.cn for further consideration.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).
