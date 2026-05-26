@@ -1,0 +1,43 @@
+Title: Multi-Agent Path Finding with Asynchronous Actions
+
+Brief intro of the project:
+Multi-Agent Path Finding (MAPF) seeks collision free paths for multiple robots from their start locations to their goal locations, while minimize an objective function such as the sum of robots' arrival times. MAPF arises in applications such as smart warehouse and logistics. This projects investigates new algorithms for MAPF related problems.
+
+Job description/workload
+Students’ job includes algorithm development, analysis and experimental verification, which involves developing new algorithms for various MAPF problems, writing code to verify the correctness and runtime efficiency of the new algorithms, and comparing the proposed method against the existing ones. The workload is expected to be at least 12 hours per week. 
+
+Keywords of this project
+Robotics, Path and Motion Planning, Multi-Agent Systems
+
+Eligibility (sophomore, junior or senior, major requirement, etc)
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before joining the project.
+
+Prerequisite: 
+Your job is to read the following paper
+https://rap-lab.github.io/documents/publications/2026_AAMAS_CBSAA_XuemianWu.pdf
+and the following code base
+https://github.com/rap-lab-org/public_graph
+and then implement the CBS-AA algorithm in that paper.
+
+First, to understand CBS-AA, you need to make sure you understand A*, A* in space-time, and then CBS. If you are unfamiliar with any of them, you should find online tutorials yourself and understand these algorithms.
+
+Second, the planners you need to implement are the CSA and CMA variants in the mentioned paper. In your implementation, you can simplified the problem by assuming that the duration of all actions (go through any edge or wait-in-place) are integers that are given as input of the problem, without considering real-numbered action duration.
+
+Third, your implementation of CBS must be based on the provided code base. You need to understand the provided classes and functions such as graph, space-time A*, etc. Create a header file named my_cbs.hpp in the include/ folder and a source file named my_cbs.cpp in the source/ folder, and a test file named test_my_cbs.cpp in the test/ folder. You can change other files if needed. Your test file should contain the toy examples in that paper and additional more complicated examples you designed. 
+
+Fourth, your low-level planner can either be a modified version of the space-time A*, or the SIPP-based approach in the mentioned paper. Again, you should find other papers and tutorials by yourself if needed.
+
+Finally, you should save the results of those examples into files and write some python code to generate a gif to animate the path of the agents, something similar to Fig. 2 on this webpage, but with agents of different speeds
+https://rap-lab.github.io/research/mcpf 
+
+Send your solutions to zhongqiang.ren@sjtu.edu.cn in a zip that contains 
+1. a folder containing all your source code
+2. the gif(s) of your examples.
+Your source code folder should be directly compilable with the same command as in the readme of the code base
+https://github.com/rap-lab-org/public_graph
+You must implement your code based on this code base. If you find any bug in this code base, you should fix them yourself.
+
+You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).
+
+After the submission, we will read your code and schedule an interview with you. It is OK that you use AI, given that you understand the principles behind the algorithms and know whether AI is doing things correctly or wrong. You must finish the entire task yourself, without asking for help from anyone else. We will ask you questions to check your understanding in the interview.
+

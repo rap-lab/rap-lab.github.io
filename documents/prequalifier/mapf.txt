@@ -38,3 +38,5 @@ You must implement your code based on this code base. If you find any bug in thi
 
 You should NOT put any of your implementation or this problem public available online (e.g. never upload anything to a public repo on github).
 
+After the submission, we will read your code and schedule an interview with you. It is OK that you use AI, given that you understand the principles behind the algorithms and know whether AI is doing correct or wrong. You must do it yourself, without asking for help from anyone else. We will ask you questions to check your understanding in the interview.
+
