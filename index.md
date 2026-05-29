@@ -6,7 +6,7 @@ show_sidebar: false
 hide_footer: false
 title_color_bg: black
 hero_height: is-medium
-hero_video: lab_web_cover
+hero_image: lab_web_cover.mp4
 ---
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9QZD7Y8D0"></script>
