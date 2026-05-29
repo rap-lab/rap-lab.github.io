@@ -6,7 +6,7 @@ show_sidebar: false
 hide_footer: false
 title_color_bg: black
 hero_height: is-medium
-hero_image: lab_cover_fig
+hero_image: todo
 ---
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9QZD7Y8D0"></script>
