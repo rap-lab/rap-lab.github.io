@@ -56,7 +56,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TRO_ETO-DF_ZiyueZheng.pdf) is accepted to TRO.
 * \[2026.08\] Our [paper](https://rap-lab.github.io/documents/publications/2026_CASE_MAPF_Elevator_HaitongHe.pdf) wins the IEEE CASE Peter Luh Memorial Best Paper Award for Young Researcher.
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TITS_NSRTW_JiaxianLi.pdf) is accepted to TITS.
-* \[2026.08\] Over the past few months, several papers accepted to or published at AAMAS-2026, IROS-2026, SOCS-2026, CASE-2026, ISRR-2026.
+* \[2026.08\] Over the past few months, several papers accepted to AAMAS-2026, IROS-2026, SOCS-2026, CASE-2026, ISRR-2026.
 * \[2025.10\] A [paper](https://rap-lab.github.io/documents/publications/2025_RAL_CP_MILP.pdf) is accepted to RAL.
 * \[2025.10\] A [paper](https://rap-lab.github.io/documents/publications/2025_MRS_TCMAPF_Focal_ZhenlongFang.pdf) is accepted to MRS-2025.
 * \[2025.7\] Three papers [paper1](https://rap-lab.github.io/documents/publications/2025_IROS_MCPFTT_XuemianWu.pdf) [paper2](https://rap-lab.github.io/documents/publications/2025_IROS_ESPC_YongceLiu.pdf) [paper3](https://rap-lab.github.io/documents/publications/2025_IROS_MAMP_MICP_ShizheZhao.pdf) are accepted to IROS-2025.
