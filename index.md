@@ -55,7 +55,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TRO_ETO-DF_ZiyueZheng.pdf) is accepted to TRO.
 * \[2026.08\] Our [paper](https://rap-lab.github.io/documents/publications/2026_CASE_MAPF_Elevator_HaitongHe.pdf) wins the IEEE CASE Peter Luh Memorial Best Paper Award for Young Researcher.
-* \[2026.08\] Prof. Ren is invited as a Senior Program Committee (SPC) for AAAI-2026.
+* \[2026.08\] Prof. Ren is invited to serve as a Senior Program Committee (SPC) for AAAI-2026.
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TITS_NSRTW_JiaxianLi.pdf) is accepted to TITS.
 * \[2026.08\] Over the past few months, several papers accepted to AAMAS-2026, IROS-2026, SOCS-2026, WAFR-2026, CASE-2026, ISRR-2026.
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TITS_NSRTW_JiaxianLi.pdf) is accepted to TITS.
