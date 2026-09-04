@@ -58,7 +58,6 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 * \[2026.08\] Prof. Ren is invited to serve as a Senior Program Committee (SPC) for AAAI-2026.
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TITS_NSRTW_JiaxianLi.pdf) is accepted to TITS.
 * \[2026.08\] Over the past few months, several papers accepted to AAMAS-2026, IROS-2026, SOCS-2026, WAFR-2026, CASE-2026, ISRR-2026.
-* \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TITS_NSRTW_JiaxianLi.pdf) is accepted to TITS.
 * \[2026.07\] Prof. Ren joins the editorial board of IEEE TRO as an associate editor.
 * \[2026.05\] A [paper](https://rap-lab.github.io/documents/publications/2026_RSS_HOP_MiaomiaoDai.pdf) is accepted to RSS-2026.
 * \[2025.12\] Prof. Ren joins the editorial board of Autonomous Robots journal as an associate editor.
