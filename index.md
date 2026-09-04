@@ -38,9 +38,24 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 我们研究的问题在计算复杂度上往往是NP-hard问题。我们的研究利用这些问题中的结构来设计算法，平衡计算速度和求解质量，提供严格的理论保证，并最终部署在实体机器人上。
 我们研究的问题广泛存在于仓储物流，智慧生产，搜索救援等应用中。
 
+# Selected Publications
+
+* \[2026-TRO\] Ergodic Trajectory Planning with Dynamic Sensor Footprints.
+* \[2026-TRO\] Parallel, Asymptotically Optimal Algorithms for Moving Target Traveling Salesman Problems.
+* \[2025-TRO\] C\*: A New Bounding Approach for the Moving-Target Traveling Salesman Problem.
+* \[2025-IJRR\] Imperative Learning: A Self-supervised Neuro-Symbolic Learning Framework for Robot Autonomy.
+* \[2025-AIJ\] EMOA*: A framework for search-based multi-objective path planning.
+* \[2023-TRO\] CBSS: A New Approach for Multiagent Combinatorial Path Finding.
+* \[2023-TRO\] A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search.
+
 
 # News
 
+
+* \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TRO_ETO-DF_ZiyueZheng.pdf) is accepted to TRO.
+* \[2026.08\] Our [paper](https://rap-lab.github.io/documents/publications/2026_CASE_MAPF_Elevator_HaitongHe.pdf) wins the IEEE CASE Peter Luh Memorial Best Paper Award for Young Researcher.
+* \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TITS_NSRTW_JiaxianLi.pdf) is accepted to TITS.
+* \[2026.08\] Over the past few months, several papers accepted to or published at AAMAS-2026, IROS-2026, SOCS-2026, CASE-2026, ISRR-2026.
 * \[2025.10\] A [paper](https://rap-lab.github.io/documents/publications/2025_RAL_CP_MILP.pdf) is accepted to RAL.
 * \[2025.10\] A [paper](https://rap-lab.github.io/documents/publications/2025_MRS_TCMAPF_Focal_ZhenlongFang.pdf) is accepted to MRS-2025.
 * \[2025.7\] Three papers [paper1](https://rap-lab.github.io/documents/publications/2025_IROS_MCPFTT_XuemianWu.pdf) [paper2](https://rap-lab.github.io/documents/publications/2025_IROS_ESPC_YongceLiu.pdf) [paper3](https://rap-lab.github.io/documents/publications/2025_IROS_MAMP_MICP_ShizheZhao.pdf) are accepted to IROS-2025.
