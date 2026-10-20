@@ -1,0 +1,29 @@
+Title: Motion Planning and Simulation of Snake Robots
+
+Brief intro of the project:
+Snake robots are a class of hyper-redundant degree-of-freedom (DoF) robots. In the study of motion control, it is challenging to intuitively imagine the robot's overall pose solely from joint angle data. Furthermore, conducting direct hardware experiments can be risk-prone and cost-prohibitive, potentially leading to hardware damage and significant time loss. Therefore, extensive simulations are essential in the development process. This project focuses on reproducing locomotion gaits within a simulated environment.
+
+Job description/workload
+The student's work involves implementing a motion planning algorithm for snake-like robots according to a research paper and conducting simulations on the MuJoCo platform.
+The workload is expected to be at least 12 hours per week. 
+
+Keywords of this project
+Robotics, Motion Planning, Simulation
+
+Eligibility 
+Students must finish the following prerequisite task and send the required material to zhongqiang.ren@sjtu.edu.cn to show their capability before 
+joining the project.
+
+Prerequisite: 
+Your task is to read the paper and master the underlying concepts and methods (you may refer to the cited references for further information). Subsequently, you are expected to develop motion control algorithms of the locomotion gaits and conduct simulation validations based on the provided robot models. The paper is provided in {https://rap-lab.github.io/documents/publications/2026_CASE_Snake_Diff_Drive_QinglingFan.pdf}. The snake robot models are available for download in {https://drive.google.com/drive/folders/121l7r3YeeiOScXd0VG7umisT8VdjR8iW?usp=sharing}. If you require additional reading, please conduct your own literature search.
+
+REFERENCE:
+0. (CAUTION) You are not allowed to disclose or spread (such as share with others or upload to GitHub, etc.) any file in the folder to anyone, such as the unpublished paper, video, and robot model.
+1. Use Mujoco python version to simulate. The motion planning algorithm can be also deployed in python. 
+2. You can learn concepts of MuJoCo in {https://space.bilibili.com/87193773/lists/5177857?type=season}, but don't spend too much time, since the hardest part, robot modeling, has been provided for you. You only need to learn how to send the commands to the actuators of the robot. The key point is about the motion planning algorithm.
+3. Official API document can be referred in {https://docs.mujoco.cn/en/stable/python.html}.
+
+Please submit a zip that includes:
+1. Python project of the algorithm and simulation visualization. Please ensure the code is well-commented and includes a README file for environment setup.
+2. A video of the gait running on T-Snake can be seen at {https://rap-lab.github.io/research/lrtsnake}. You should also set the parameters in your simulation to make the robot turn.
+Send your folder in a zip to zhongqiang.ren@sjtu.edu.cn.
