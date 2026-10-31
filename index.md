@@ -40,14 +40,15 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # Selected Publications
 
-* \[2026-TRO\] Ergodic Trajectory Planning with Dynamic Sensor Footprints.
-* \[2026-TRO\] Parallel, Asymptotically Optimal Algorithms for Moving Target Traveling Salesman Problems.
-* \[2025-TRO\] C\*: A New Bounding Approach for the Moving-Target Traveling Salesman Problem.
-* \[2025-IJRR\] Imperative Learning: A Self-supervised Neuro-Symbolic Learning Framework for Robot Autonomy.
-* \[2025-AIJ\] EMOA*: A framework for search-based multi-objective path planning.
-* \[2023-SR\] Representation granularity enables time-efficient autonomous exploration in large, complex worlds.
-* \[2023-TRO\] CBSS: A New Approach for Multiagent Combinatorial Path Finding.
-* \[2023-TRO\] A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search.
+* \[2026-TRO\] RPT*: Global Planning with Probabilistic Terminals for Target Search in Complex Environments. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_RPT_YunpengLyu.pdf)
+* \[2026-TRO\] Ergodic Trajectory Planning with Dynamic Sensor Footprints. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_ETO-DF_ZiyueZheng.pdf)
+* \[2026-TRO\] Parallel, Asymptotically Optimal Algorithms for Moving Target Traveling Salesman Problems. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_MTTSP_Anoop.pdf)
+* \[2025-TRO\] C\*: A New Bounding Approach for the Moving-Target Traveling Salesman Problem. [paper](https://rap-lab.github.io/documents/publications/2025_TRO_Cstar_Allen.pdf)
+* \[2025-IJRR\] Imperative Learning: A Self-supervised Neuro-Symbolic Learning Framework for Robot Autonomy. [paper](https://rap-lab.github.io/documents/publications/2025_IJRR_IL_ChenWang.pdf)
+* \[2025-AIJ\] EMOA*: A framework for search-based multi-objective path planning. [paper](https://rap-lab.github.io/documents/publications/2024_AIJ_EMOA.pdf)
+* \[2023-SR\] Representation granularity enables time-efficient autonomous exploration in large, complex worlds. [paper](https://www.science.org/doi/abs/10.1126/scirobotics.adf0970)
+* \[2023-TRO\] CBSS: A New Approach for Multiagent Combinatorial Path Finding. [paper](https://rap-lab.github.io/documents/publications/ren23_CBSS_TRO.pdf)
+* \[2023-TRO\] A Pareto-Optimal Local Optimization Framework for Multiobjective Ergodic Search. [paper](https://rap-lab.github.io/documents/publications/ren23_MOES_TRO.pdf)
 
 
 # News
