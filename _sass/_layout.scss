@@ -73,3 +73,9 @@ div.highlight {
 table.customFormat tr td{ 
     line-height: 1.2rem; 
 }
+
+// Team member cards: unify photo aspect ratio (3:4), crop instead of stretch
+.team-photo img {
+    object-fit: cover;
+    object-position: center 25%;
+}

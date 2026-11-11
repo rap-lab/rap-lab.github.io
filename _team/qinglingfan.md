@@ -6,6 +6,7 @@ category: phd_student
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/qlfan.jpg
+photo_position: 35% 25%  # crop focus (x y); default is center 25%
 hide_hero: true
 hide_footer: false
 remove_hero_title: true

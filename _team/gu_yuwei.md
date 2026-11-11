@@ -6,6 +6,7 @@ category: undergraduate
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/gu_yuwei.jpg
+photo_position: 38% 25%  # crop focus (x y); default is center 25%
 hide_hero: true
 hide_footer: false
 remove_hero_title: true

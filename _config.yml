@@ -36,7 +36,6 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - bulma-clean-theme.gemspec
   - README.md
   - LICENSE.txt
   - changelog.txt
