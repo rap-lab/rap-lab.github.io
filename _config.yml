@@ -4,7 +4,7 @@ tagline: Robotics Autonomy and Planning Lab
 email: zhongqiang.ren@sjtu.edu.cn
 description: Robotics Autonomy and Planning Lab
 baseurl: ""
-url: ""
+url: "https://rap-lab.github.io"
 permalink: pretty
 #favicon: /path/to/favicon.png
 # gh_sponsor: chrisrhymes
@@ -35,13 +35,16 @@ plugins:
 
 exclude:
   - Gemfile
-  - clean-theme.gemspec
   - Gemfile.lock
+  - bulma-clean-theme.gemspec
+  - README.md
+  - LICENSE.txt
+  - changelog.txt
+  - package.json
+  - package-lock.json
+  - yarn.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor
 
 livereload: true
 
@@ -63,9 +66,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      author: "C.S. Rhymes"
       layout: post
-      image: https://via.placeholder.com/1200x800
       show_sidebar: true
 
 markdown: kramdown
@@ -77,7 +78,6 @@ collections:
   team:
     output: true
     layout: product
-    image: https://via.placeholder.com/800x600
     show_sidebar: false
 
 scholar:
@@ -86,6 +86,4 @@ scholar:
   bibliography_template: bibtemplate
   source: ./_bibliography
   bibliography: publications.bib
-
-exclude: [vendor]
 

@@ -6,3 +6,12 @@ Gemfile.lock
 **/.DS_Store
 
 **/*Zone.Identifier
+
+# Build output and dependencies
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+node_modules/
+vendor/
+.bundle/
