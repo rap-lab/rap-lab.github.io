@@ -113,12 +113,9 @@ show_sidebar: false
   {% endfor %}
   </div>
 
-<<!-- hr>
-<h1 style="font-size:30px;">Others</h1>
-<br> -->
-
 {% assign sorted_products = site.team | where:"category","undergraduate" %}
 {% if sorted_products.size > 0 %}
+<hr>
 <h1 style="font-size:35px;">Undergraduate Students</h1>
 <br>
 <div class="columns is-multiline">
@@ -142,7 +139,6 @@ show_sidebar: false
 </div>
 {% endfor %}
 </div>
-<hr>
 {% endif %}
 
 
@@ -224,12 +220,8 @@ show_sidebar: false
 </div>
 
 
-<!-- <hr>
-<h1 style="font-size:30px;">Alumni</h1>
-<br> -->
-
 <hr>
-<h1 style="font-size:35px;">Alumi</h1>
+<h1 style="font-size:35px;">Alumni</h1>
 <br>
 <div class="columns is-multiline">
   {% assign sorted_products = site.team | where:"category","alumni" %}
