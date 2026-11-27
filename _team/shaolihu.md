@@ -1,8 +1,8 @@
 ---
 title: Shaoli Hu
-subtitle: Master Student
-job_title: Master Student
-category: master_student
+subtitle: PhD@HKUST
+job_title: PhD@HKUST
+category: alumni
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/shaolihu.jpg

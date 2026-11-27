@@ -2,7 +2,7 @@
 title: Yu Chen
 subtitle: Staff
 job_title: Staff
-category: staff 
+category: alumni 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/chen_yu.jpg

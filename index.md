@@ -40,6 +40,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # Selected Publications
 
+* \[2026-TRO\] HEHA: Bounded Suboptimal Planning for Constrained Routing and Its Use in Heterogeneous Multi-Robot Exploration of Unknown Environments. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_HEHA_LongruiYang.pdf)
 * \[2026-TRO\] RPT*: Global Planning with Probabilistic Terminals for Target Search in Complex Environments. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_RPT_YunpengLyu.pdf)
 * \[2026-TRO\] Ergodic Trajectory Planning with Dynamic Sensor Footprints. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_ETO-DF_ZiyueZheng.pdf)
 * \[2026-TRO\] Parallel, Asymptotically Optimal Algorithms for Moving Target Traveling Salesman Problems. [paper](https://rap-lab.github.io/documents/publications/2026_TRO_MTTSP_Anoop.pdf)
@@ -53,7 +54,7 @@ These problems arise in **warehouse logistics, manufacturing and search-and-resc
 
 # News
 
-
+* \[2026.11\] A [paper](https://rap-lab.github.io/documents/publications/2026_TRO_HEHA_LongruiYang.pdf) is accepted to TRO. Congratulations to Longrui, Yiyu and Jingfan!
 * \[2026.10\] A [paper](https://rap-lab.github.io/documents/publications/2026_TRO_RPT_YunpengLyu.pdf) is accepted to TRO. Congratulations to Yunpeng!
 * \[2026.08\] A [paper](https://rap-lab.github.io/documents/publications/2026_TRO_ETO-DF_ZiyueZheng.pdf) is accepted to TRO. Congratulations to Ziyue!
 * \[2026.08\] Our [paper](https://rap-lab.github.io/documents/publications/2026_CASE_MAPF_Elevator_HaitongHe.pdf) wins the IEEE CASE Peter Luh Memorial Best Paper Award for Young Researcher.

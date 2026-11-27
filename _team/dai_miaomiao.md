@@ -1,8 +1,8 @@
 ---
 title: Miaomiao Dai
-subtitle: Undergraduate Researcher
-job_title: Undergraduate Researcher
-category: undergraduate 
+subtitle: MS@UPenn
+job_title: MS@UPenn
+category: alumni 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/dai_miaomiao.jpg
