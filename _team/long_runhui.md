@@ -1,8 +1,8 @@
 ---
 title: Runhui Long
-subtitle: Undergraduate Researcher
-job_title: Undergraduate Researcher
-category: undergraduate 
+subtitle: MS@CMU
+job_title: MS@CMU
+category: alumni 
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
 image: /img/team/long_runhui.jpg

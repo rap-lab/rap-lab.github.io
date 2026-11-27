@@ -1,7 +1,7 @@
 ---
 title: Shuai Zhou
-subtitle: Intern@CMU
-job_title: Intern@CMU
+subtitle: MS@CMU
+job_title: MS@CMU
 category: alumni
 # select from lab_head, postdoc, phd_student, master_student, undergraduate, staff, visitor, intern
 layout: product
